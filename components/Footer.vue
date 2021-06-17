@@ -2,7 +2,7 @@
   <!-- TODO: Make many of the items "v-for" -->
   <v-footer dark>
     <v-layout wrap>
-      <v-flex sm4 xs12>
+      <v-flex sm6 xs12>
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
@@ -47,7 +47,7 @@
           </v-card>
         </v-hover>
       </v-flex>
-      <v-flex sm4 xs12>
+      <!-- <v-flex sm4 xs12>
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
@@ -61,8 +61,8 @@
             </v-card-text>
           </v-card>
         </v-hover>
-      </v-flex>
-      <v-flex sm4 xs12>
+      </v-flex> -->
+      <v-flex sm6 xs12>
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
@@ -71,12 +71,12 @@
           >
             <v-card-title class="justify-center">Information</v-card-title>
             <v-list class="transparent">
-              <v-list-item class="justify-center"
+              <!-- <v-list-item class="justify-center"
                 ><NuxtLink to="/faq">FAQ</NuxtLink></v-list-item
               >
               <v-list-item class="justify-center"
                 ><NuxtLink to="/glossary">Glossary</NuxtLink></v-list-item
-              >
+              > -->
               <v-list-item class="justify-center"
                 ><NuxtLink to="/partnerships"
                   >Partnerships</NuxtLink
@@ -95,7 +95,7 @@
         >
           <v-card-title>Resources</v-card-title>
           <v-list class="transparent">
-            <v-list-item class="d-inline"
+            <!-- <v-list-item class="d-inline"
               ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
             >
             <v-list-item class="d-inline"
@@ -103,11 +103,11 @@
             >
             <v-list-item class="d-inline"
               ><NuxtLink to="/legal">Legal</NuxtLink></v-list-item
-            >
+            > -->
             <v-list-item class="d-inline"
               ><NuxtLink to="/privacy">Privacy</NuxtLink></v-list-item
             >
-            <v-list-item class="d-inline"
+            <!-- <v-list-item class="d-inline"
               ><NuxtLink to="/rss">RSS</NuxtLink></v-list-item
             >
             <v-list-item class="d-inline"
@@ -118,7 +118,7 @@
             >
             <v-list-item class="d-inline">
               <NuxtLink to="/terms">Terms</NuxtLink></v-list-item
-            >
+            > -->
           </v-list>
         </v-card></v-hover
       >

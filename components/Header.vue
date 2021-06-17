@@ -77,27 +77,26 @@ export default Vue.extend({
         name: 'Games',
         path: '/games',
       },
-      {
-        icon: 'mdi-newspaper-variant-outline',
-        name: 'News',
-        path: '/news',
-      },
-      {
-        icon: 'mdi-devices',
-        name: 'Platforms',
-        path: '/platforms',
-      },
-      {
-        icon: 'mdi-motion-play',
-        name: 'PlayTesting',
-        path: '/playtesting',
-      },
-      {
-        icon: 'mdi-account-group',
-        name: 'Community',
-        path: '/community',
-      },
-
+      // {
+      //   icon: 'mdi-newspaper-variant-outline',
+      //   name: 'News',
+      //   path: '/news',
+      // },
+      // {
+      //   icon: 'mdi-devices',
+      //   name: 'Platforms',
+      //   path: '/platforms',
+      // },
+      // {
+      //   icon: 'mdi-motion-play',
+      //   name: 'PlayTesting',
+      //   path: '/playtesting',
+      // },
+      // {
+      //   icon: 'mdi-account-group',
+      //   name: 'Community',
+      //   path: '/community',
+      // },
       {
         icon: 'mdi-fingerprint',
         name: 'About',
