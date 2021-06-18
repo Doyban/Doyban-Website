@@ -95,6 +95,36 @@
             <v-img :src="require('@/static/random.jpg')" />
             <v-card-title class="justify-center" v-text="game.title" />
             <v-card-subtitle><p v-text="game.description" /></v-card-subtitle>
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/AppleAppStoreButton.png"
+            />
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/GooglePlayStoreButton.png"
+            />
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/MessengerButton.png"
+            />
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/FacebookWebButton.png"
+            />
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/ItchIoButton.png"
+            />
+            <img
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+              src="/buttons_stores/ChromeWebStoreButton.png"
+            />
             <v-card-actions>
               <v-spacer />
               <v-btn icon @click="showGame1Details = !showGame1Details"
