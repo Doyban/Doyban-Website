@@ -96,34 +96,15 @@
             <v-card-title class="justify-center" v-text="game.title" />
             <v-card-subtitle><p v-text="game.description" /></v-card-subtitle>
             <img
+              v-for="(storeButton, index) in storeButtons"
+              :key="index"
               class="VuetifyLogo"
               alt="Vuetify Logo"
-              src="/buttons_stores/AppleAppStoreButton.png"
-            />
-            <img
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              src="/buttons_stores/GooglePlayStoreButton.png"
-            />
-            <img
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              src="/buttons_stores/MessengerButton.png"
-            />
-            <img
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              src="/buttons_stores/FacebookWebButton.png"
-            />
-            <img
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              src="/buttons_stores/ItchIoButton.png"
-            />
-            <img
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              src="/buttons_stores/ChromeWebStoreButton.png"
+              :src="
+                require(`@/static/buttons_stores/` +
+                  `${storeButton.filename}` +
+                  `.png`)
+              "
             />
             <v-card-actions>
               <v-spacer />
@@ -170,6 +151,26 @@ export default Vue.extend({
         {
           description: 'Lorem',
           title: 'Game 4',
+        },
+      ],
+      storeButtons: [
+        {
+          filename: 'AppleAppStoreButton',
+        },
+        {
+          filename: 'GooglePlayStoreButton',
+        },
+        {
+          filename: 'MessengerButton',
+        },
+        {
+          filename: 'FacebookWebButton',
+        },
+        {
+          filename: 'ItchIoButton',
+        },
+        {
+          filename: 'ChromeWebStoreButton',
         },
       ],
       features: [] as Feature[],
