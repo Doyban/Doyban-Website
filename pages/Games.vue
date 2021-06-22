@@ -58,13 +58,9 @@
       >
         <h2 class="font-weight-black my-12" v-text="game.title" />
         <p v-text="game.description" />
-        <h3 class="font-weight-black mb-6 mt-12" v-text="game.title">
-          More info
-        </h3>
+        <h3 class="font-weight-black mb-6 mt-12">About</h3>
         <p v-text="game.description" />
-        <h3 class="font-weight-black mb-6 mt-12" v-text="game.title">
-          More info
-        </h3>
+        <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
         <p v-text="game.description" />
       </v-col>
       <v-col
