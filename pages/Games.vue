@@ -138,19 +138,23 @@ export default Vue.extend({
       games: [
         {
           description: 'Lorem',
-          title: 'Game 1',
+          title: 'PirateBay',
         },
         {
           description: 'Lorem',
-          title: 'Game 2',
+          title: 'YellowSidd',
         },
         {
           description: 'Lorem',
-          title: 'Game 3',
+          title: 'MatchBalloons',
         },
         {
           description: 'Lorem',
-          title: 'Game 4',
+          title: 'CashNinja',
+        },
+        {
+          description: 'Lorem',
+          title: 'InfiniteHell',
         },
       ],
       storeButtons: [
