@@ -22,25 +22,39 @@
               <v-list-item
                 ><p>
                   <v-icon>mdi-home</v-icon>
-                  Address
+                  <i>Irysowa 18, 55-220 Jelcz-Laskowice, Poland</i>
                 </p></v-list-item
               >
               <v-list-item
                 ><p>
                   <v-icon>mdi-phone</v-icon>
-                  Phone
+                  <i
+                    ><a
+                      aria-label="+48 732 280 741. Click here give us a phone call."
+                      href="tel:+48 732 280 741"
+                      title="+48 732 280 741"
+                      >+48 732 280 741</a
+                    ></i
+                  >
                 </p></v-list-item
               >
               <v-list-item
                 ><p>
                   <v-icon>mdi-at</v-icon>
-                  Email
+                  <i
+                    ><a
+                      aria-label="contact@doyban.com. Click here to send us an e-mail."
+                      href="mailto:contact@doyban.com?subject=Mail from doyban.com&body=Hi Doyban!%0D%0A%0D%0AMy mail is about:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0ABest regards,%0D%0A"
+                      title="contact@doyban.com"
+                      >contact@doyban.com</a
+                    ></i
+                  >
                 </p></v-list-item
               >
               <v-list-item
                 ><p>
                   <v-icon>mdi-information-outline</v-icon>
-                  Tax ID
+                  <i>Tax ID: PL9121899240</i>
                 </p></v-list-item
               >
             </v-list>
@@ -142,3 +156,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+i > a {
+  color: white;
+  text-decoration: none;
+}
+</style>
