@@ -20,12 +20,13 @@
             :class="{
               'on-hover': hover,
             }"
+            :color="checkIfCenter(index) ? 'purple darken-4' : ''"
             :dark="checkIfCenter(index)"
             :elevation="hover ? 24 : 12"
             class="pb-6"
           >
             <v-card-title class="justify-center">
-              <h2 class="mt-6 price" v-text="partnership.title" />
+              <h2 class="mt-6" v-text="partnership.title" />
             </v-card-title>
             <v-card-text>
               <h2 class="my-12 text-center">Perks</h2>
@@ -46,6 +47,7 @@
                 <template v-slot:activator="{ on, attributes }">
                   <v-btn
                     :class="[checkIfCenter(index) ? 'custom-btn' : '']"
+                    :color="checkIfCenter(index) ? 'red darken-4' : ''"
                     class="mt-12"
                     exact
                     nuxt
@@ -159,7 +161,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.price,
 .no {
   color: red;
 }
@@ -173,7 +174,6 @@ export default Vue.extend({
 }
 
 .custom-btn {
-  background-color: red !important;
   color: white;
   font-weight: bold;
 }
