@@ -73,7 +73,7 @@ export default Vue.extend({
         path: '/',
       },
       {
-        icon: 'mdi-gamepad-variant',
+        icon: 'mdi-google-controller',
         name: 'Games',
         path: '/games',
       },
