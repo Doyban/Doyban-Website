@@ -66,27 +66,6 @@
   </section>
 </template>
 
-<style lang="scss" scoped>
-.price,
-.no {
-  color: red;
-}
-
-.yes {
-  color: green;
-}
-
-.v-card.theme--dark {
-  background-color: purple;
-}
-
-.custom-btn {
-  background-color: red !important;
-  color: white;
-  font-weight: bold;
-}
-</style>
-
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
@@ -178,3 +157,24 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.price,
+.no {
+  color: red;
+}
+
+.yes {
+  color: green;
+}
+
+.v-card.theme--dark {
+  background-color: purple;
+}
+
+.custom-btn {
+  background-color: red !important;
+  color: white;
+  font-weight: bold;
+}
+</style>
