@@ -97,46 +97,76 @@ export default Vue.extend({
           perks: [
             {
               class: 'yes',
-              label: 'Label 1',
+              label: 'Freedom',
               value: 'YES',
             },
             {
-              class: 'monthly',
-              label: 'Label 2',
+              class: 'no',
+              label: 'Boringness',
+              value: 'NO',
+            },
+            {
+              class: 'yes',
+              label: 'Flexibility',
+              value: 'YES',
+            },
+            {
+              class: 'no',
+              label: 'Fight with Developers',
               value: 'NO',
             },
           ],
-          title: 'One',
+          title: 'Designers',
         },
         {
           perks: [
             {
               class: 'yes',
-              label: 'Label 3',
+              label: 'Freedom',
               value: 'YES',
             },
             {
-              class: 'monthly',
-              label: 'Label 4',
+              class: 'no',
+              label: 'Boringness',
+              value: 'NO',
+            },
+            {
+              class: 'yes',
+              label: 'Flexibility',
+              value: 'YES',
+            },
+            {
+              class: 'no',
+              label: 'Fight with Designers',
               value: 'NO',
             },
           ],
-          title: 'Two',
+          title: 'Developers',
         },
         {
           perks: [
             {
               class: 'yes',
-              label: 'Label 5',
+              label: 'Freedom',
               value: 'YES',
             },
             {
-              class: 'monthly',
-              label: 'Label 6',
+              class: 'no',
+              label: 'Boringness',
               value: 'NO',
             },
+            {
+              class: 'yes',
+              label: 'Flexibility',
+              value: 'YES',
+            },
+            {
+              class: 'yes',
+              label: 'Support',
+              value: 'YES',
+            },
           ],
-          title: 'Three',
+          title: 'Playtesting & Interns',
         },
       ],
     }
