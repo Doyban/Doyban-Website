@@ -102,29 +102,36 @@ export default Vue.extend({
   created() {
     this.events = [
       {
+        color: 'green',
+        description:
+          "Daniel Danielecki founds Doyban as a hobby project for his HTML5 games after his Engineer's Thesis 'The game application in HTML 5 technology designed for mobile devices'. The thesis project and the first game was based on Quintus, but all the next games have been shifted to Phaser.",
+        icon: 'mdi-rocket-launch-outline',
+        title: 'Doyban has been founded',
+        year: 2016,
+      },
+      {
         color: 'orange',
         description:
-          'Exercitation cupidatat magna consequat ea cupidatat non enim consectetur consectetur incididunt elit sint do proident. Laborum consectetur in laborum nostrud exercitation laborum laborum magna ut. Commodo occaecat duis aute tempor elit minim elit non excepteur.',
-        icon: 'mdi-phone-in-talk',
-        title: 'Enim nulla nulla nostrud irure velit.',
-        year: 2000,
+          "In 2015, Daniel read in a book (Luke Stevens, RJ Owen: 'The Truth About HTML5, Apress', 2012) about futuristic use cases for HTML5 technology. In 2019, Facebook came up with Messenger Instant Games, a breakthrough for Doyban, quickly increasing the number of players above 100.000, making this hobby project more aspiring.",
+        icon: 'mdi-lightbulb-on-outline',
+        title: 'Instant Games',
+        year: 2019,
       },
       {
-        color: 'red',
+        color: 'deep-purple',
         description:
-          'Aute proident ut nisi ea velit nisi veniam proident ullamco esse excepteur ad. Aliqua magna aute eiusmod elit. Pariatur magna fugiat aliquip fugiat aliqua Lorem. Laboris officia nostrud occaecat mollit eu esse est incididunt. Fugiat qui sit mollit ipsum magna minim est adipisicing quis magna.',
-        icon: 'mdi-phone-in-talk',
-        title:
-          'Cillum sit est quis cupidatat aliquip proident id cillum cupidatat ullamco fugiat ipsum.',
-        year: 2010,
+          'We have launched a crowdfunding campaign on the world-famous Kickstarter platform. The campaign was about Mobile Games without Installation, Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat. It was featured widely in Australia, Belgium, Ecuador, Germany, India, Japan, Poland, United Kingdom (UK), United States (USA) by many blogs, gaming portals, technological news, websites, etc., such as Gamasutra. Unfortunately, we have not been successfully funded. There might be several reasons: audience did not what we wanted to achieve, mobiles gamers do not follow Kickstarter, too early product stage, or just a bad idea.',
+        icon: 'mdi-kickstarter',
+        title: 'Kickstarter: #5G Ready, Mobile Games.',
+        year: 2021,
       },
       {
-        color: 'purple',
+        color: 'brown',
         description:
-          'Quis enim enim fugiat anim aute nulla ea anim nulla elit ullamco nostrud nulla. Eiusmod ipsum aliqua dolore mollit ad aliquip eu cillum Lorem ex quis officia. Veniam irure veniam exercitation ullamco adipisicing sint sit. Laboris nostrud nulla irure dolor irure consectetur pariatur reprehenderit nisi veniam id eiusmod. Deserunt commodo irure in nostrud dolor ex eiusmod. Eu deserunt cillum laboris fugiat ullamco ipsum id exercitation ex id. Elit consequat deserunt nisi id id.',
-        icon: 'mdi-phone-in-talk',
-        title: 'Deserunt ipsum amet enim eu nisi sunt pariatur ut.',
-        year: 2020,
+          'We believe Mobile Games without Installation on platforms such as Facebook Gaming, iMessage, Messenger, Snapchat, or Telegram will evolve. However, in the meantime, we continue publishing our games as native mobile applications on Android and iOS. All our games are installation less ready once our desired ecosystem evolves.',
+        icon: 'mdi-cellphone-arrow-down',
+        title: 'Mobile Games',
+        year: 2022,
       },
     ]
   },
