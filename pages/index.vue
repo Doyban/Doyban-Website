@@ -10,7 +10,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-parallax :src="require('@/static/random.jpg')" height="200">
+    <v-parallax :src="require('@/static/imported/footer.jpeg')" height="200">
       <h1 class="display-3 text-center white--text">Hello</h1>
       <h2 class="text-center">Random text bla bla</h2>
     </v-parallax>
@@ -36,7 +36,10 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-parallax :src="require('@/static/random.jpg')" height="200">
+    <v-parallax
+      :src="require('@/static/imported/background.jpeg')"
+      height="200"
+    >
       <h2 class="display-2 text-center">Random text bla bla</h2>
       <em class="text-center">Super super text goes here.</em>
       <v-tooltip bottom>
