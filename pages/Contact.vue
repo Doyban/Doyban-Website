@@ -2,7 +2,12 @@
   <section>
     <v-layout>
       <v-flex hidden-sm-and-down md4>
-        <v-img :src="require('@/static/random.jpg')" height="100%" />
+        <v-img
+          :src="
+            require('@/static/imported/a3d32c48f128325f7d46a1ee41d1ef7c-d2tl16l-1.jpeg')
+          "
+          height="100%"
+        />
       </v-flex>
       <v-layout justify-center my-12>
         <v-flex md10 xs12>
@@ -292,6 +297,7 @@ export default Vue.extend({
             (inputValue || '').length <= 512 ||
             'Email has to have at most 512 characters.',
           (inputValue: string) =>
+            // eslint-disable-next-line no-useless-escape
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
               inputValue
             ) || 'This is not correct email format.',
