@@ -9,7 +9,7 @@
     <NuxtLink to="/"> Home page </NuxtLink>
     <v-row>
       <v-col cols="12">
-        <v-img :src="require('@/static/imported/404.jpeg')" />
+        <v-img :src="require('@/static/pages/404.jpeg')" />
       </v-col>
     </v-row>
   </v-app>

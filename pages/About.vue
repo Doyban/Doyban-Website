@@ -2,10 +2,7 @@
   <section>
     <v-layout>
       <v-flex hidden-sm-and-down md6>
-        <v-img
-          :src="require('@/static/imported/posts_archive.jpeg')"
-          height="100%"
-        />
+        <v-img :src="require('@/static/pages/about.jpeg')" height="100%" />
       </v-flex>
       <v-layout justify-center my-12>
         <v-flex md8 xs12>

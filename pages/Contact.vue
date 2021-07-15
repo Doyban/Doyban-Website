@@ -2,12 +2,7 @@
   <section>
     <v-layout>
       <v-flex hidden-sm-and-down md4>
-        <v-img
-          :src="
-            require('@/static/imported/a3d32c48f128325f7d46a1ee41d1ef7c-d2tl16l-1.jpeg')
-          "
-          height="100%"
-        />
+        <v-img :src="require('@/static/pages/contact.jpeg')" height="100%" />
       </v-flex>
       <v-layout justify-center my-12>
         <v-flex md10 xs12>
