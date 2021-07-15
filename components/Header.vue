@@ -92,6 +92,10 @@ export default Vue.extend({
       //   name: 'PlayTesting',
       //   path: '/playtesting',
       // },
+      //   icon: 'mdi-motion-play', // TODO: Change the icon.
+      //   name: 'UX Research',
+      //   path: '/ux-research',
+      // },
       // {
       //   icon: 'mdi-account-group',
       //   name: 'Community',
