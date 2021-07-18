@@ -262,8 +262,6 @@ import Vue from 'vue'
 // TODO: Check if data isn't overloaded (https://stackoverflow.com/a/41763856/11127383)
 export default Vue.extend({
   data() {
-    // eslint-disable-next-line no-console
-    console.log(process.env.AGASTYA_API_KEY)
     return {
       isContactFormValid: false,
       isRecaptchaValid: false,
