@@ -10,7 +10,7 @@
         </div>
       </v-col>
     </v-row>
-    <v-parallax :src="require('@/static/pages/parallax2.jpeg')" height="200">
+    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="200">
       <h2 class="display-2 text-center">Random text bla bla</h2>
       <em class="text-center">Super super text goes here.</em>
       <v-tooltip bottom>
