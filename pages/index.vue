@@ -2,6 +2,16 @@
   <section>
     <!-- TODO: Play with Typography (https://vuetifyjs.com/en/styles/text-and-typography/#typography) -->
     <!-- TODO: Improve almost everything on this page. -->
+    <v-carousel progress progress-color="purple darken-4">
+      <v-carousel-item
+        v-for="(sliderItem, index) in sliderItems"
+        :key="index"
+        :src="sliderItem.src"
+        reverse-transition="fade-transition"
+        ripple
+        transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
     <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="6">
         <div class="text-center">
@@ -84,6 +94,20 @@ export default Vue.extend({
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
           icon: 'mdi-home',
           title: 'Title',
+        },
+      ],
+      sliderItems: [
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
         },
       ],
     }
