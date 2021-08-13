@@ -98,13 +98,16 @@ export default Vue.extend({
       ],
       sliderItems: [
         {
-          src: require('@/static/pages/slide1.jpeg'),
+          src: require('@/static/pages/slide1.png'),
         },
         {
-          src: require('@/static/pages/slide2.jpeg'),
+          src: require('@/static/pages/slide2.png'),
         },
         {
-          src: require('@/static/pages/slide3.jpeg'),
+          src: require('@/static/pages/slide3.png'),
+        },
+        {
+          src: require('@/static/pages/slide4.png'),
         },
       ],
     }
