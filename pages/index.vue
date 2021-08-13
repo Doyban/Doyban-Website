@@ -98,16 +98,13 @@ export default Vue.extend({
       ],
       sliderItems: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: require('@/static/pages/slide1.jpeg'),
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: require('@/static/pages/slide2.jpeg'),
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-        },
-        {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: require('@/static/pages/slide3.jpeg'),
         },
       ],
     }
