@@ -60,6 +60,7 @@
           </v-card-text>
         </v-card>
       </v-col>
+      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
     </v-row>
   </section>
 </template>
