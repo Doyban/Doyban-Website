@@ -4,7 +4,7 @@
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img :src="require('@/static/pages/slide3.jpeg')" height="100%" />
+        <v-img :src="require('@/static/pages/games.jpeg')" height="100%" />
       </v-col>
       <v-col md="6" xs="12">
         <v-row class="my-12" justify="center">

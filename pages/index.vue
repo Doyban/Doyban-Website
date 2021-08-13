@@ -102,10 +102,10 @@ export default Vue.extend({
           src: require('@/static/pages/slide1.png'),
         },
         {
-          src: require('@/static/pages/slide3.png'),
+          src: require('@/static/pages/slide2.png'),
         },
         {
-          src: require('@/static/pages/slide4.png'),
+          src: require('@/static/pages/slide3.png'),
         },
       ],
     }
