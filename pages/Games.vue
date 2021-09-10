@@ -88,7 +88,9 @@
               ></v-progress-linear>
             </template>
             <!--/ Slots for "v-progress-linear". -->
-            <v-img :src="require('@/static/random.jpg')" />
+            <v-img
+              :src="require(`@/static/games/` + `${game.title}` + `.jpeg`)"
+            />
             <v-card-title class="justify-center" v-text="game.title" />
             <v-card-subtitle><p v-text="game.description" /></v-card-subtitle>
             <img
