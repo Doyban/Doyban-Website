@@ -116,6 +116,21 @@
               <div v-show="showGame1Details">
                 <v-divider />
                 <v-card-text><p v-text="game.description" /></v-card-text>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attributes }">
+                    <v-btn
+                      class="mt-12"
+                      light
+                      exact
+                      nuxt
+                      :to="'/games/' + `${game.title.toLowerCase()}`"
+                      x-large
+                      v-bind="attributes"
+                      v-on="on"
+                      >Button
+                    </v-btn> </template
+                  ><span>Read More</span>
+                </v-tooltip>
               </div>
             </v-expand-transition>
           </v-card>
