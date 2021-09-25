@@ -109,9 +109,10 @@
         >
           <v-card-title>Resources</v-card-title>
           <v-list class="transparent">
-            <!-- <v-list-item class="d-inline"
+            <v-list-item class="d-inline"
               ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
             >
+            <!--
             <v-list-item class="d-inline"
               ><NuxtLink to="/cookies">Cookies</NuxtLink></v-list-item
             >
