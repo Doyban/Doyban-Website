@@ -6,7 +6,7 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 24 : 12"
+            :elevation="hover ? 4 : 2"
             class="transparent"
           >
             <v-card-title class="justify-center">Doyban</v-card-title>
@@ -65,7 +65,7 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 24 : 12"
+            :elevation="hover ? 4 : 2"
             class="transparent"
           >
             <v-card-title class="justify-center">Stay informed</v-card-title>
@@ -80,7 +80,7 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 24 : 12"
+            :elevation="hover ? 4 : 2"
             class="transparent"
           >
             <v-card-title class="justify-center">Information</v-card-title>
@@ -103,7 +103,7 @@
       <v-hover v-slot:default="{ hover }">
         <v-card
           :class="{ 'on-hover': hover }"
-          :elevation="hover ? 24 : 12"
+          :elevation="hover ? 4 : 2"
           class="transparent"
           style="width: 100%"
         >
@@ -161,5 +161,13 @@ export default Vue.extend({
 i > a {
   color: white;
   text-decoration: none;
+}
+.v-footer {
+  background: rgb(156, 39, 176);
+  background: linear-gradient(
+    0deg,
+    rgba(156, 39, 176, 1) 0%,
+    rgba(74, 20, 140, 1) 18%
+  );
 }
 </style>
