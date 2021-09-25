@@ -47,7 +47,7 @@
                 <template v-slot:activator="{ on, attributes }">
                   <v-btn
                     :class="[checkIfCenter(index) ? 'custom-btn' : '']"
-                    :color="checkIfCenter(index) ? 'red darken-4' : ''"
+                    :color="checkIfCenter(index) ? '#7c0690' : ''"
                     class="mt-12"
                     exact
                     nuxt
@@ -162,7 +162,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .no {
-  color: red;
+  color: #7c0690;
 }
 
 .yes {
