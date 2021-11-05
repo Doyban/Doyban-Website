@@ -106,14 +106,14 @@
             />
             <v-card-actions>
               <v-spacer />
-              <v-btn icon @click="showGame1Details = !showGame1Details"
+              <v-btn icon @click="game.showGameDetails = !game.showGameDetails"
                 ><v-icon>{{
-                  showGame1Details ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                  game.showGameDetails ? 'mdi-chevron-up' : 'mdi-chevron-down'
                 }}</v-icon></v-btn
               >
             </v-card-actions>
             <v-expand-transition>
-              <div v-show="showGame1Details">
+              <div v-show="game.showGameDetails">
                 <v-divider />
                 <v-card-text><p v-text="game.description" /></v-card-text>
                 <v-tooltip bottom>
@@ -151,22 +151,27 @@ export default Vue.extend({
       games: [
         {
           description: 'Lorem',
+          showGameDetails: false,
           title: 'PirateBay',
         },
         {
           description: 'Lorem',
+          showGameDetails: false,
           title: 'YellowSidd',
         },
         {
           description: 'Lorem',
+          showGameDetails: false,
           title: 'MatchBalloons',
         },
         {
           description: 'Lorem',
+          showGameDetails: false,
           title: 'CashNinja',
         },
         {
           description: 'Lorem',
+          showGameDetails: false,
           title: 'InfiniteHell',
         },
       ],
@@ -191,7 +196,6 @@ export default Vue.extend({
         },
       ],
       features: [] as Feature[],
-      showGame1Details: false, // TODO: Each game should have it separated.
     }
   },
   created() {
