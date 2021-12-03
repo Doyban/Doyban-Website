@@ -6,10 +6,11 @@
     <h1 v-else>
       {{ otherError }}
     </h1>
+    <h2>May the force be with you</h2>
     <NuxtLink to="/"> Home page </NuxtLink>
     <v-row>
       <v-col cols="12">
-        <v-img :src="require('@/static/pages/404.jpeg')" />
+        <v-img :src="require('@/static/pages/404.gif')" />
       </v-col>
     </v-row>
   </v-app>
