@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mx-3">
     <h1 class="mt-12 text-center">Partnerships</h1>
     <v-row class="justify-center">
       <v-col sm="3" xs="6">

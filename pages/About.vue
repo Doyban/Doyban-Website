@@ -5,7 +5,7 @@
         <v-img :src="require('@/static/pages/about.png')" height="100%" />
       </v-flex>
       <v-layout justify-center my-12>
-        <v-flex md8 xs12>
+        <v-flex md6 xs12 mx-3>
           <h1 class="mb-6 text-center">About</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
@@ -30,61 +30,63 @@
         </v-flex>
       </v-layout>
     </v-layout>
-    <h1 class="my-12 text-center">Our Story</h1>
-    <v-timeline
-      :dense="$vuetify.breakpoint.smAndDown"
-      :reverse="$vuetify.breakpoint.mdAndUp"
-    >
-      <v-timeline-item
-        v-for="(event, index) in events"
-        :key="index"
-        :color="event.color"
-        class="ma-6"
-        fill-dot
-        large
+    <v-container>
+      <h1 class="my-12 text-center">Our Story</h1>
+      <v-timeline
+        :dense="$vuetify.breakpoint.smAndDown"
+        :reverse="$vuetify.breakpoint.mdAndUp"
       >
-        <!-- Slots for "v-timeline-item". -->
-        <template v-slot:icon>
-          <v-icon dark size="32" v-text="event.icon" />
-        </template>
-        <template v-slot:opposite>
-          <span
-            :class="`headline font-weight-bold ${event.color}--text`"
-            v-text="event.year"
-          ></span>
-        </template>
-        <v-hover v-slot:default="{ hover }">
-          <v-card
-            :class="{ 'on-hover': hover }"
-            :color="`${event.color} lighten-5`"
-            :elevation="hover ? 24 : 12"
-            loading
-            outlined
-            ripple
-            shaped
-          >
-            <!-- Slots for "v-progress-linear". -->
-            <template slot="progress">
-              <v-progress-linear
-                buffer-value="0"
-                :color="`${event.color} darken-4`"
-                stream
-              ></v-progress-linear>
-            </template>
-            <!--/ Slots for "v-progress-linear". -->
-            <v-card-title
-              :class="`headline pt-6 font-weight-light mb-6 text-center
-            ${event.color}--text`"
-              v-text="event.title"
-            />
-            <v-card-text
-              ><p>{{ event.description }}</p></v-card-text
+        <v-timeline-item
+          v-for="(event, index) in events"
+          :key="index"
+          :color="event.color"
+          class="ma-6"
+          fill-dot
+          large
+        >
+          <!-- Slots for "v-timeline-item". -->
+          <template v-slot:icon>
+            <v-icon dark size="32" v-text="event.icon" />
+          </template>
+          <template v-slot:opposite>
+            <span
+              :class="`headline font-weight-bold ${event.color}--text`"
+              v-text="event.year"
+            ></span>
+          </template>
+          <v-hover v-slot:default="{ hover }">
+            <v-card
+              :class="{ 'on-hover': hover }"
+              :color="`${event.color} lighten-5`"
+              :elevation="hover ? 24 : 12"
+              loading
+              outlined
+              ripple
+              shaped
             >
-          </v-card>
-        </v-hover>
-        <!--/ Slots for "v-timeline-item". -->
-      </v-timeline-item>
-    </v-timeline>
+              <!-- Slots for "v-progress-linear". -->
+              <template slot="progress">
+                <v-progress-linear
+                  buffer-value="0"
+                  :color="`${event.color} darken-4`"
+                  stream
+                ></v-progress-linear>
+              </template>
+              <!--/ Slots for "v-progress-linear". -->
+              <v-card-title
+                :class="`headline pt-6 font-weight-light mb-6 text-center
+            ${event.color}--text`"
+                v-text="event.title"
+              />
+              <v-card-text
+                ><p>{{ event.description }}</p></v-card-text
+              >
+            </v-card>
+          </v-hover>
+          <!--/ Slots for "v-timeline-item". -->
+        </v-timeline-item>
+      </v-timeline>
+    </v-container>
   </section>
 </template>
 

@@ -2,7 +2,7 @@
   <section>
     <!-- TODO: Play with Typography (https://vuetifyjs.com/en/styles/text-and-typography/#typography) -->
     <!-- TODO: Improve almost everything on this page. -->
-    <v-carousel progress progress-color="purple darken-4">
+    <v-carousel height="95vh" progress progress-color="purple darken-4">
       <v-carousel-item
         v-for="(sliderItem, index) in sliderItems"
         :key="index"
