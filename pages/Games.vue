@@ -44,7 +44,7 @@
     <v-row justify="center">
       <v-col sm="4">
         <h1>Our Games</h1>
-        <p class="text-center">Some dummy description.</p>
+        <p class="text-center">Here you can find what we have done so far.</p>
         <v-divider />
       </v-col>
     </v-row>
@@ -57,11 +57,21 @@
         order-sm="2"
       >
         <h2 class="font-weight-black my-12" v-text="game.title" />
-        <p v-text="game.description" />
+        <p class="text-center" v-text="game.headline" />
         <h3 class="font-weight-black mb-6 mt-12">About</h3>
-        <p v-text="game.description" />
+        <p class="text-center" v-text="game.description" />
         <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
-        <p v-text="game.description" />
+        <img
+          v-for="(storeButton, index) in storeButtons"
+          :key="index"
+          class="VuetifyLogo"
+          alt="Vuetify Logo"
+          :src="
+            require(`@/static/buttons_stores/` +
+              `${storeButton.filename}` +
+              `.png`)
+          "
+        />
       </v-col>
       <v-col
         md="6"
@@ -92,18 +102,9 @@
               :src="require(`@/static/games/` + `${game.title}` + `.jpeg`)"
             />
             <v-card-title class="justify-center" v-text="game.title" />
-            <v-card-subtitle><p v-text="game.description" /></v-card-subtitle>
-            <img
-              v-for="(storeButton, index) in storeButtons"
-              :key="index"
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
-              :src="
-                require(`@/static/buttons_stores/` +
-                  `${storeButton.filename}` +
-                  `.png`)
-              "
-            />
+            <v-card-subtitle
+              ><p class="text-center" v-text="game.headline"
+            /></v-card-subtitle>
             <v-card-actions>
               <v-spacer />
               <v-btn icon @click="game.showGameDetails = !game.showGameDetails"
@@ -119,7 +120,7 @@
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on, attributes }">
                     <v-btn
-                      class="mt-12"
+                      class="mb-12"
                       light
                       exact
                       nuxt
@@ -127,7 +128,7 @@
                       x-large
                       v-bind="attributes"
                       v-on="on"
-                      >Button
+                      >Read More
                     </v-btn> </template
                   ><span>Read More</span>
                 </v-tooltip>
@@ -151,26 +152,34 @@ export default Vue.extend({
       games: [
         {
           description: 'Lorem',
+          headline:
+            'PirateBay let you to discover world as a Pirate and fight with different enemies.',
           showGameDetails: false,
           title: 'PirateBay',
         },
         {
           description: 'Lorem',
+          headline:
+            'YellowSidd gives you ability to play good old style platformer type game.',
           showGameDetails: false,
           title: 'YellowSidd',
         },
         {
           description: 'Lorem',
+          headline: 'MatchBalloons is a friendly match 3 game!',
           showGameDetails: false,
           title: 'MatchBalloons',
         },
         {
           description: 'Lorem',
+          headline:
+            'CashNinja is a free and fun game where you get get a lot of cash!',
           showGameDetails: false,
           title: 'CashNinja',
         },
         {
           description: 'Lorem',
+          headline: 'InfiniteHell is a neverending hell!',
           showGameDetails: false,
           title: 'InfiniteHell',
         },
