@@ -11,6 +11,17 @@
             </small>
           </footer>
         </blockquote>
+        <img
+          v-for="(storeButton, index) in storeButtons"
+          :key="index"
+          class="VuetifyLogo"
+          alt="Vuetify Logo"
+          :src="
+            require(`@/static/buttons_stores/` +
+              `${storeButton.filename}` +
+              `.png`)
+          "
+        />
         <v-overlay v-if="selectedItem">
           <v-img
             :src="selectedItem ? selectedItem.src : ''"
@@ -51,6 +62,30 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  data() {
+    return {
+      storeButtons: [
+        {
+          filename: 'AppleAppStoreButton',
+        },
+        {
+          filename: 'GooglePlayStoreButton',
+        },
+        {
+          filename: 'MessengerButton',
+        },
+        {
+          filename: 'FacebookWebButton',
+        },
+        {
+          filename: 'ItchIoButton',
+        },
+        {
+          filename: 'ChromeWebStoreButton',
+        },
+      ],
+    }
+  },
   props: {
     description: String,
     items: Object,

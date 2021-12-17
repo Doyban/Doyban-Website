@@ -61,17 +61,6 @@
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
           <p class="text-center" v-text="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
-          <img
-            v-for="(storeButton, index) in storeButtons"
-            :key="index"
-            class="VuetifyLogo"
-            alt="Vuetify Logo"
-            :src="
-              require(`@/static/buttons_stores/` +
-                `${storeButton.filename}` +
-                `.png`)
-            "
-          />
         </v-col>
         <v-col
           md="6"
@@ -185,26 +174,6 @@ export default Vue.extend({
           headline: 'InfiniteHell is a neverending hell!',
           showGameDetails: false,
           title: 'InfiniteHell',
-        },
-      ],
-      storeButtons: [
-        {
-          filename: 'AppleAppStoreButton',
-        },
-        {
-          filename: 'GooglePlayStoreButton',
-        },
-        {
-          filename: 'MessengerButton',
-        },
-        {
-          filename: 'FacebookWebButton',
-        },
-        {
-          filename: 'ItchIoButton',
-        },
-        {
-          filename: 'ChromeWebStoreButton',
         },
       ],
       features: [] as Feature[],
