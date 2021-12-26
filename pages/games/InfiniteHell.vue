@@ -2,6 +2,7 @@
   <SingleGame
     :description="description"
     :items="items"
+    :storeUrls="storeUrls"
     :title="title"
     :url="url"
   />
@@ -24,6 +25,15 @@ export default Vue.extend({
         { id: 4, src: require('@/static/games/gallery/InfiniteHell/4.webp') },
         { id: 5, src: require('@/static/games/gallery/InfiniteHell/5.webp') },
       ],
+      storeUrls: {
+        appleAppStore: 'https://apps.apple.com/app/infinitehell/id1450304986',
+        googlePlayStore:
+          'https://play.google.com/store/apps/details?id=com.doyban.infinitehell',
+        messenger: 'https://m.me/2211491489066459?game=infinitehell-instant',
+        facebookWeb: 'https://apps.facebook.com/infinitehell',
+        itchIo: 'https://doyban.itch.io/infinitehell',
+        chromeWebStore: 'https://chrome.google.com/webstore',
+      },
       title: 'InfiniteHell',
       url: '/v.png',
     }

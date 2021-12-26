@@ -2,6 +2,7 @@
   <SingleGame
     :description="description"
     :items="items"
+    :storeUrls="storeUrls"
     :title="title"
     :url="url"
   />
@@ -24,6 +25,16 @@ export default Vue.extend({
         { id: 4, src: require('@/static/games/gallery/MatchBalloons/4.webp') },
         { id: 5, src: require('@/static/games/gallery/MatchBalloons/5.webp') },
       ],
+      storeUrls: {
+        appleAppStore: 'https://www.apple.com/app-store',
+        googlePlayStore:
+          'https://play.google.com/store/apps/details?id=com.doyban.matchballoons',
+        messenger: 'https://m.me/608428436252601?game=mballoons-instant',
+        facebookWeb: 'https://apps.facebook.com/matchballoons',
+        itchIo: 'https://doyban.itch.io/matchballoons',
+        chromeWebStore:
+          'https://chrome.google.com/webstore/detail/matchballoons/pngjfjiicdgbphmjclejldaaiffofobm',
+      },
       title: 'MatchBalloons',
       url: '/v.png',
     }

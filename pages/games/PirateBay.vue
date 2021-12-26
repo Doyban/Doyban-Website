@@ -2,6 +2,7 @@
   <SingleGame
     :description="description"
     :items="items"
+    :storeUrls="storeUrls"
     :title="title"
     :url="url"
   />
@@ -24,6 +25,15 @@ export default Vue.extend({
         { id: 4, src: require('@/static/games/gallery/PirateBay/4.webp') },
         { id: 5, src: require('@/static/games/gallery/PirateBay/5.webp') },
       ],
+      storeUrls: {
+        appleAppStore: 'https://apps.apple.com/app/piratebay/id1450304848',
+        googlePlayStore:
+          'https://play.google.com/store/apps/details?id=com.doyban.piratebay',
+        messenger: 'https://m.me/GamePirateBay?game=piratebay-instant',
+        facebookWeb: 'https://apps.facebook.com/doyban-piratebay',
+        itchIo: 'https://doyban.itch.io/piratebay',
+        chromeWebStore: 'https://chrome.google.com/webstore',
+      },
       title: 'PirateBay',
       url: '/v.png',
     }

@@ -2,6 +2,7 @@
   <SingleGame
     :description="description"
     :items="items"
+    :storeUrls="storeUrls"
     :title="title"
     :url="url"
   />
@@ -24,6 +25,15 @@ export default Vue.extend({
         { id: 4, src: require('@/static/games/gallery/CashNinja/4.webp') },
         { id: 5, src: require('@/static/games/gallery/CashNinja/5.webp') },
       ],
+      storeUrls: {
+        appleAppStore: 'https://apps.apple.com/app/cashninja/id1450304980',
+        googlePlayStore:
+          'https://play.google.com/store/apps/details?id=com.doyban.cashninja',
+        messenger: 'https://m.me/320930938515454?game=cashninja-instant',
+        facebookWeb: 'https://apps.facebook.com/cash-ninja',
+        itchIo: 'https://doyban.itch.io/cashninja',
+        chromeWebStore: 'https://chrome.google.com/webstore',
+      },
       title: 'CashNinja',
       url: '/v.png',
     }

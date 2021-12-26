@@ -11,17 +11,22 @@
             </small>
           </footer>
         </blockquote>
-        <img
+        <a
           v-for="(storeButton, index) in storeButtons"
           :key="index"
-          class="VuetifyLogo"
-          alt="Vuetify Logo"
-          :src="
-            require(`@/static/buttons_stores/` +
-              `${storeButton.filename}` +
-              `.png`)
-          "
-        />
+          :title="storeButton.title"
+          :href="storeButton.url"
+          rel="noreferrer noopener"
+        >
+          <img
+            :src="
+              require(`@/static/buttons_stores/` +
+                `${storeButton.filename}` +
+                `.png`)
+            "
+            :title="storeButton.title"
+            class="VuetifyLogo"
+        /></a>
         <v-overlay v-if="selectedItem">
           <v-img
             :src="selectedItem ? selectedItem.src : ''"
@@ -67,21 +72,33 @@ export default Vue.extend({
       storeButtons: [
         {
           filename: 'AppleAppStoreButton',
+          title: 'Apple App Store',
+          url: this.$props.storeUrls.appleAppStore,
         },
         {
           filename: 'GooglePlayStoreButton',
+          title: 'GooglePlay Store',
+          url: this.storeUrls.googlePlayStore,
         },
         {
           filename: 'MessengerButton',
+          title: 'Messenger',
+          url: this.storeUrls.messenger,
         },
         {
           filename: 'FacebookWebButton',
+          title: 'Facebook Web',
+          url: this.storeUrls.facebookWeb,
         },
         {
           filename: 'ItchIoButton',
+          title: 'itch.io',
+          url: this.storeUrls.itchIo,
         },
         {
           filename: 'ChromeWebStoreButton',
+          title: 'Chrome Web Store',
+          url: this.storeUrls.chromeWebStore,
         },
       ],
     }
@@ -90,6 +107,7 @@ export default Vue.extend({
     description: String,
     items: Object,
     selectedItem: Boolean,
+    storeUrls: Object,
     title: String,
     url: String,
   },
