@@ -61,17 +61,23 @@
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
           <p class="text-center" v-text="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
-          <img
-            v-for="(storeButton, index) in storeButtons"
-            :key="index"
-            class="VuetifyLogo"
-            alt="Vuetify Logo"
-            :src="
-              require(`@/static/buttons_stores/` +
-                `${storeButton.filename}` +
-                `.png`)
-            "
-          />
+          <a
+            v-for="(storeButton, indexGameStoreButton) in game.storeButtons"
+            :key="indexGameStoreButton"
+            :href="storeButton.url"
+            :title="storeButton.title"
+            rel="noreferrer noopener"
+          >
+            <img
+              :key="indexGameStoreButton"
+              :src="
+                require(`@/static/buttons_stores/` +
+                  `${storeButton.filename}` +
+                  `.png`)
+              "
+              class="VuetifyLogo"
+              alt="Vuetify Logo"
+          /></a>
         </v-col>
         <v-col
           md="6"
@@ -158,6 +164,40 @@ export default Vue.extend({
           headline:
             'PirateBay let you to discover world as a Pirate and fight with different enemies.',
           showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://apps.apple.com/app/piratebay/id1450304848',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'GooglePlay Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.piratebay',
+            },
+            {
+              filename: 'MessengerButton',
+              title: 'Messenger',
+              url: 'https://m.me/GamePirateBay?game=piratebay-instant',
+            },
+            {
+              filename: 'FacebookWebButton',
+              title: 'Facebook Web',
+              url: 'https://apps.facebook.com/doyban-piratebay',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/piratebay',
+            },
+            {
+              filename: 'ChromeWebStoreButton',
+              title: 'Chrome Web Store',
+              url: 'https://chrome.google.com/webstore',
+            },
+          ],
           title: 'PirateBay',
         },
         {
@@ -165,12 +205,84 @@ export default Vue.extend({
           headline:
             'YellowSidd gives you ability to play good old style platformer type game.',
           showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://apps.apple.com/app/yellowsidd/id1381229545',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'GooglePlay Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.yellowsidd',
+            },
+            {
+              filename: 'MessengerButton',
+              title: 'Messenger',
+              url: 'https://m.me/2267679480167572?game=yellowsidd-instant',
+            },
+            {
+              filename: 'FacebookWebButton',
+              title: 'Facebook Web',
+              url: 'https://apps.facebook.com/yellowsidd',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/yellowsidd',
+            },
+            {
+              filename: 'ChromeWebStoreButton',
+              title: 'Chrome Web Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://chrome.google.com/webstore/detail/yellowsidd/iphohbgpbedhejglcfcgkgbobjipmgkb',
+            },
+          ],
           title: 'YellowSidd',
         },
         {
           description: 'Lorem',
           headline: 'MatchBalloons is a friendly match 3 game!',
           showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://www.apple.com/app-store',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'GooglePlay Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.matchballoons',
+            },
+            {
+              filename: 'MessengerButton',
+              title: 'Messenger',
+              url: 'https://m.me/608428436252601?game=mballoons-instant',
+            },
+            {
+              filename: 'FacebookWebButton',
+              title: 'Facebook Web',
+              url: 'https://apps.facebook.com/matchballoons',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/matchballoons',
+            },
+            {
+              filename: 'ChromeWebStoreButton',
+              title: 'Chrome Web Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://chrome.google.com/webstore/detail/matchballoons/pngjfjiicdgbphmjclejldaaiffofobm',
+            },
+          ],
           title: 'MatchBalloons',
         },
         {
@@ -178,33 +290,81 @@ export default Vue.extend({
           headline:
             'CashNinja is a free and fun game where you get get a lot of cash!',
           showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://apps.apple.com/app/cashninja/id1450304980',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'GooglePlay Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.cashninja',
+            },
+            {
+              filename: 'MessengerButton',
+              title: 'Messenger',
+              url: 'https://m.me/320930938515454?game=cashninja-instant',
+            },
+            {
+              filename: 'FacebookWebButton',
+              title: 'Facebook Web',
+              url: 'https://apps.facebook.com/cash-ninja',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/cashninja',
+            },
+            {
+              filename: 'ChromeWebStoreButton',
+              title: 'Chrome Web Store',
+              url: 'https://chrome.google.com/webstore',
+            },
+          ],
           title: 'CashNinja',
         },
         {
           description: 'Lorem',
           headline: 'InfiniteHell is a neverending hell!',
           showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://apps.apple.com/app/infinitehell/id1450304986',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'GooglePlay Store',
+              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
+              // eslint-disable-next-line
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.infinitehell',
+            },
+            {
+              filename: 'MessengerButton',
+              title: 'Messenger',
+              url: 'https://m.me/2211491489066459?game=infinitehell-instant',
+            },
+            {
+              filename: 'FacebookWebButton',
+              title: 'Facebook Web',
+              url: 'https://apps.facebook.com/infinitehell',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/infinitehell',
+            },
+            {
+              filename: 'ChromeWebStoreButton',
+              title: 'Chrome Web Store',
+              url: 'https://chrome.google.com/webstore',
+            },
+          ],
           title: 'InfiniteHell',
-        },
-      ],
-      storeButtons: [
-        {
-          filename: 'AppleAppStoreButton',
-        },
-        {
-          filename: 'GooglePlayStoreButton',
-        },
-        {
-          filename: 'MessengerButton',
-        },
-        {
-          filename: 'FacebookWebButton',
-        },
-        {
-          filename: 'ItchIoButton',
-        },
-        {
-          filename: 'ChromeWebStoreButton',
         },
       ],
       features: [] as Feature[],
