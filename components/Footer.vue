@@ -131,9 +131,10 @@
             <v-list-item class="d-inline"
               ><NuxtLink to="/sitemap">Sitemap</NuxtLink></v-list-item
             >
+            -->
             <v-list-item class="d-inline">
               <NuxtLink to="/terms">Terms</NuxtLink></v-list-item
-            > -->
+            >
           </v-list>
         </v-card></v-hover
       >

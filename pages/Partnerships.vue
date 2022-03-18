@@ -147,7 +147,7 @@ export default Vue.extend({
               value: 'YES',
             },
           ],
-          title: 'Playtesting & Interns',
+          title: 'PlayTesting & Interns',
         },
       ],
     }
