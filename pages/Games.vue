@@ -63,20 +63,20 @@
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
           <a
             v-for="(storeButton, indexGameStoreButton) in game.storeButtons"
-            :key="indexGameStoreButton"
             :href="storeButton.url"
+            :key="indexGameStoreButton"
             :title="storeButton.title"
             rel="noreferrer noopener"
           >
             <img
-              :key="indexGameStoreButton"
+              :alt="storeButton.title"
               :src="
                 require(`@/static/buttons_stores/` +
                   `${storeButton.filename}` +
                   `.png`)
               "
-              class="VuetifyLogo"
-              alt="Vuetify Logo"
+              :title="storeButton.title"
+              class="storeButtons"
           /></a>
         </v-col>
         <v-col
@@ -406,5 +406,18 @@ h1,
 h2,
 h3 {
   text-align: center;
+}
+
+.storeButtons {
+  animation: turn 3.5s ease-out forwards 1s;
+  height: 60px;
+  transform: rotateY(560deg);
+  width: 160px;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotateY(0deg);
+  }
 }
 </style>

@@ -13,19 +13,20 @@
         </blockquote>
         <a
           v-for="(storeButton, index) in storeButtons"
+          :href="storeButton.url"
           :key="index"
           :title="storeButton.title"
-          :href="storeButton.url"
           rel="noreferrer noopener"
         >
           <img
+            :alt="storeButton.title"
             :src="
               require(`@/static/buttons_stores/` +
                 `${storeButton.filename}` +
                 `.png`)
             "
             :title="storeButton.title"
-            class="VuetifyLogo"
+            class="storeButtons"
         /></a>
         <v-overlay v-if="selectedItem">
           <v-img
@@ -113,3 +114,18 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.storeButtons {
+  animation: turn 3.5s ease-out forwards 1s;
+  height: 60px;
+  transform: rotateY(560deg);
+  width: 160px;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+</style>

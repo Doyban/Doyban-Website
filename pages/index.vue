@@ -12,14 +12,6 @@
         transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>
-    <v-row justify="center" align="center">
-      <v-col cols="12" sm="8" md="6">
-        <div class="text-center">
-          <logo />
-          <vuetify-logo />
-        </div>
-      </v-col>
-    </v-row>
     <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="200">
       <h2 class="display-2 text-center">Random text bla bla</h2>
       <em class="text-center">Super super text goes here.</em>
@@ -67,14 +59,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default Vue.extend({
-  components: {
-    Logo,
-    VuetifyLogo,
-  },
   data() {
     return {
       points: [
