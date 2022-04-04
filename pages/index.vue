@@ -33,8 +33,8 @@
     </v-parallax>
     <v-row justify="center">
       <v-col sm="4" xs="12">
-        <h2 class="text-center">Some slogan</h2>
-        <p class="text-center">Paragraph goes here</p>
+        <h2 class="text-center">Our Games</h2>
+        <p class="text-center">1, 2, 3 &mdash; that's all. Simple.</p>
         <v-divider />
       </v-col>
     </v-row>
@@ -48,7 +48,7 @@
             <h3>{{ point.title }}</h3>
           </v-card-title>
           <v-card-text>
-            <p>{{ point.description }}</p>
+            <p class="text-center">{{ point.description }}</p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -66,21 +66,20 @@ export default Vue.extend({
       points: [
         {
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-          icon: 'mdi-home',
-          title: 'Title',
+            'Our games do not need a tutorial to play them from A to Z.',
+          icon: 'mdi-refresh-auto',
+          title: 'Easy',
+        },
+        {
+          description: 'Simplicity creates out of them so much fun.',
+          icon: 'mdi-magic-staff',
+          title: 'Fun',
         },
         {
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-          icon: 'mdi-home',
-          title: 'Title',
-        },
-        {
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-          icon: 'mdi-home',
-          title: 'Title',
+            'We develop mobile-first games, rarely deploying on different platforms.',
+          icon: 'mdi-cellphone',
+          title: 'Mobile',
         },
       ],
       sliderItems: [
