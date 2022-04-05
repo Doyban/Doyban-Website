@@ -36,7 +36,6 @@
 </template>
 
 <script lang="ts">
-// It has to stay as "/privacy" due to compatibility with old Privacy Policy links.
 // TODO: Add Animate on Scroll (AOL).
 import Vue from 'vue'
 import { Policy } from './interfaces/Policy'
@@ -56,7 +55,7 @@ export default Vue.extend({
       },
       {
         description:
-          "Doyban (<a aria-label='https://doyban.com. Click here to get redirected into our home page.' href='/' onclick='event.preventDefault(); app._router.push('/');' target='_self' title='https://doyban.com'>https://doyban.com</a>) is operated by and part of IBStructure Daniel Danielecki (company, Doyban, IBStructure Daniel Danielecki, our, us, we) – a company registered in Poland (European Union) under European registration number (VIES) PL9121899240. The Polish identification tax number (NIP) is 9121899240, while the business entity identification number (REGON) is 366592971.<br><br>You can contact us at our registered office, Irysowa 18, 55-220 Jelcz-Laskowice, Poland. Mail correspondence, please send to this address. Alternative contact is company business telephone <a aria-label='+48 732 280 741. Click here give us a phone call.' href='tel:+48 732 280 741' title='+48 732 280 741'>+48 732 280 741</a> or e-mail <a aria-label='contact@doyban.com. Click here to send us an e-mail.' href='mailto:contact@doyban.com?subject=Mail from doyban.com&body=Hi Doyban!%0D%0A%0D%0AMy mail is about:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0ABest regards,%0D%0A' title='contact@doyban.com'>contact@doyban.com</a>.",
+          "Doyban (<a aria-label='https://doyban.com. Click here to get redirected into our home page.' href='/' onclick='event.preventDefault(); app._router.push('/');' target='_self' title='https://doyban.com'>https://doyban.com</a>) is operated by and part of IBStructure Daniel Danielecki (company, Doyban, IBStructure Daniel Danielecki, our, us, we) &ndash; a company registered in Poland (European Union) under European registration number (VIES) PL9121899240. The Polish identification tax number (NIP) is 9121899240, while the business entity identification number (REGON) is 366592971.<br><br>You can contact us at our registered office, Irysowa 18, 55-220 Jelcz-Laskowice, Poland. Mail correspondence, please send to this address. Alternative contact is company business telephone <a aria-label='+48 732 280 741. Click here give us a phone call.' href='tel:+48 732 280 741' title='+48 732 280 741'>+48 732 280 741</a> or e-mail <a aria-label='contact@doyban.com. Click here to send us an e-mail.' href='mailto:contact@doyban.com?subject=Mail from doyban.com&body=Hi Doyban!%0D%0A%0D%0AMy mail is about:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0ABest regards,%0D%0A' title='contact@doyban.com'>contact@doyban.com</a>.",
         title: 'About Doyban',
       },
       {

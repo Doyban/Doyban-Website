@@ -112,10 +112,10 @@
             <v-list-item class="d-inline"
               ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
             >
-            <!--
             <v-list-item class="d-inline"
               ><NuxtLink to="/cookies">Cookies</NuxtLink></v-list-item
             >
+            <!--
             <v-list-item class="d-inline"
               ><NuxtLink to="/legal">Legal</NuxtLink></v-list-item
             > -->
