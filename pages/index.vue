@@ -12,6 +12,16 @@
         transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>
+    <div id="clouds">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud3"></div>
+      <div class="cloud cloud4"></div>
+      <div class="cloud cloud5"></div>
+      <div class="cloud cloud6"></div>
+      <div class="cloud cloud7"></div>
+      <div class="cloud cloud8"></div>
+    </div>
     <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="200">
       <h2 class="display-2 text-center">Random text bla bla</h2>
       <em class="text-center">Super super text goes here.</em>
@@ -97,3 +107,115 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+#clouds {
+  height: 0;
+  position: absolute;
+  top: 150px;
+
+  @media only screen and (max-width: 767px) {
+    top: 90px;
+  }
+}
+
+.cloud {
+  background: #fff;
+  border-radius: 150px;
+  height: 60px;
+  position: relative;
+  width: 200px;
+
+  &.cloud1 {
+    animation: moveclouds 60s linear infinite;
+  }
+
+  &.cloud2 {
+    animation: moveclouds 55s linear infinite;
+    left: 600px;
+    opacity: 0.7;
+    top: -100px;
+    transform: scale(0.7);
+  }
+
+  &.cloud3 {
+    animation: moveclouds 60s linear infinite;
+    left: -180px;
+    opacity: 0.8;
+    top: -180px;
+    transform: scale(0.8);
+  }
+
+  &.cloud4 {
+    animation: moveclouds 65s linear infinite;
+    left: 200px;
+    opacity: 0.85;
+    top: -200px;
+    transform: scale(0.85);
+  }
+
+  &.cloud5 {
+    animation: moveclouds 60s linear infinite;
+    left: 400px;
+    opacity: 0.8;
+    top: -150px;
+    transform: scale(0.8);
+  }
+
+  &.cloud6 {
+    animation: moveclouds 70s linear infinite;
+    left: 700px;
+    opacity: 0.7;
+    top: -350px;
+    transform: scale(0.7);
+  }
+
+  &.cloud7 {
+    animation: moveclouds 60s linear infinite;
+    left: 800px;
+    opacity: 0.8;
+    top: -250px;
+    transform: scale(0.8);
+  }
+
+  &.cloud8 {
+    animation: moveclouds 80s linear infinite;
+    left: 1000px;
+    opacity: 0.9;
+    top: -450px;
+    transform: scale(0.9);
+  }
+
+  &::after,
+  &::before {
+    background: #fff;
+    border-radius: 150px;
+    content: '';
+    position: absolute;
+    width: 120px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    height: 120px;
+    left: auto;
+    right: 15px;
+    top: -55px;
+  }
+
+  &::before {
+    height: 70px;
+    left: 5px;
+    top: -5px;
+  }
+}
+
+@keyframes moveclouds {
+  0% {
+    margin-left: 2000px;
+  }
+  100% {
+    margin-left: -2000px;
+  }
+}
+</style>
