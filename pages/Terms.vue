@@ -2,12 +2,12 @@
   <section>
     <h1 class="mt-12 text-center">Terms of Service/Use/User Agreement/EULA</h1>
     <v-row class="justify-center">
-      <v-col sm="3" xs="6">
+      <v-col :sm="columnsDividerSm ?? 3" :xs="columnsDividerXs ?? 6">
         <v-divider />
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-col class="ma-8" md="6" xs="12">
+      <v-col class="ma-8" :md="columnsBodyMd ?? 6" xs="12">
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{
@@ -89,6 +89,11 @@ export default Vue.extend({
         title: 'Limitations of Liability',
       },
     ]
+  },
+  props: {
+    columnsDividerXs: Number,
+    columnsDividerSm: Number,
+    columnsBodyMd: Number,
   },
 })
 </script>

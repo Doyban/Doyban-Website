@@ -141,12 +141,12 @@
                       <div @click.stop>
                         Do you accept the
                         <a href="javascript:;" @click.stop="terms = true"
-                          >terms</a
+                          >Terms</a
                         >
                         and
-                        <a href="javascript:;" @click.stop="conditions = true"
-                          >conditions</a
-                        >
+                        <a href="javascript:;" @click.stop="privacy = true"
+                          >Privacy Policy</a
+                        >?
                       </div>
                     </template>
                   </v-checkbox>
@@ -186,21 +186,12 @@
                     ripple
                     shaped
                   >
-                    <v-card-title>Title</v-card-title>
                     <v-card-text
-                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Laborum, sit ad! Velit laudantium similique incidunt
-                      repellendus, a modi sint eaque quod quibusdam quas tempora
-                      deserunt commodi illum maxime qui repellat? Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Ipsa sit
-                      alias iusto, unde maxime sunt illo, eos esse totam aperiam
-                      reiciendis nam. Minus sed ab sit recusandae nulla, minima
-                      iure? Lorem, ipsum dolor sit amet consectetur adipisicing
-                      elit. Quis nihil veritatis optio distinctio. Autem in
-                      excepturi at maxime esse nemo, minima omnis, quia ad
-                      dolorum voluptas nihil! Nemo, reiciendis
-                      dolor.</v-card-text
-                    >
+                      ><Terms
+                        :columnsDividerXs="12"
+                        :columnsDividerSm="6"
+                        :columnsBodyMd="12"
+                    /></v-card-text>
                     <v-card-actions>
                       <v-spacer />
                       <v-btn text color="purple darken-4" @click="terms = false"
@@ -210,7 +201,7 @@
                   </v-card></v-hover
                 >
               </v-dialog>
-              <v-dialog v-model="conditions" width="50%">
+              <v-dialog v-model="privacy" width="50%">
                 <v-hover v-slot:default="{ hover2 }">
                   <v-card
                     :class="{ 'on-hover': hover2 }"
@@ -220,27 +211,18 @@
                     ripple
                     shaped
                   >
-                    <v-card-title>Conditions</v-card-title>
                     <v-card-text
-                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Laborum, sit ad! Velit laudantium similique incidunt
-                      repellendus, a modi sint eaque quod quibusdam quas tempora
-                      deserunt commodi illum maxime qui repellat? Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Ipsa sit
-                      alias iusto, unde maxime sunt illo, eos esse totam aperiam
-                      reiciendis nam. Minus sed ab sit recusandae nulla, minima
-                      iure? Lorem, ipsum dolor sit amet consectetur adipisicing
-                      elit. Quis nihil veritatis optio distinctio. Autem in
-                      excepturi at maxime esse nemo, minima omnis, quia ad
-                      dolorum voluptas nihil! Nemo, reiciendis
-                      dolor.</v-card-text
-                    >
+                      ><Privacy
+                        :columnsDividerXs="12"
+                        :columnsDividerSm="6"
+                        :columnsBodyMd="12"
+                    /></v-card-text>
                     <v-card-actions>
                       <v-spacer />
                       <v-btn
                         text
                         color="purple darken-4"
-                        @click="conditions = false"
+                        @click="privacy = false"
                         >Ok</v-btn
                       >
                     </v-card-actions>
@@ -256,17 +238,19 @@
 </template>
 
 <script lang="ts">
-import Swal from 'sweetalert2'
 import Vue from 'vue'
+import Swal from 'sweetalert2'
+import Privacy from './Privacy.vue'
+import Terms from './Terms.vue'
 
 // TODO: Check if data isn't overloaded (https://stackoverflow.com/a/41763856/11127383)
 export default Vue.extend({
+  components: { Privacy, Terms },
   data() {
     return {
       isContactFormValid: false,
       isRecaptchaValid: false,
       contactType: ['Careers', 'Games', 'Investment', 'Other'],
-      conditions: false,
       contactForm: {
         contactType: '',
         email: '',
@@ -336,6 +320,7 @@ export default Vue.extend({
             'Subject has to have at most 128 characters.',
         ],
       },
+      privacy: false,
       terms: false,
     }
   },
