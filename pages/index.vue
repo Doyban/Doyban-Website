@@ -22,7 +22,114 @@
       <div class="cloud cloud7"></div>
       <div class="cloud cloud8"></div>
     </div>
-    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="200">
+    <v-row class="my-12" justify="center">
+      <v-col sm="4" xs="12">
+        <h2 class="text-center">Our Games</h2>
+        <p class="text-center">1, 2, 3 &mdash; that's all. Simple.</p>
+        <v-divider />
+      </v-col>
+    </v-row>
+    <v-row class="my-12">
+      <v-col v-for="(point, index) in points" :key="index" md="4" xs="12">
+        <v-card class="transparent" flat>
+          <v-card-text class="text-center">
+            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+          </v-card-text>
+          <v-card-title class="justify-center">
+            <h3>{{ point.title }}</h3>
+          </v-card-title>
+          <v-card-text>
+            <p class="text-center">{{ point.description }}</p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
+    </v-row>
+    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
+      <h2 class="display-2 text-center">Random text bla bla</h2>
+      <em class="text-center">Super super text goes here.</em>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attributes }">
+          <v-btn
+            class="mt-12"
+            light
+            exact
+            nuxt
+            to="/games"
+            x-large
+            v-bind="attributes"
+            v-on="on"
+            >Button
+          </v-btn> </template
+        ><span>Games</span>
+      </v-tooltip>
+    </v-parallax>
+    <v-row class="my-12" justify="center">
+      <v-col sm="4" xs="12">
+        <h2 class="text-center">About us</h2>
+        <p class="text-center">Doyban &mdash; we.</p>
+        <v-divider />
+      </v-col>
+    </v-row>
+    <v-row class="my-12">
+      <v-col v-for="(point, index) in points" :key="index" md="4" xs="12">
+        <v-card class="transparent" flat>
+          <v-card-text class="text-center">
+            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+          </v-card-text>
+          <v-card-title class="justify-center">
+            <h3>{{ point.title }}</h3>
+          </v-card-title>
+          <v-card-text>
+            <p class="text-center">{{ point.description }}</p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
+    </v-row>
+    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
+      <h2 class="display-2 text-center">Random text bla bla</h2>
+      <em class="text-center">Super super text goes here.</em>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attributes }">
+          <v-btn
+            class="mt-12"
+            light
+            exact
+            nuxt
+            to="/about"
+            x-large
+            v-bind="attributes"
+            v-on="on"
+            >Button
+          </v-btn> </template
+        ><span>About</span>
+      </v-tooltip>
+    </v-parallax>
+    <v-row class="my-12" justify="center">
+      <v-col sm="4" xs="12">
+        <h2 class="text-center">Finds us online</h2>
+        <p class="text-center">1, 2, 3 &mdash; that's all. Simple.</p>
+        <v-divider />
+      </v-col>
+    </v-row>
+    <v-row class="my-12">
+      <v-col v-for="(point, index) in points" :key="index" md="4" xs="12">
+        <v-card class="transparent" flat>
+          <v-card-text class="text-center">
+            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+          </v-card-text>
+          <v-card-title class="justify-center">
+            <h3>{{ point.title }}</h3>
+          </v-card-title>
+          <v-card-text>
+            <p class="text-center">{{ point.description }}</p>
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
+    </v-row>
+    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
       <h2 class="display-2 text-center">Random text bla bla</h2>
       <em class="text-center">Super super text goes here.</em>
       <v-tooltip bottom>
@@ -41,29 +148,6 @@
         ><span>Contact</span>
       </v-tooltip>
     </v-parallax>
-    <v-row justify="center">
-      <v-col sm="4" xs="12">
-        <h2 class="text-center">Our Games</h2>
-        <p class="text-center">1, 2, 3 &mdash; that's all. Simple.</p>
-        <v-divider />
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col v-for="(point, index) in points" :key="index" md="4" xs="12">
-        <v-card class="transparent" flat>
-          <v-card-text class="text-center">
-            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
-          </v-card-text>
-          <v-card-title class="justify-center">
-            <h3>{{ point.title }}</h3>
-          </v-card-title>
-          <v-card-text>
-            <p class="text-center">{{ point.description }}</p>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
-    </v-row>
   </section>
 </template>
 
