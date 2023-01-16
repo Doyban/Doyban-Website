@@ -5,7 +5,7 @@
   <!-- TODO: Go through all the app's template/Vuetify elements/code. -->
   <v-app>
     <Header />
-    <v-main>
+    <v-main class="mt-4 pt-4">
       <nuxt />
     </v-main>
     <Footer />
