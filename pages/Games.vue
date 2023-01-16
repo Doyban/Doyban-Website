@@ -172,7 +172,7 @@ export default Vue.extend({
             },
             {
               filename: 'GooglePlayStoreButton',
-              title: 'GooglePlay Store',
+              title: 'Google Play Store',
               // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
               // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.piratebay',
@@ -213,7 +213,7 @@ export default Vue.extend({
             },
             {
               filename: 'GooglePlayStoreButton',
-              title: 'GooglePlay Store',
+              title: 'Google Play Store',
               // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
               // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.yellowsidd',
@@ -255,7 +255,7 @@ export default Vue.extend({
             },
             {
               filename: 'GooglePlayStoreButton',
-              title: 'GooglePlay Store',
+              title: 'Google Play Store',
               // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
               // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.matchballoons',
@@ -298,7 +298,7 @@ export default Vue.extend({
             },
             {
               filename: 'GooglePlayStoreButton',
-              title: 'GooglePlay Store',
+              title: 'Google Play Store',
               // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
               // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.cashninja',
@@ -338,7 +338,7 @@ export default Vue.extend({
             },
             {
               filename: 'GooglePlayStoreButton',
-              title: 'GooglePlay Store',
+              title: 'Google Play Store',
               // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
               // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.infinitehell',

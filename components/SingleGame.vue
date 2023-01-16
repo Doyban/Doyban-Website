@@ -78,7 +78,7 @@ export default Vue.extend({
         },
         {
           filename: 'GooglePlayStoreButton',
-          title: 'GooglePlay Store',
+          title: 'Google Play Store',
           url: this.storeUrls.googlePlayStore,
         },
         {
