@@ -161,6 +161,29 @@ export default Vue.extend({
       games: [
         {
           description: 'Lorem',
+          headline: 'MoveUp description...',
+          showGameDetails: false,
+          storeButtons: [
+            {
+              filename: 'AppleAppStoreButton',
+              title: 'Apple App Store',
+              url: 'https://apps.apple.com/app/moveup/id6444214445',
+            },
+            {
+              filename: 'GooglePlayStoreButton',
+              title: 'Google Play Store',
+              url: 'https://play.google.com/store/apps/details?id=com.doyban.moveup',
+            },
+            {
+              filename: 'ItchIoButton',
+              title: 'itch.io',
+              url: 'https://doyban.itch.io/moveup',
+            },
+          ],
+          title: 'MoveUp',
+        },
+        {
+          description: 'Lorem',
           headline:
             'PirateBay let you to discover world as a Pirate and fight with different enemies.',
           showGameDetails: false,
