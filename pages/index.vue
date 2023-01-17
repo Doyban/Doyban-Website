@@ -43,11 +43,13 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
     </v-row>
     <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
-      <h2 class="display-2 text-center">Random text bla bla</h2>
-      <em class="text-center">Super super text goes here.</em>
+      <h2 class="display-2 text-center">Play</h2>
+      <em class="text-center"
+        >Take a look into our collection of games across different
+        platforms.</em
+      >
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attributes }">
           <v-btn
@@ -59,7 +61,7 @@
             x-large
             v-bind="attributes"
             v-on="on"
-            >Button
+            >Games
           </v-btn> </template
         ><span>Games</span>
       </v-tooltip>
@@ -85,11 +87,10 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
     </v-row>
-    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
-      <h2 class="display-2 text-center">Random text bla bla</h2>
-      <em class="text-center">Super super text goes here.</em>
+    <v-parallax :src="require('@/static/pages/parallax2.jpeg')" height="400">
+      <h2 class="display-2 text-center">Doyban</h2>
+      <em class="text-center">Read who we are &amp; what we do.</em>
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attributes }">
           <v-btn
@@ -101,7 +102,7 @@
             x-large
             v-bind="attributes"
             v-on="on"
-            >Button
+            >About
           </v-btn> </template
         ><span>About</span>
       </v-tooltip>
@@ -130,7 +131,6 @@
           <v-card-text class="text-center" v-html="point.description" />
         </v-card>
       </v-col>
-      <v-img :src="require('@/static/pages/home_bottom.jpeg')" />
     </v-row>
   </section>
 </template>
