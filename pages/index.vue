@@ -30,7 +30,7 @@
       </v-col>
     </v-row>
     <v-row class="my-12">
-      <v-col v-for="(point, index) in pointsAbout" :key="index" md="4" xs="12">
+      <v-col v-for="(point, index) in pointsGames" :key="index" md="4" xs="12">
         <v-card class="transparent" flat>
           <v-card-text class="text-center">
             <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
@@ -74,7 +74,7 @@
       </v-col>
     </v-row>
     <v-row class="my-12">
-      <v-col v-for="(point, index) in pointsGames" :key="index" md="4" xs="12">
+      <v-col v-for="(point, index) in pointsAbout" :key="index" md="4" xs="12">
         <v-card class="transparent" flat>
           <v-card-text class="text-center">
             <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
@@ -90,7 +90,7 @@
     </v-row>
     <v-parallax :src="require('@/static/pages/parallax2.jpeg')" height="400">
       <h2 class="display-2 text-center">Doyban</h2>
-      <em class="text-center">Read who we are &amp; what we do.</em>
+      <em class="text-center">Read our story; who we are &amp; what we do.</em>
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attributes }">
           <v-btn
@@ -144,20 +144,21 @@ export default Vue.extend({
       pointsAbout: [
         {
           description:
-            'Our games do not need a tutorial to play them from A to Z.',
-          icon: 'mdi-refresh-auto',
-          title: 'Easy',
-        },
-        {
-          description: 'Simplicity creates out of them so much fun.',
-          icon: 'mdi-magic-staff',
-          title: 'Fun',
+            'There is nothing to hide about our being a genuinely micro-scale gaming company.',
+          icon: 'mdi-account-arrow-down',
+          title: 'Small',
         },
         {
           description:
-            'We develop mobile-first games, rarely deploying on different platforms.',
-          icon: 'mdi-cellphone',
-          title: 'Mobile',
+            'That is what keep us on the competitive market. Passion.',
+          icon: 'mdi-fire',
+          title: 'Dedicated',
+        },
+        {
+          description:
+            'Only together we can make something fun, and entertaining for our Players.',
+          icon: 'mdi-account-group',
+          title: 'Team',
         },
       ],
       pointsContact: [
