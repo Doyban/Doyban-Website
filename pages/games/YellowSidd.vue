@@ -2,7 +2,7 @@
   <SingleGame
     :description="description"
     :items="items"
-    :storeUrls="storeUrls"
+    :store-urls="storeUrls"
     :title="title"
     :url="url"
   />

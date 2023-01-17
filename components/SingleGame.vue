@@ -68,6 +68,14 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  props: {
+    description: String,
+    items: Object,
+    selectedItem: Boolean,
+    storeUrls: Object,
+    title: String,
+    url: String,
+  },
   data() {
     return {
       storeButtons: [
@@ -103,14 +111,6 @@ export default Vue.extend({
         },
       ],
     }
-  },
-  props: {
-    description: String,
-    items: Object,
-    selectedItem: Boolean,
-    storeUrls: Object,
-    title: String,
-    url: String,
   },
 })
 </script>
