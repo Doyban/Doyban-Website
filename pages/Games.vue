@@ -105,7 +105,7 @@
               </template>
               <!--/ Slots for "v-progress-linear". -->
               <v-img
-                :src="require(`@/static/games/` + `${game.title}` + `.jpeg`)"
+                :src="require(`@/static/games/` + `${game.title}` + `.webp`)"
               />
               <v-card-title class="justify-center" v-text="game.title" />
               <v-card-subtitle
