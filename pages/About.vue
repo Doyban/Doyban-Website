@@ -8,24 +8,24 @@
         <v-flex md6 xs12 mx-3>
           <h1 class="mb-6 text-center">About</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
-            accusantium tenetur iste dolorum maxime similique sapiente libero
-            veritatis necessitatibus esse adipisci culpa ipsum molestiae sunt,
-            magnam dignissimos suscipit inventore!
+            We believe that the 5G will accelerate the transition towards cloud
+            gaming within our daily used applications. We are here to research
+            Mobile Games, and eventually develop only installation-free Mini
+            Games.
           </p>
           <h2 class="mb-4 text-center">Mission</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
-            accusantium tenetur iste dolorum maxime similique sapiente libero
-            veritatis necessitatibus esse adipisci culpa ipsum molestiae sunt,
-            magnam dignissimos suscipit inventore!
+            The technology goes fast, we do not want to be the last. Mini Games
+            have the ambition to bypass traditional app stores, the social
+            gameplay mechanics is one of its cores. Only together can we make
+            something great, which can be an opening gate.
           </p>
           <h2 class="mb-4 text-center">Team &amp; Community</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque
-            accusantium tenetur iste dolorum maxime similique sapiente libero
-            veritatis necessitatibus esse adipisci culpa ipsum molestiae sunt,
-            magnam dignissimos suscipit inventore!
+            Here is Doyban from Remote lands. Games without Installation are an
+            ample opportunity, but first, we need to make #call4community. The
+            main goal is to build a community around our mission and vision,
+            even though our team is currently super small.
           </p>
         </v-flex>
       </v-layout>
