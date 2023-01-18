@@ -6,16 +6,23 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 4 : 2"
+            :elevation="hover ? 24 : 0"
             class="transparent"
           >
             <v-card-title class="justify-center">Doyban</v-card-title>
             <v-card-text
               ><p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Officia inventore labore illum saepe vero quia vitae error,
-                suscipit, consectetur repellendus nulla impedit numquam quis
-                ipsam dolor veritatis facere. Omnis, exercitationem.
+                We are a small mobile gaming studio developing simple yet fun
+                games on multiple platforms. Our future-proof focus is Mini
+                Games on popular apps and chats like Facebook Gaming, iMessage,
+                Messenger, Paytm, Snapchat, Telegram, WeChat, or WhatsApp. We
+                believe that blazing-fast 5G will accelerate the gaming
+                industry's change and move towards Games without Installation
+                through Open Web Standards, such as HTML5. The simple games and
+                community build-around will give us a competitive advantage once
+                the market is mature enough to develop serious games. Nowadays,
+                in practice, we (almost) cannot make money out of these kinds of
+                games.
               </p></v-card-text
             >
             <v-list class="transparent">
@@ -61,11 +68,12 @@
           </v-card>
         </v-hover>
       </v-flex>
+      <!-- When we'll introduce newsletter uncomment it. -->
       <!-- <v-flex sm4 xs12>
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 4 : 2"
+            :elevation="hover ? 24 : 0"
             class="transparent"
           >
             <v-card-title class="justify-center">Stay informed</v-card-title>
@@ -80,8 +88,9 @@
         <v-hover v-slot:default="{ hover }">
           <v-card
             :class="{ 'on-hover': hover }"
-            :elevation="hover ? 4 : 2"
+            :elevation="hover ? 24 : 0"
             class="transparent"
+            style="height: 100%"
           >
             <v-card-title class="justify-center">Information</v-card-title>
             <v-list class="transparent">
@@ -103,7 +112,7 @@
       <v-hover v-slot:default="{ hover }">
         <v-card
           :class="{ 'on-hover': hover }"
-          :elevation="hover ? 4 : 2"
+          :elevation="hover ? 24 : 0"
           class="transparent"
           style="width: 100%"
         >
