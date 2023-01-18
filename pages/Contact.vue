@@ -26,7 +26,7 @@
                     v-model="contactForm.firstName"
                     :counter="64"
                     :rules="contactFormRules.firstName"
-                    append-icon="mdi-car"
+                    append-icon="mdi-account"
                     clearable
                     color="purple darken-4"
                     hint="Write your first name."
@@ -45,7 +45,7 @@
                     v-model="contactForm.lastName"
                     :counter="64"
                     :rules="contactFormRules.lastName"
-                    append-icon="mdi-car"
+                    append-icon="mdi-account-check"
                     clearable
                     color="purple darken-4"
                     hint="Write your last name."
@@ -64,7 +64,7 @@
                     v-model="contactForm.email"
                     :counter="512"
                     :rules="contactFormRules.email"
-                    append-icon="mdi-car"
+                    append-icon="mdi-at"
                     clearable
                     color="purple darken-4"
                     hint="Provide a valid email address."
@@ -83,7 +83,7 @@
                     v-model="contactForm.subject"
                     :counter="128"
                     :rules="contactFormRules.subject"
-                    append-icon="mdi-car"
+                    append-icon="mdi-information-outline"
                     clearable
                     color="purple darken-4"
                     hint="The subject of your email."
@@ -103,7 +103,7 @@
                     v-model="contactForm.message"
                     :counter="8192"
                     :rules="contactFormRules.message"
-                    append-icon="mdi-car"
+                    append-icon="mdi-lead-pencil"
                     clearable
                     color="purple darken-4"
                     hint="Write about what you have to say to us."
@@ -123,7 +123,7 @@
                     v-model="contactForm.contactType"
                     :items="contactType"
                     color="purple darken-4"
-                    append-icon="mdi-car"
+                    append-icon="mdi-thought-bubble-outline"
                     clearable
                     outlined
                     placeholder="What brings you to us?"
