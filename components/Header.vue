@@ -75,7 +75,7 @@ export default Vue.extend({
         path: '/',
       },
       {
-        icon: 'mdi-google-controller',
+        icon: 'mdi-controller',
         name: 'Games',
         path: '/games',
       },
