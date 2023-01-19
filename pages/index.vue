@@ -145,7 +145,7 @@ export default Vue.extend({
         {
           description:
             'There is nothing to hide about our being a genuinely micro-scale gaming company.',
-          icon: 'mdi-account-arrow-down',
+          icon: 'mdi-account-arrow-down-outline',
           title: 'Small',
         },
         {
@@ -157,7 +157,7 @@ export default Vue.extend({
         {
           description:
             'Only together we can make something fun, and entertaining for our Players.',
-          icon: 'mdi-account-group',
+          icon: 'mdi-account-group-outline',
           title: 'Team',
         },
       ],
@@ -177,7 +177,7 @@ export default Vue.extend({
         {
           description:
             "<a aria-label='Apple App Store. Click here to check our Apple App Store.' href='https://apps.apple.com/us/developer/daniel-danielecki/id1381229544' rel='noopener' target='_blank' title='Apple App Store'>Apple App Store</a>, <a aria-label='Facebook. Click here to check our Facebook.' href='https://www.facebook.com/doybangames' rel='noopener' target='_blank' title='Facebook'>Facebook</a>, <a aria-label='GitHub. Click here to check our GitHub.' href='https://github.com/doyban' rel='noopener' target='_blank' title='GitHub'>GitHub</a>, <a aria-label='Google Play Store. Click here to check our Google Play Store.' href='https://play.google.com/store/apps/developer?id=Doyban' rel='noopener' target='_blank' title='Google Play Store'>Google Play Store</a>, <a aria-label='Instagram. Click here to check our Instagram.' href='https://www.instagram.com/doybangames/' rel='noopener' target='_blank' title='Instagram'>Instagram</a>, <a aria-label='itch.io. Click here to check our itch.io.' href='https://doyban.itch.io' rel='noopener' target='_blank' title='itch.io'>itch.io</a>, <a aria-label='Twitter. Click here to check our Twitter.' href='https://twitter.com/doybangames' rel='noopener' target='_blank' title='Twitter'>Twitter</a>, <a aria-label='YouTube. Click here to check our YouTube.' href='https://www.youtube.com/@doyban' rel='noopener' target='_blank' title='YouTube'>YouTube</a>.",
-          icon: 'mdi-thumb-up',
+          icon: 'mdi-thumb-up-outline',
           title: 'Social Media',
         },
       ],
