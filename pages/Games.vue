@@ -396,7 +396,7 @@ export default Vue.extend({
         description:
           "Mini Games work without Installation. Discover 5G ready Mobile Games. Traditional App Stores will not be needed anymore for Games due to 5G's low latency and speed. Games inside the most popular apps and chats without the need to install or update anything.",
         icon: 'mdi-cloud',
-        title: 'Installation-free',
+        title: 'Cloud',
       },
       {
         description:
