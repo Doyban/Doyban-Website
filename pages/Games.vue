@@ -7,18 +7,15 @@
         <v-img :src="require('@/static/pages/games.jpeg')" height="100%" />
       </v-flex>
       <v-col class="mx-sm-3 mx-md-0" md="6" xs="12">
-        <v-row class="my-12" justify="center">
+        <v-row class="mt-12" justify="center">
           <v-col md="8" xs="12">
             <h1 class="mb-6">Games</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-              itaque accusantium tenetur iste dolorum maxime similique sapiente
-              libero veritatis necessitatibus esse adipisci culpa ipsum
-              molestiae sunt, magnam dignissimos suscipit inventore!
+            <p class="text-center">
+              Four pillars on which our vision is based.
             </p></v-col
           >
         </v-row>
-        <v-row wrap>
+        <v-row justify="center" wrap>
           <v-col
             v-for="(feature, index) in features"
             :key="index"
@@ -35,7 +32,7 @@
                 ><v-icon dark x-large v-text="feature.icon"
               /></v-avatar>
             </v-row>
-            <h2 class="mb-2" v-text="feature.title" />
+            <h2 class="my-4" v-text="feature.title" />
             <p v-text="feature.description"></p>
           </v-col>
         </v-row>
@@ -397,27 +394,27 @@ export default Vue.extend({
     this.features = [
       {
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium harum distinctio nisi iure enim corrupti consequatur perferendis dignissimos sapiente voluptate obcaecati quibusdam excepturi exercitationem aut unde recusandae, non debitis.',
-        icon: 'mdi-home',
-        title: 'Name',
+          "Mini Games work without Installation. Discover 5G ready Mobile Games. Traditional App Stores will not be needed anymore for Games due to 5G's low latency and speed. Games inside the most popular apps and chats without the need to install or update anything.",
+        icon: 'mdi-cloud',
+        title: 'Installation-free',
       },
       {
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium harum distinctio nisi iure enim corrupti consequatur perferendis dignissimos sapiente voluptate obcaecati quibusdam excepturi exercitationem aut unde recusandae, non debitis.',
-        icon: 'mdi-home',
-        title: 'Name',
+          '5G will create new gaming platforms in popular apps and chats. We can be ready enough to leverage the upcoming change with the games by performing our research and development on the topic of Games without Installation compared to other platforms..',
+        icon: 'mdi-access-point-network',
+        title: '5G',
       },
       {
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium harum distinctio nisi iure enim corrupti consequatur perferendis dignissimos sapiente voluptate obcaecati quibusdam excepturi exercitationem aut unde recusandae, non debitis.',
-        icon: 'mdi-home',
-        title: 'Name',
+          'Creating games is about more than design and development. Hobbyists heavily occupy this sector, where is no space for companies without being crazy even though we are currently heavily prototyping, but still, with the games we create; we also give away part of our soul.',
+        icon: 'mdi-hand-heart',
+        title: 'Passion',
       },
       {
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium harum distinctio nisi iure enim corrupti consequatur perferendis dignissimos sapiente voluptate obcaecati quibusdam excepturi exercitationem aut unde recusandae, non debitis.',
-        icon: 'mdi-home',
-        title: 'Name',
+          'We are proud of everyone enjoying our simple, fun games. There are over 200,000 enthusiasts who played at least one of our games on any platform. The 5G is supposed to accelerate the development of these gaming channels we focus on to have you more soon.',
+        icon: 'mdi-account-group',
+        title: 'Players',
       },
     ]
   },
