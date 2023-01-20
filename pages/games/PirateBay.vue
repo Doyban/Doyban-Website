@@ -34,7 +34,7 @@ export default Vue.extend({
         itchIo: 'https://doyban.itch.io/piratebay',
       },
       title: 'PirateBay',
-      url: '/v.png',
+      url: '/games/icons/PirateBay.webp',
     }
   },
 })

@@ -32,7 +32,7 @@ export default Vue.extend({
         itchIo: 'https://doyban.itch.io/moveup',
       },
       title: 'MoveUp',
-      url: '/v.png',
+      url: '/games/icons/MoveUp.webp',
     }
   },
 })

@@ -36,7 +36,7 @@ export default Vue.extend({
           'https://chrome.google.com/webstore/detail/matchballoons/pngjfjiicdgbphmjclejldaaiffofobm',
       },
       title: 'MatchBalloons',
-      url: '/v.png',
+      url: '/games/icons/MatchBalloons.webp',
     }
   },
 })

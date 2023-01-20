@@ -34,7 +34,7 @@ export default Vue.extend({
         itchIo: 'https://doyban.itch.io/cashninja',
       },
       title: 'CashNinja',
-      url: '/v.png',
+      url: '/games/icons/CashNinja.webp',
     }
   },
 })

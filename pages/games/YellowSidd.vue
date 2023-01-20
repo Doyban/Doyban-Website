@@ -36,7 +36,7 @@ export default Vue.extend({
           'https://chrome.google.com/webstore/detail/yellowsidd/iphohbgpbedhejglcfcgkgbobjipmgkb',
       },
       title: 'YellowSidd',
-      url: '/v.png',
+      url: '/games/icons/YellowSidd.webp',
     }
   },
 })

@@ -34,7 +34,7 @@ export default Vue.extend({
         itchIo: 'https://doyban.itch.io/infinitehell',
       },
       title: 'InfiniteHell',
-      url: '/v.png',
+      url: '/games/icons/InfiniteHell.webp',
     }
   },
 })
