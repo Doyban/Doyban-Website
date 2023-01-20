@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-row>
-      <v-col class="text-center">
+      <v-col class="text-center mt-12 pt-12">
         <img :src="url" alt="Vuetify.js" class="mb-5" />
         <blockquote class="blockquote">
           &#8220;{{ description }}&#8221;
