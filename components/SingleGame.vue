@@ -19,6 +19,7 @@
           rel="noreferrer noopener"
         >
           <img
+            v-if="storeButton.url"
             :alt="storeButton.title"
             :src="
               require(`@/static/buttons_stores/` +

@@ -212,11 +212,6 @@ export default Vue.extend({
               title: 'itch.io',
               url: 'https://doyban.itch.io/piratebay',
             },
-            {
-              filename: 'ChromeWebStoreButton',
-              title: 'Chrome Web Store',
-              url: 'https://chrome.google.com/webstore',
-            },
           ],
           title: 'PirateBay',
         },
@@ -268,11 +263,6 @@ export default Vue.extend({
           headline: 'MatchBalloons is a friendly match 3 game!',
           showGameDetails: false,
           storeButtons: [
-            {
-              filename: 'AppleAppStoreButton',
-              title: 'Apple App Store',
-              url: 'https://www.apple.com/app-store',
-            },
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
@@ -338,11 +328,6 @@ export default Vue.extend({
               title: 'itch.io',
               url: 'https://doyban.itch.io/cashninja',
             },
-            {
-              filename: 'ChromeWebStoreButton',
-              title: 'Chrome Web Store',
-              url: 'https://chrome.google.com/webstore',
-            },
           ],
           title: 'CashNinja',
         },
@@ -377,11 +362,6 @@ export default Vue.extend({
               filename: 'ItchIoButton',
               title: 'itch.io',
               url: 'https://doyban.itch.io/infinitehell',
-            },
-            {
-              filename: 'ChromeWebStoreButton',
-              title: 'Chrome Web Store',
-              url: 'https://chrome.google.com/webstore',
             },
           ],
           title: 'InfiniteHell',

@@ -32,7 +32,6 @@ export default Vue.extend({
         messenger: 'https://m.me/2211491489066459?game=infinitehell-instant',
         facebookWeb: 'https://apps.facebook.com/infinitehell',
         itchIo: 'https://doyban.itch.io/infinitehell',
-        chromeWebStore: 'https://chrome.google.com/webstore',
       },
       title: 'InfiniteHell',
       url: '/v.png',

@@ -32,7 +32,6 @@ export default Vue.extend({
         messenger: 'https://m.me/GamePirateBay?game=piratebay-instant',
         facebookWeb: 'https://apps.facebook.com/doyban-piratebay',
         itchIo: 'https://doyban.itch.io/piratebay',
-        chromeWebStore: 'https://chrome.google.com/webstore',
       },
       title: 'PirateBay',
       url: '/v.png',

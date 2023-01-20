@@ -32,7 +32,6 @@ export default Vue.extend({
         messenger: 'https://m.me/320930938515454?game=cashninja-instant',
         facebookWeb: 'https://apps.facebook.com/cash-ninja',
         itchIo: 'https://doyban.itch.io/cashninja',
-        chromeWebStore: 'https://chrome.google.com/webstore',
       },
       title: 'CashNinja',
       url: '/v.png',
