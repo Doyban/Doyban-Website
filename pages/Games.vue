@@ -200,8 +200,6 @@ export default Vue.extend({
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.piratebay',
             },
             {
@@ -236,8 +234,6 @@ export default Vue.extend({
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.yellowsidd',
             },
             {
@@ -258,8 +254,6 @@ export default Vue.extend({
             {
               filename: 'ChromeWebStoreButton',
               title: 'Chrome Web Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://chrome.google.com/webstore/detail/yellowsidd/iphohbgpbedhejglcfcgkgbobjipmgkb',
             },
           ],
@@ -274,8 +268,6 @@ export default Vue.extend({
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.matchballoons',
             },
             {
@@ -296,8 +288,6 @@ export default Vue.extend({
             {
               filename: 'ChromeWebStoreButton',
               title: 'Chrome Web Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://chrome.google.com/webstore/detail/matchballoons/pngjfjiicdgbphmjclejldaaiffofobm',
             },
           ],
@@ -318,8 +308,6 @@ export default Vue.extend({
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.cashninja',
             },
             {
@@ -354,8 +342,6 @@ export default Vue.extend({
             {
               filename: 'GooglePlayStoreButton',
               title: 'Google Play Store',
-              // Strange Prettier error to insert: https://github.com/prettier/eslint-plugin-prettier/issues/116
-              // eslint-disable-next-line
               url: 'https://play.google.com/store/apps/details?id=com.doyban.infinitehell',
             },
             {
