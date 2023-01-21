@@ -243,7 +243,6 @@ import Swal from 'sweetalert2'
 import Privacy from './Privacy.vue'
 import Terms from './Terms.vue'
 
-// TODO: Check if data isn't overloaded (https://stackoverflow.com/a/41763856/11127383)
 export default Vue.extend({
   components: { Privacy, Terms },
   data() {
