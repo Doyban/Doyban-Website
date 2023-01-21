@@ -16,7 +16,7 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'YellowSidd description',
+      description: 'Old School Platformer for new Ages.',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/YellowSidd/1.webp') },

@@ -1,5 +1,5 @@
 <template>
-  <!-- TODO: Polish this component, add real content and add interface/subtitles to reach game. -->
+  <!-- TODO: Polish this component, and add interface to game object. -->
   <!-- TODO: Add images only in modern standards (AVIF/WEBP). -->
   <section>
     <v-row>
@@ -56,7 +56,7 @@
           <h2 class="font-weight-black my-12" v-text="game.title" />
           <p class="text-center" v-text="game.headline" />
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
-          <p class="text-center" v-text="game.description" />
+          <p class="text-center" v-html="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
           <a
             v-for="(storeButton, indexGameStoreButton) in game.storeButtons"
@@ -121,13 +121,19 @@
               <v-expand-transition>
                 <div v-show="game.showGameDetails">
                   <v-divider />
-                  <v-card-text><p v-text="game.description" /></v-card-text>
+                  <v-card-text
+                    ><p>
+                      There is more information about the game on the dedicated
+                      page. You will be redirected to the dedicated page for
+                      that game after clicking the <b>Read More</b> button
+                      below.
+                    </p></v-card-text
+                  >
                   <v-tooltip bottom>
                     <template v-slot:activator="{ on, attributes }">
                       <v-btn
-                        class="mb-12"
-                        light
                         exact
+                        light
                         nuxt
                         :to="'/games/' + `${game.title.toLowerCase()}`"
                         x-large
@@ -157,8 +163,9 @@ export default Vue.extend({
     return {
       games: [
         {
-          description: 'Lorem',
-          headline: 'MoveUp description...',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>Simple.</li><li>Minimalistic.</li><li>Platformer game moving up till infinity.</li><li>Available on 3 platforms.</li></ul>",
+          headline: 'Move up all the way to infinity.',
           showGameDetails: false,
           storeButtons: [
             {
@@ -180,9 +187,9 @@ export default Vue.extend({
           title: 'MoveUp',
         },
         {
-          description: 'Lorem',
-          headline:
-            'PirateBay let you to discover world as a Pirate and fight with different enemies.',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>Many different enemies.</li><li>Infinite levels to play.</li><li>Fabulous gameplay.</li><li>Available on 5 platforms.</li></ul>",
+          headline: 'Take a challenge and access legendary PirateBay!',
           showGameDetails: false,
           storeButtons: [
             {
@@ -216,9 +223,9 @@ export default Vue.extend({
           title: 'PirateBay',
         },
         {
-          description: 'Lorem',
-          headline:
-            'YellowSidd gives you ability to play good old style platformer type game.',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>User friendly graphics.</li><li>Wide spectrum of enemies.</li><li>Huge amount of coins to grab.</li><li>Available on 6 platforms.</li></ul>",
+          headline: 'Old School Platformer for new Ages.',
           showGameDetails: false,
           storeButtons: [
             {
@@ -259,7 +266,8 @@ export default Vue.extend({
           title: 'YellowSidd',
         },
         {
-          description: 'Lorem',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>Go through infinite levels.</li><li>Match 3 or more balloons to get points.</li><li>Every level you need more points having less time.</li><li>Available on 5 platforms.</li></ul>",
           headline: 'MatchBalloons is a friendly match 3 game!',
           showGameDetails: false,
           storeButtons: [
@@ -296,7 +304,8 @@ export default Vue.extend({
           title: 'MatchBalloons',
         },
         {
-          description: 'Lorem',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>For money lovers.</li><li>Never ending rain of cash.</li><li>10 different types of coins to grab.</li><li>Available on 5 platforms.</li></ul>",
           headline:
             'CashNinja is a free and fun game where you get get a lot of cash!',
           showGameDetails: false,
@@ -332,7 +341,8 @@ export default Vue.extend({
           title: 'CashNinja',
         },
         {
-          description: 'Lorem',
+          description:
+            "<ul class='pl-0' style='list-style: none;'><li>Many things to do.</li><li>Many chests to open.</li><li>Take a hero, just fly above them all.</li><li>Available on 5 platforms.</li></ul>",
           headline: 'InfiniteHell is a neverending hell!',
           showGameDetails: false,
           storeButtons: [
@@ -406,6 +416,10 @@ h1,
 h2,
 h3 {
   text-align: center;
+}
+
+.v-btn {
+  width: 100%;
 }
 
 .storeButtons {

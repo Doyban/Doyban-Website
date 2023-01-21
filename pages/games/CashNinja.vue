@@ -16,7 +16,8 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'CashNinja description',
+      description:
+        'CashNinja is a free and fun game where you get get a lot of cash!',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/CashNinja/1.webp') },

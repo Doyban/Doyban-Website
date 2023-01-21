@@ -16,7 +16,7 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'InfiniteHell description',
+      description: 'InfiniteHell is a neverending hell!',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/InfiniteHell/1.webp') },

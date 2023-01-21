@@ -16,7 +16,7 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'MoveUp description',
+      description: 'Move up all the way to infinity.',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/MoveUp/1.webp') },

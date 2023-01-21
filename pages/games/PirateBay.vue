@@ -16,7 +16,7 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'PirateBay description',
+      description: 'Take a challenge and access legendary PirateBay!',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/PirateBay/1.webp') },

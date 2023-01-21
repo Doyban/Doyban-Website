@@ -16,7 +16,7 @@ export default Vue.extend({
   components: { SingleGame },
   data() {
     return {
-      description: 'MatchBalloons description',
+      description: 'MatchBalloons is a friendly match 3 game!',
       selectedItem: null,
       items: [
         { id: 1, src: require('@/static/games/gallery/MatchBalloons/1.webp') },
