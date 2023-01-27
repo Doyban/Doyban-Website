@@ -101,7 +101,7 @@ export default Vue.extend({
       // {
       //   icon: 'mdi-account-group',
       //   name: 'Community',
-      //   path: '/community', // TODO: should redirect to forum.doyban.com as per https://github.com/Doyban/Doyban-Website/issues/7
+      //   path: '/community', // TODO: should redirect to forum.doyban.com as per https://github.com/Doyban/Doyban-Website/issues/7.
       // },
       {
         icon: 'mdi-fingerprint',

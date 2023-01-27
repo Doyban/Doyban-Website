@@ -97,6 +97,7 @@
               <!-- <v-list-item class="justify-center"
                 ><NuxtLink to="/faq">FAQ</NuxtLink></v-list-item
               >
+              // TODO: should redirect to /glossary as per https://github.com/Doyban/Doyban-Website/issues/8.
               <v-list-item class="justify-center"
                 ><NuxtLink to="/glossary">Glossary</NuxtLink></v-list-item
               > -->
