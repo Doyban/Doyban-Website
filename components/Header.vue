@@ -7,7 +7,7 @@
       elevation="24"
     >
       <v-toolbar-title
-        ><v-img :src="require('@/static/logo.png')" max-width="100"
+        ><v-img :src="require('@/static/logo.webp')" max-width="100"
       /></v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />

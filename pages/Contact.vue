@@ -2,7 +2,7 @@
   <section>
     <v-layout>
       <v-flex hidden-sm-and-down md6>
-        <v-img :src="require('@/static/pages/contact.jpeg')" height="100%" />
+        <v-img :src="require('@/static/pages/contact.webp')" height="100%" />
       </v-flex>
       <v-layout justify-center my-12 mx-3>
         <v-flex md10 xs12>

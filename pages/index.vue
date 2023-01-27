@@ -43,7 +43,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-parallax :src="require('@/static/pages/parallax.jpeg')" height="400">
+    <v-parallax :src="require('@/static/pages/parallax.webp')" height="400">
       <h2 class="display-2 text-center">Play</h2>
       <em class="text-center"
         >Take a look into our collection of games across different
@@ -87,7 +87,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-parallax :src="require('@/static/pages/parallax2.jpeg')" height="400">
+    <v-parallax :src="require('@/static/pages/parallax2.webp')" height="400">
       <h2 class="display-2 text-center">Doyban</h2>
       <em class="text-center">Read our story; who we are &amp; what we do.</em>
       <v-tooltip bottom>
@@ -201,13 +201,13 @@ export default Vue.extend({
       ],
       sliderItems: [
         {
-          src: require('@/static/pages/slide1.png'),
+          src: require('@/static/pages/slide1.webp'),
         },
         {
-          src: require('@/static/pages/slide2.png'),
+          src: require('@/static/pages/slide2.webp'),
         },
         {
-          src: require('@/static/pages/slide3.png'),
+          src: require('@/static/pages/slide3.webp'),
         },
       ],
     }

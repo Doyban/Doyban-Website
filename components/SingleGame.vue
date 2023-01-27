@@ -24,7 +24,7 @@
             :src="
               require(`@/static/buttons_stores/` +
                 `${storeButton.filename}` +
-                `.png`)
+                `.webp`)
             "
             :title="storeButton.title"
             class="storeButtons"

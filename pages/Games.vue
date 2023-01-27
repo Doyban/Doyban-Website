@@ -1,10 +1,9 @@
 <template>
   <!-- TODO: Polish this component, and add interface to game object. -->
-  <!-- TODO: Add images only in modern standards (AVIF/WEBP). -->
   <section>
     <v-row>
       <v-flex hidden-sm-and-down md6>
-        <v-img :src="require('@/static/pages/games.jpeg')" height="100%" />
+        <v-img :src="require('@/static/pages/games.webp')" height="100%" />
       </v-flex>
       <v-col class="mx-sm-3 mx-md-0" md="6" xs="12">
         <v-row class="mt-12" justify="center">
@@ -70,7 +69,7 @@
               :src="
                 require(`@/static/buttons_stores/` +
                   `${storeButton.filename}` +
-                  `.png`)
+                  `.webp`)
               "
               :title="storeButton.title"
               class="storeButtons"
