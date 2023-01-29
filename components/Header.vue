@@ -82,7 +82,7 @@ export default Vue.extend({
       // {
       //   icon: 'mdi-newspaper-variant-outline',
       //   name: 'News',
-      //   path: '/news',
+      //   path: '/news', // TODO: should redirect to blog.doyban.com as per https://github.com/Doyban/Doyban-Website/issues/9.
       // },
       // {
       //   icon: 'mdi-devices',
