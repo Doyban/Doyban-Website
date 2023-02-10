@@ -1,5 +1,6 @@
 <template>
   <section>
+    <!-- TODO: We could have 1 component for legal pages. -->
     <h1 class="mt-12 text-center">Cookies Policy</h1>
     <v-row class="justify-center">
       <v-col sm="3" xs="6">

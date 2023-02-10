@@ -188,9 +188,9 @@
                   >
                     <v-card-text
                       ><Terms
-                        :columnsDividerXs="12"
-                        :columnsDividerSm="6"
-                        :columnsBodyMd="12"
+                        :columns-divider-xs="12"
+                        :columns-divider-sm="6"
+                        :columns-body-md="12"
                     /></v-card-text>
                     <v-card-actions>
                       <v-spacer />
@@ -213,9 +213,9 @@
                   >
                     <v-card-text
                       ><Privacy
-                        :columnsDividerXs="12"
-                        :columnsDividerSm="6"
-                        :columnsBodyMd="12"
+                        :columns-divider-xs="12"
+                        :columns-divider-sm="6"
+                        :columns-body-md="12"
                     /></v-card-text>
                     <v-card-actions>
                       <v-spacer />
@@ -348,10 +348,6 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-p {
-  text-align: justify;
-}
-
 .v-text-field {
   padding-bottom: 1rem;
 }

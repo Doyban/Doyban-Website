@@ -375,7 +375,7 @@ export default Vue.extend({
       },
       {
         description:
-          '5G will create new gaming platforms in popular apps and chats. We can be ready enough to leverage the upcoming change with the games by performing our research and development on the topic of Games without Installation compared to other platforms..',
+          '5G will create new gaming platforms in popular apps and chats. We can be ready enough to leverage the upcoming change with the games by performing our research and development on the topic of Games without Installation compared to other platforms.',
         icon: 'mdi-access-point-network',
         title: '5G',
       },

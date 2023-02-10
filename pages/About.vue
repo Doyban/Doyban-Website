@@ -141,6 +141,15 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+span.headline,
+.v-card__title {
+  font-family: 'IM Fell English SC', serif !important;
+}
+
+span.headline {
+  font-size: 2rem !important;
+}
+
 .v-card {
   opacity: 0.5;
 

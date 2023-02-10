@@ -117,6 +117,14 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+blockquote {
+  font-family: 'Cormorant', serif;
+}
+
+blockquote > footer > small {
+  font-family: 'IM Fell English SC', serif;
+}
+
 .storeButtons {
   animation: turn 3.5s ease-out forwards 1s;
   height: 60px;

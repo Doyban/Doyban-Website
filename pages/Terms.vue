@@ -41,6 +41,11 @@ import Vue from 'vue'
 import { Policy } from './interfaces/Policy'
 
 export default Vue.extend({
+  props: {
+    columnsDividerXs: Number,
+    columnsDividerSm: Number,
+    columnsBodyMd: Number,
+  },
   data() {
     return {
       policies: [] as Policy[],
@@ -89,11 +94,6 @@ export default Vue.extend({
         title: 'Limitations of Liability',
       },
     ]
-  },
-  props: {
-    columnsDividerXs: Number,
-    columnsDividerSm: Number,
-    columnsBodyMd: Number,
   },
 })
 </script>

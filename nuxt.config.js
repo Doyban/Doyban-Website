@@ -33,6 +33,8 @@ export default {
     '@nuxtjs/vuetify',
     // https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    // https://github.com/nuxt-community/google-fonts-module
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -47,6 +49,27 @@ export default {
     hideBadge: true,
     siteKey: process.env.RECAPTCHA_API_KEY,
     version: 2, // TODO: Change this to version 3 (and activate associated key to reCAPTCHA v3 - example https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue)
+  },
+
+  googleFonts: {
+    base64: true,
+    display: 'swap',
+    download: true,
+    families: {
+      'IM+Fell+English+SC': true,
+      Cormorant: [300, 400, 500, 600, 700],
+    },
+    fontsDir: 'fonts',
+    fontsPath: '~assets/fonts',
+    inject: true,
+    overwriting: true,
+    preconnect: true,
+    prefetch: true,
+    preload: true,
+    subsets: [],
+    stylePath: 'css/fonts.css',
+    text: null,
+    useStylesheet: false,
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)

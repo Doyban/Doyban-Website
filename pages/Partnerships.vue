@@ -173,6 +173,10 @@ export default Vue.extend({
   background-color: purple;
 }
 
+.v-card__text div {
+  font-size: 1.5rem;
+}
+
 .custom-btn {
   color: white;
   font-weight: bold;

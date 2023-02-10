@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/recaptcha": "^0.6.2",
     "agastya": "^4.2.0",

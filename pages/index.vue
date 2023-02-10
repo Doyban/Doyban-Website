@@ -216,6 +216,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.v-parallax__content > h2 {
+  font-family: 'IM Fell English SC', serif !important;
+}
+
 #clouds {
   height: 0;
   position: absolute;

@@ -174,6 +174,7 @@ i > a {
   color: white;
   text-decoration: none;
 }
+
 .v-footer {
   background: rgb(156, 39, 176);
   background: linear-gradient(
