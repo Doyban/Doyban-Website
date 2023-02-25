@@ -70,5 +70,10 @@ export default Vue.extend({
       },
     ]
   },
+  head() {
+    return {
+      title: 'Copyrights',
+    }
+  },
 })
 </script>

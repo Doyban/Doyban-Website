@@ -212,6 +212,11 @@ export default Vue.extend({
       ],
     }
   },
+  head() {
+    return {
+      title: 'Home',
+    }
+  },
 })
 </script>
 

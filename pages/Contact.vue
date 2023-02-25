@@ -344,6 +344,11 @@ export default Vue.extend({
       this.onReset()
     },
   },
+  head() {
+    return {
+      title: 'Contact',
+    }
+  },
 })
 </script>
 

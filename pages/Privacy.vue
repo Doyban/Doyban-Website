@@ -101,5 +101,10 @@ export default Vue.extend({
     columnsDividerSm: Number,
     columnsBodyMd: Number,
   },
+  head() {
+    return {
+      title: 'Privacy Policy',
+    }
+  },
 })
 </script>

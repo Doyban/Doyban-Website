@@ -393,6 +393,11 @@ export default Vue.extend({
       },
     ]
   },
+  head() {
+    return {
+      title: 'Games',
+    }
+  },
 })
 </script>
 

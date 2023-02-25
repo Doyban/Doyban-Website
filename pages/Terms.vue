@@ -95,5 +95,10 @@ export default Vue.extend({
       },
     ]
   },
+  head() {
+    return {
+      title: 'Terms of Use',
+    }
+  },
 })
 </script>

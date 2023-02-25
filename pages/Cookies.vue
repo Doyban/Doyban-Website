@@ -56,5 +56,10 @@ export default Vue.extend({
       },
     ]
   },
+  head() {
+    return {
+      title: 'Cookies Policy',
+    }
+  },
 })
 </script>

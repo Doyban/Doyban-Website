@@ -157,6 +157,11 @@ export default Vue.extend({
       return index === 1
     },
   },
+  head() {
+    return {
+      title: 'Partnerships',
+    }
+  },
 })
 </script>
 
