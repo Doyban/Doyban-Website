@@ -314,12 +314,12 @@ export default {
     '@nuxtjs/dotenv',
     // https://github.com/nuxt-community/google-fonts-module
     '@nuxtjs/google-fonts',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     // https://github.com/nuxt-community/recaptcha-module
     '@nuxtjs/recaptcha',
   ],
