@@ -330,6 +330,9 @@ export default {
     version: 2, // TODO: Change this to version 3 (and activate associated key to reCAPTCHA v3 - example https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue)
   },
 
+  // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
+  generate: { fallback: true },
+
   googleFonts: {
     base64: true,
     display: 'swap',
