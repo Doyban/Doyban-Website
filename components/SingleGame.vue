@@ -2,7 +2,7 @@
   <section>
     <v-row>
       <v-col class="text-center mt-12 pt-12">
-        <img :src="url" alt="Vuetify.js" class="mb-5" />
+        <img :alt="title" :src="url" class="mb-5" />
         <blockquote class="blockquote">
           &#8220;{{ description }}&#8221;
           <footer>
@@ -38,12 +38,13 @@
         </v-overlay>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row class="mb-8">
       <v-col
         v-for="item in items"
         :key="item.id"
-        class="d-flex child-flex"
-        cols="4"
+        xs="12"
+        md="4"
+        class="px-6 mt-6"
       >
         <v-img
           :src="item.src"
@@ -122,6 +123,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+a img {
+  margin: 1.5rem;
+}
+
 blockquote {
   font-family: 'Cormorant', serif;
 }

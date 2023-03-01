@@ -11,8 +11,8 @@
             <h1 class="mb-6">Games</h1>
             <p class="text-center">
               Four pillars on which our vision is based.
-            </p></v-col
-          >
+            </p>
+          </v-col>
         </v-row>
         <v-row justify="center" wrap>
           <v-col
@@ -104,9 +104,9 @@
                 :src="require(`@/static/games/` + `${game.title}` + `.webp`)"
               />
               <v-card-title class="justify-center" v-text="game.title" />
-              <v-card-subtitle
-                ><p class="text-center" v-text="game.headline"
-              /></v-card-subtitle>
+              <v-card-subtitle>
+                <p class="text-center" v-text="game.headline" />
+              </v-card-subtitle>
               <v-card-actions>
                 <v-spacer />
                 <v-btn
@@ -120,14 +120,14 @@
               <v-expand-transition>
                 <div v-show="game.showGameDetails">
                   <v-divider />
-                  <v-card-text
-                    ><p>
+                  <v-card-text>
+                    <p>
                       There is more information about the game on the dedicated
                       page. You will be redirected to the dedicated page for
                       that game after clicking the <b>Read More</b> button
                       below.
-                    </p></v-card-text
-                  >
+                    </p>
+                  </v-card-text>
                   <v-tooltip bottom>
                     <template v-slot:activator="{ on, attributes }">
                       <v-btn
@@ -402,6 +402,15 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+a img {
+  margin: 1.5rem;
+
+  @media only screen and (max-width: 767px) {
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
 h1,
 h2,
 h3 {
