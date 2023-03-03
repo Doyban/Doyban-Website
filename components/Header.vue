@@ -96,7 +96,7 @@ export default Vue.extend({
       // },
       //   icon: 'mdi-motion-play', // TODO: Change the icon.
       //   name: 'UX Research',
-      //   path: '/ux-research',
+      //   path: '/ux-research', // TODO: should redirect to /ux-research as per https://github.com/Doyban/Doyban-Website/issues/10.
       // },
       // {
       //   icon: 'mdi-account-group',
