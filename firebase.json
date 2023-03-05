@@ -1,0 +1,34 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "cd functions && npm run build && cd .. && npm run build && rm -rf functions/.nuxt && mkdir -p functions/.nuxt/dist/ && cp -r .nuxt/dist/server functions/.nuxt/dist/ && cp nuxt.config.js functions/"
+      ]
+    }
+  ],
+  "hosting": {
+    "predeploy": [
+      "rm -rf public/* && mkdir -p public/_nuxt && cp -r .nuxt/dist/client/ public/_nuxt"
+    ],
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssrapp"
+      }
+    ]
+  }
+}
