@@ -155,7 +155,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { Feature } from './interfaces/Feature'
+import { Feature } from '../interfaces/Feature'
 
 export default Vue.extend({
   data() {

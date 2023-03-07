@@ -93,7 +93,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import { Event } from './interfaces/Event'
+import { Event } from '../interfaces/Event'
 
 export default Vue.extend({
   data() {

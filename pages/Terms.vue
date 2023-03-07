@@ -38,7 +38,7 @@
 <script lang="ts">
 // TODO: Add Animate on Scroll (AOL).
 import Vue from 'vue'
-import { Policy } from './interfaces/Policy'
+import { Policy } from '../interfaces/Policy'
 
 export default Vue.extend({
   props: {

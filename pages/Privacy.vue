@@ -39,7 +39,7 @@
 // It has to stay as "/privacy" due to compatibility with old Privacy Policy links.
 // TODO: Add Animate on Scroll (AOL).
 import Vue from 'vue'
-import { Policy } from './interfaces/Policy'
+import { Policy } from '../interfaces/Policy'
 
 export default Vue.extend({
   data() {

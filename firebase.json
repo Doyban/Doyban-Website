@@ -10,13 +10,13 @@
         "firebase-debug.*.log"
       ],
       "predeploy": [
-        "cd functions && npm run build && cd .. && npm run build && rm -rf functions/.nuxt && mkdir -p functions/.nuxt/dist/ && cp -r .nuxt/dist/server functions/.nuxt/dist/ && cp nuxt.config.js functions/"
+        "cd functions && npm run build && cd .. && rm -rf dist && npm run generate && rm -rf functions/.nuxt && mkdir -p functions/.nuxt/dist/ && cp -r .nuxt/dist/server functions/.nuxt/dist/ && cp nuxt.config.js functions/"
       ]
     }
   ],
   "hosting": {
     "predeploy": [
-      "rm -rf public/* && mkdir -p public/_nuxt && cp -r .nuxt/dist/client/ public/_nuxt"
+      "rm -rf public/* && mkdir -p public/_nuxt && cp -r .nuxt/dist/client/ public/_nuxt && cp static/robots.txt public/ && cp dist/sitemap.xml public/ && cp dist/sitemap.xml.gz public/"
     ],
     "public": "public",
     "ignore": [

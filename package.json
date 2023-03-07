@@ -29,6 +29,7 @@
     "@nuxtjs/google-fonts": "^2.0.0",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/recaptcha": "^0.6.2",
+    "@nuxtjs/sitemap": "^2.4.0",
     "agastya": "^4.2.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
