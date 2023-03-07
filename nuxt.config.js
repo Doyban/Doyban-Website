@@ -1,4 +1,3 @@
-// @ts-ignore
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
@@ -323,6 +322,8 @@ export default {
   modules: [
     // https://github.com/nuxt-community/recaptcha-module
     '@nuxtjs/recaptcha',
+    // https://github.com/nuxt-community/sitemap-module
+    '@nuxtjs/sitemap',
   ],
 
   recaptcha: {
@@ -353,6 +354,12 @@ export default {
     stylePath: 'css/fonts.css',
     text: null,
     useStylesheet: false,
+  },
+
+  sitemap: {
+    gzip: true,
+    hostname: 'https://doyban.com',
+    path: '/sitemap.xml',
   },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
