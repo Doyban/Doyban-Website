@@ -1,4 +1,4 @@
-export interface Event {
+export default interface Event {
   color: string
   description: string
   icon: string

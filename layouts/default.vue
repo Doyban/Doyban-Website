@@ -2,7 +2,7 @@
   <v-app>
     <Header />
     <v-main class="mt-4 pt-4">
-      <nuxt />
+      <slot />
     </v-main>
     <Footer />
   </v-app>

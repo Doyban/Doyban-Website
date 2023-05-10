@@ -1,5 +1,4 @@
-// TODO: Create interfaces for all objects.
-export interface Feature {
+export default interface Feature {
   description: string
   icon: string
   title: string

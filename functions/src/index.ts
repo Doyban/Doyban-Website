@@ -1,6 +1,6 @@
 const { Nuxt } = require('nuxt-start')
 const functions = require('firebase-functions')
-// const nuxtConfig = require('./../nuxt.config.js')
+// const nuxtConfig = require('./../nuxt.config.ts')
 
 const config = {
   // TODO: There's a problem with deploying to Firebase while including nuxtConfig, looks like compatibility issue. Topics to followup: https://stackoverflow.com/questions/75634743/nuxt-js-problematic-nuxt-config-js-ts-with-firebase-cloud-functions-while-deploy?noredirect=1 & https://stackoverflow.com/questions/73756329/deployment-error-with-nuxt-v2-and-firebase-functions.

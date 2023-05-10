@@ -1,3 +1,56 @@
+<script lang="ts" setup>
+import GalleryPicture from '~/interfaces/GalleryPicture'
+import StoreButton from '~/interfaces/StoreButton'
+import StoreUrls from '~/interfaces/StoreUrls'
+
+interface Props {
+  description: string
+  galleryPictures: GalleryPicture
+  selectedItem: boolean
+  storeUrls: StoreUrls
+  title: string
+  url: string | undefined
+}
+const props = defineProps<Props>()
+
+const storeButtons: StoreButton[] = [
+  {
+    filename: 'AppleAppStoreButton',
+    title: 'Apple App Store',
+    url: props.storeUrls.appleAppStore,
+  },
+  {
+    filename: 'GooglePlayStoreButton',
+    title: 'Google Play Store',
+    url: props.storeUrls.googlePlayStore,
+  },
+  {
+    filename: 'MessengerButton',
+    title: 'Messenger',
+    url: props.storeUrls.messenger,
+  },
+  {
+    filename: 'FacebookWebButton',
+    title: 'Facebook Web',
+    url: props.storeUrls.facebookWeb,
+  },
+  {
+    filename: 'ItchIoButton',
+    title: 'itch.io',
+    url: props.storeUrls.itchIo,
+  },
+  {
+    filename: 'ChromeWebStoreButton',
+    title: 'Chrome Web Store',
+    url: props.storeUrls.chromeWebStore,
+  },
+]
+
+useHead({
+  title: props.title,
+})
+</script>
+
 <template>
   <section>
     <v-row>
@@ -21,11 +74,7 @@
           <img
             v-if="storeButton.url"
             :alt="storeButton.title"
-            :src="
-              require(`@/static/buttons_stores/` +
-                `${storeButton.filename}` +
-                `.webp`)
-            "
+            :src="`/buttons_stores/${storeButton.filename}.webp`"
             :title="storeButton.title"
             class="storeButtons"
         /></a>
@@ -40,17 +89,17 @@
     </v-row>
     <v-row class="mb-8">
       <v-col
-        v-for="item in items"
-        :key="item.id"
-        xs="12"
+        v-for="galleryPicture in galleryPictures"
+        :key="galleryPicture.id"
         md="4"
         class="px-6 mt-6"
+        cols="12"
       >
         <v-img
-          :src="item.src"
+          :src="galleryPicture.src"
           contain
           class="grey lighten-2"
-          @click="selectedItem = item"
+          @click="selectedItem = galleryPicture"
         >
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
@@ -65,62 +114,6 @@
     </v-row>
   </section>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  props: {
-    description: String,
-    items: Object,
-    selectedItem: Boolean,
-    storeUrls: Object,
-    title: String,
-    url: String,
-  },
-  data() {
-    return {
-      storeButtons: [
-        {
-          filename: 'AppleAppStoreButton',
-          title: 'Apple App Store',
-          url: this.$props.storeUrls.appleAppStore,
-        },
-        {
-          filename: 'GooglePlayStoreButton',
-          title: 'Google Play Store',
-          url: this.storeUrls.googlePlayStore,
-        },
-        {
-          filename: 'MessengerButton',
-          title: 'Messenger',
-          url: this.storeUrls.messenger,
-        },
-        {
-          filename: 'FacebookWebButton',
-          title: 'Facebook Web',
-          url: this.storeUrls.facebookWeb,
-        },
-        {
-          filename: 'ItchIoButton',
-          title: 'itch.io',
-          url: this.storeUrls.itchIo,
-        },
-        {
-          filename: 'ChromeWebStoreButton',
-          title: 'Chrome Web Store',
-          url: this.storeUrls.chromeWebStore,
-        },
-      ],
-    }
-  },
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-})
-</script>
 
 <style lang="scss" scoped>
 a img {

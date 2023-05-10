@@ -1,10 +1,14 @@
+<script lang="ts" setup>
+const currentYear: number = new Date().getFullYear()
+</script>
+
 <template>
   <!-- TODO: Make many of the items "v-for" -->
-  <v-footer dark>
-    <v-layout wrap>
-      <v-flex sm6 xs12>
-        <v-card class="transparent" elevation="0">
-          <v-card-title class="justify-center">Doyban</v-card-title>
+  <v-footer theme="dark">
+    <v-row>
+      <v-col cols="12" sm="6">
+        <v-card align="center" color="transparent" elevation="0">
+          <v-card-title>Doyban</v-card-title>
           <v-card-text
             ><p>
               We are a small mobile gaming studio developing simple yet fun
@@ -19,7 +23,7 @@
               we (almost) cannot make money out of these kinds of games.
             </p></v-card-text
           >
-          <v-list class="transparent">
+          <v-list class="bg-transparent">
             <v-list-item
               ><p>
                 <v-icon>mdi-home</v-icon>
@@ -60,88 +64,81 @@
             >
           </v-list>
         </v-card>
-      </v-flex>
+      </v-col>
       <!-- When we'll introduce newsletter uncomment it. -->
-      <!-- <v-flex sm4 xs12>
-        <v-hover v-slot:default="{ hover }">
-          <v-card
-            :class="{ 'on-hover': hover }"
-            :elevation="hover ? 24 : 0"
-            class="transparent"
-          >
-            <v-card-title class="justify-center">Stay informed</v-card-title>
-            <v-card-subtitle class="text-center">Subscribe</v-card-subtitle>
-            <v-card-text>
-              <v-btn>Opt in</v-btn>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-flex> -->
-      <v-flex sm6 xs12>
-        <v-card class="transparent" elevation="0">
-          <v-card-title class="justify-center">Information</v-card-title>
-          <v-list class="transparent">
-            <!-- <v-list-item class="justify-center"
-                ><NuxtLink to="/faq">FAQ</NuxtLink></v-list-item
-              >
-              // TODO: should redirect to /glossary as per https://github.com/Doyban/Doyban-Website/issues/8.
-              <v-list-item class="justify-center"
-                ><NuxtLink to="/glossary">Glossary</NuxtLink></v-list-item
-              > -->
-            <v-list-item class="justify-center"
-              ><NuxtLink to="/partnerships">Partnerships</NuxtLink></v-list-item
+      <!-- <v-col cols="12" sm="4">
+        <v-hover>
+          <template v-slot:default="{ hover }">
+            <v-card
+              :class="{ 'on-hover': hover }"
+              :elevation="hover ? 24 : 0"
+              align="center"
+              color="transparent"
             >
+              <v-card-title>Stay informed</v-card-title>
+              <v-card-subtitle>Subscribe</v-card-subtitle>
+              <v-card-text>
+                <v-btn ripple variant="outlined">Opt in</v-btn>
+              </v-card-text>
+            </v-card>
+          </template>
+        </v-hover>
+      </v-col> -->
+      <v-col cols="12" sm="6">
+        <v-card align="center" color="transparent" elevation="0">
+          <v-card-title>Information</v-card-title>
+          <v-list class="bg-transparent">
+            <!-- <v-list-item>
+              <NuxtLink to="/faq">FAQ</NuxtLink>
+            </v-list-item>
+            // TODO: should redirect to /glossary as per
+            https://github.com/Doyban/Doyban-Website/issues/8.
+            <v-list-item>
+              <NuxtLink to="/glossary">Glossary</NuxtLink>
+            </v-list-item> -->
+            <v-list-item>
+              <NuxtLink to="/partnerships">Partnerships</NuxtLink>
+            </v-list-item>
           </v-list>
         </v-card>
-      </v-flex>
-      <v-card class="transparent" elevation="0">
-        <v-card-title>Resources</v-card-title>
-        <v-list class="transparent">
-          <v-list-item class="d-inline"
-            ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
-          >
-          <v-list-item class="d-inline"
-            ><NuxtLink to="/cookies">Cookies</NuxtLink></v-list-item
-          >
-          <!--
-            <v-list-item class="d-inline"
+      </v-col>
+      <v-col cols="12">
+        <v-card color="transparent" elevation="0">
+          <v-card-title>Resources</v-card-title>
+          <v-list class="bg-transparent d-flex">
+            <v-list-item
+              ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
+            >
+            <v-list-item
+              ><NuxtLink to="/cookies">Cookies</NuxtLink></v-list-item
+            >
+            <!--
+            <v-list-item
               ><NuxtLink to="/legal">Legal</NuxtLink></v-list-item
             > -->
-          <v-list-item class="d-inline"
-            ><NuxtLink to="/privacy">Privacy</NuxtLink></v-list-item
-          >
-          <!-- <v-list-item class="d-inline"
+            <v-list-item
+              ><NuxtLink to="/privacy">Privacy</NuxtLink></v-list-item
+            >
+            <!-- <v-list-item
               ><NuxtLink to="/rss">RSS</NuxtLink></v-list-item
             >
-            <v-list-item class="d-inline"
+            <v-list-item
               ><NuxtLink to="/security">Security</NuxtLink></v-list-item
             >
-            <v-list-item class="d-inline"
+            <v-list-item
               ><NuxtLink to="/sitemap">Sitemap</NuxtLink></v-list-item
             >
             -->
-          <v-list-item class="d-inline">
-            <NuxtLink to="/terms">Terms</NuxtLink></v-list-item
-          >
-        </v-list>
-      </v-card>
-    </v-layout>
-    <v-container
-      ><p class="text-center">&copy; {{ currentYear }} Doyban</p></v-container
-    >
+            <v-list-item> <NuxtLink to="/terms">Terms</NuxtLink></v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+      <v-col cols="12">
+        <p class="text-center">&copy; {{ currentYear }} Doyban</p>
+      </v-col>
+    </v-row>
   </v-footer>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  data() {
-    return {
-      currentYear: new Date().getFullYear(),
-    }
-  },
-})
-</script>
 
 <style lang="scss" scoped>
 i > a {
@@ -150,7 +147,6 @@ i > a {
 }
 
 .v-footer {
-  background: rgb(156, 39, 176);
   background: linear-gradient(
     0deg,
     rgba(156, 39, 176, 1) 0%,

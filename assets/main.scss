@@ -1,0 +1,39 @@
+a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+em,
+p {
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.v-card-title,
+.v-list-item-title {
+  font-family: 'IM Fell English SC', serif;
+}
+
+a,
+em,
+input,
+label,
+p,
+textarea,
+.v-card-text {
+  font-family: 'Cormorant', serif;
+  font-style: italic;
+  font-size: inherit;
+}
+
+.v-list-item-subtitle {
+  font-family: 'Cormorant', serif;
+  font-style: normal;
+  font-weight: 600;
+}

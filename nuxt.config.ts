@@ -1,7 +1,16 @@
-import colors from 'vuetify/es5/util/colors'
-require('dotenv').config()
+// import colors from 'vuetify/es5/util/colors'
+// import 'vuetify';
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
+  build: { transpile: ["vuetify"] },
 
-export default {
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: [
+    'vuetify/styles',
+    '~/assets/main.scss'
+  ],
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - Doyban | The World of Digital Gameplay.',
@@ -293,95 +302,89 @@ export default {
     },
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [{ src: '~/plugins/agastya.js', ssr: false }], // "ssr: false" fixes "window is not defined".
+  // plugins: [{ src: '~/plugins/agastya.js', ssr: false }], // "ssr: false" fixes "window is not defined".
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-    // https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    // https://github.com/nuxt-community/google-fonts-module
-    '@nuxtjs/google-fonts',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-  ],
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://github.com/nuxt-community/recaptcha-module
-    '@nuxtjs/recaptcha',
+    // '@nuxtjs/recaptcha',
     // https://github.com/nuxt-community/sitemap-module
-    '@nuxtjs/sitemap',
+    // '@nuxtjs/sitemap',
+    // https://go.nuxtjs.dev/stylelint
+    // '@nuxtjs/stylelint-module',
+    ['@nuxtjs/google-fonts', {
+      base64: true,
+      display: 'swap',
+      download: true,
+      families: {
+        'IM+Fell+English+SC': true,
+        Cormorant: [300, 400, 500, 600, 700],
+      },
+      fontsDir: 'fonts',
+      fontsPath: '~assets/fonts',
+      inject: true,
+      overwriting: true,
+      preconnect: true,
+      prefetch: true,
+      preload: true,
+      subsets: [],
+      stylePath: 'css/fonts.css',
+      text: null,
+      useStylesheet: false,
+    }],
+    // // https://go.nuxtjs.dev/pwa
+    // '@nuxtjs/pwa',
+    // // https://github.com/dword-design/nuxt-mail
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: 'contact@doyban.com',
+        },
+        smtp: {
+          host: 'mail.doyban.com',
+          port: 587,
+        },
+      },
+    ],
   ],
 
-  recaptcha: {
-    hideBadge: true,
-    siteKey: process.env.RECAPTCHA_API_KEY,
-    version: 2, // TODO: Change this to version 3 (and activate associated key to reCAPTCHA v3 - example https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue)
-  },
+  // recaptcha: {
+  //   hideBadge: true,
+  //   siteKey: process.env.RECAPTCHA_API_KEY,
+  //   version: 2, // TODO: Change this to version 3 (and activate associated key to reCAPTCHA v3 - example https://github.com/nuxt-community/recaptcha-module/blob/master/example/v3/pages/index.vue)
+  // },
 
   // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
   generate: { fallback: true },
 
-  googleFonts: {
-    base64: true,
-    display: 'swap',
-    download: true,
-    families: {
-      'IM+Fell+English+SC': true,
-      Cormorant: [300, 400, 500, 600, 700],
-    },
-    fontsDir: 'fonts',
-    fontsPath: '~assets/fonts',
-    inject: true,
-    overwriting: true,
-    preconnect: true,
-    prefetch: true,
-    preload: true,
-    subsets: [],
-    stylePath: 'css/fonts.css',
-    text: null,
-    useStylesheet: false,
-  },
-
-  sitemap: {
-    gzip: true,
-    hostname: 'https://doyban.com',
-    path: '/sitemap.xml',
-  },
+  // sitemap: {
+  //   gzip: true,
+  //   hostname: 'https://doyban.com',
+  //   path: '/sitemap.xml',
+  // },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   // TODO: Use variables for SCSS.
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
-  },
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
-}
+  // vuetify: {
+  //   customVariables: ['~/assets/variables.scss'],
+  //   theme: {
+  //     dark: false,
+  //     themes: {
+  //       dark: {
+  //         primary: colors.blue.darken2,
+  //         accent: colors.grey.darken3,
+  //         secondary: colors.amber.darken3,
+  //         info: colors.teal.lighten1,
+  //         warning: colors.amber.base,
+  //         error: colors.deepOrange.accent4,
+  //         success: colors.green.accent3,
+  //       },
+  //     },
+  //   },
+  // },
+})

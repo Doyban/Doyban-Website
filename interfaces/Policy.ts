@@ -1,4 +1,4 @@
-export interface Policy {
+export default interface Policy {
   description: string
   title: string
 }
