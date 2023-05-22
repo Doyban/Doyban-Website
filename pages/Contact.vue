@@ -75,6 +75,48 @@ const contactFormRules = {
   ],
 }
 const contactType: string[] = ['Careers', 'Games', 'Investment', 'Other']
+const inputFields: any = [
+  {
+    appendInnerIcon: 'mdi-account',
+    counter: 64,
+    hint: 'Write your first name.',
+    placeholder: 'Your first name',
+    slotText: 'First name',
+    rules: contactFormRules.firstName,
+    variant: 'outlined',
+    vBind: contactForm.value.firstName
+  },
+  {
+    appendInnerIcon: 'mdi-account-check',
+    counter: 64,
+    hint: 'Write your last name.',
+    placeholder: 'Your last name',
+    slotText: 'Last name',
+    rules: contactFormRules.lastName,
+    variant: 'outlined',
+    vBind: contactForm.value.lastName
+  },
+  {
+    appendInnerIcon: 'mdi-at',
+    counter: 512,
+    hint: 'Provide a valid email address.',
+    placeholder: 'Your email',
+    slotText: 'Email',
+    rules: contactFormRules.email,
+    variant: 'outlined',
+    vBind: contactForm.value.email
+  },
+  {
+    appendInnerIcon: 'mdi-information-outline',
+    counter: 128,
+    hint: 'The subject of your message.',
+    placeholder: 'Subject',
+    slotText: 'Subject',
+    rules: contactFormRules.subject,
+    variant: 'outlined',
+    vBind: contactForm.value.subject
+  },
+];
 const isContactFormValid: Ref<boolean> = ref(false)
 let isRecaptchaValid = false
 const privacy: Ref<boolean> = ref(false)
@@ -137,80 +179,23 @@ useHead({
                 >
                   <v-container>
                     <h1 class="my-12 text-center">Contact</h1>
-                    <!-- TODO: Make the text fields in a "for" loop. -->
                     <v-text-field
-                      :counter="64"
-                      :rules="contactFormRules.firstName"
-                      append-inner-icon="mdi-account"
+                      v-for="inputField in inputFields"
+                      :key="inputField"
+                      :append-inner-icon="inputField.appendInnerIcon"
+                      :counter="inputField.counter"
+                      :hint="inputField.hint"
+                      :placeholder="inputField.placeholder"
+                      :rules="inputField.rules"
+                      :variant="inputField.variant"
+                      :v-bind="inputField.vBind"
                       clearable
                       color="purple darken-4"
-                      hint="Write your first name."
                       loading
-                      placeholder="Your first name"
-                      v-bind="contactForm.firstName"
-                      variant="outlined"
                     >
                       <!-- Slot for "v-text-field". -->
                       <template #label
-                        ><span class="red--text"><strong>* </strong></span>First
-                        name</template
-                      >
-                      <!--/ Slot for "v-text-field". -->
-                    </v-text-field>
-                    <v-text-field
-                      :counter="64"
-                      :rules="contactFormRules.lastName"
-                      append-inner-icon="mdi-account-check"
-                      clearable
-                      color="purple darken-4"
-                      hint="Write your last name."
-                      loading
-                      placeholder="Your last name"
-                      v-bind="contactForm.lastName"
-                      variant="outlined"
-                    >
-                      <!-- Slot for "v-text-field". -->
-                      <template #label
-                        ><span class="red--text"><strong>* </strong></span>Last
-                        name</template
-                      >
-                      <!--/ Slot for "v-text-field". -->
-                    </v-text-field>
-                    <v-text-field
-                      :counter="512"
-                      :rules="contactFormRules.email"
-                      append-inner-icon="mdi-at"
-                      clearable
-                      color="purple darken-4"
-                      hint="Provide a valid email address."
-                      loading
-                      placeholder="Your email"
-                      v-bind="contactForm.email"
-                      variant="outlined"
-                    >
-                      <!-- Slot for "v-text-field". -->
-                      <template #label
-                        ><span class="red--text"><strong>* </strong></span
-                        >Email</template
-                      >
-                      <!--/ Slot for "v-text-field". -->
-                    </v-text-field>
-                    <v-text-field
-                      :counter="128"
-                      :rules="contactFormRules.subject"
-                      append-inner-icon="mdi-information-outline"
-                      clearable
-                      color="purple darken-4"
-                      hint="The subject of your email."
-                      loading
-                      placeholder="Subject"
-                      v-bind="contactForm.subject"
-                      variant="outlined"
-                    >
-                      <!-- Slot for "v-text-field". -->
-                      <template #label
-                        ><span class="red--text"><strong>* </strong></span
-                        >Subject</template
+                        ><span class="red--text"><strong>* </strong></span>{{ inputField.slotText }}</template
                       >
                       <!--/ Slot for "v-text-field". -->
                     </v-text-field>
