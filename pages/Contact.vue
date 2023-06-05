@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, Ref } from 'vue'
+import { ref, Ref } from 'vue'
 import Swal from 'sweetalert2'
 import Privacy from './Privacy.vue'
 import Terms from './Terms.vue'
@@ -13,7 +13,6 @@ const contactForm: Ref = ref({
   subject: '',
   terms: false,
 })
-const contactFormReactive = reactive({...contactForm});
 const contactFormRules = {
   acceptedTerms: [
     (inputValue: boolean) => inputValue === true || 'Terms are required.',
@@ -84,7 +83,7 @@ const inputFields: any = [
     slotText: 'First name',
     rules: contactFormRules.firstName,
     variant: 'outlined',
-    vBind: contactForm.value.firstName
+    vBind: contactForm.value.firstName,
   },
   {
     appendInnerIcon: 'mdi-account-check',
@@ -94,7 +93,7 @@ const inputFields: any = [
     slotText: 'Last name',
     rules: contactFormRules.lastName,
     variant: 'outlined',
-    vBind: contactForm.value.lastName
+    vBind: contactForm.value.lastName,
   },
   {
     appendInnerIcon: 'mdi-at',
@@ -104,7 +103,7 @@ const inputFields: any = [
     slotText: 'Email',
     rules: contactFormRules.email,
     variant: 'outlined',
-    vBind: contactForm.value.email
+    vBind: contactForm.value.email,
   },
   {
     appendInnerIcon: 'mdi-information-outline',
@@ -114,9 +113,10 @@ const inputFields: any = [
     slotText: 'Subject',
     rules: contactFormRules.subject,
     variant: 'outlined',
-    vBind: contactForm.value.subject
+    vBind: contactForm.value.subject,
   },
-];
+]
+
 const isContactFormValid: Ref<boolean> = ref(false)
 let isRecaptchaValid = false
 const privacy: Ref<boolean> = ref(false)
@@ -130,10 +130,7 @@ function onRecaptchaVerified(): void {
 }
 
 const onReset = () => {
-  // const contactFormRef: any = contactForm.reset()
-  // contactFormRef.reset()
-  Object.assign(contactFormReactive, contactForm);
-  console.log(contactForm.value)
+  contactForm.value?.reset()
 }
 
 function onSubmit(): void {
@@ -195,7 +192,8 @@ useHead({
                     >
                       <!-- Slot for "v-text-field". -->
                       <template #label
-                        ><span class="red--text"><strong>* </strong></span>{{ inputField.slotText }}</template
+                        ><span class="red--text"><strong>* </strong></span
+                        >{{ inputField.slotText }}</template
                       >
                       <!--/ Slot for "v-text-field". -->
                     </v-text-field>
@@ -285,8 +283,8 @@ useHead({
                       variant="text"
                       >Reset</v-btn
                     >
-                    <!-- :disabled="isContactFormValid || isRecaptchaValid" -->
                     <v-btn
+                      :disabled="!isContactFormValid || !isRecaptchaValid"
                       color="purple darken-4"
                       elevation="6"
                       ripple
@@ -379,10 +377,10 @@ useHead({
 }
 :deep() {
   .v-field__outline__start {
-    border-radius: 1rem 0 0 0!important;
+    border-radius: 1rem 0 0 0 !important;
   }
   .v-field__outline__end {
-    border-radius: 0 2rem 0 0!important;
+    border-radius: 0 2rem 0 0 !important;
   }
 }
 
