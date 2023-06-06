@@ -104,15 +104,16 @@ useHead({
         md="3"
       >
         <v-hover>
-          <template v-slot:default="{ hover }">
+          <template v-slot:default="{ isHovering, props }">
             <v-card
               :class="{
-                'on-hover': hover,
+                'on-hover': isHovering,
               }"
               :color="checkIfCenter(index) ? 'purple darken-4' : ''"
-              :elevation="hover ? 24 : 12"
+              :elevation="isHovering ? 24 : 12"
               :theme="checkIfCenter(index) ? 'dark' : ''"
               class="pb-6"
+              v-bind="props"
             >
               <v-card-title class="text-center">
                 <h2 class="mt-6" v-text="partnership.title" />

@@ -315,15 +315,16 @@ useHead({
           order-sm="1"
         >
           <v-hover>
-            <template v-slot:default="{ hover }">
+            <template v-slot:default="{ isHovering, props }">
               <v-card
-                :class="{ 'on-hover': hover }"
+                :class="{ 'on-hover': isHovering }"
                 color="purple lighten-5"
-                :elevation="hover ? 24 : 12"
+                :elevation="isHovering ? 24 : 12"
                 loading
                 outlined
                 ripple
                 shaped
+                v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
                 <template slot="progress">

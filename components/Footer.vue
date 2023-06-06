@@ -68,12 +68,13 @@ const currentYear: number = new Date().getFullYear()
       <!-- When we'll introduce newsletter uncomment it. -->
       <!-- <v-col cols="12" sm="4">
         <v-hover>
-          <template v-slot:default="{ hover }">
+          <template v-slot:default="{ isHovering, props }">
             <v-card
-              :class="{ 'on-hover': hover }"
-              :elevation="hover ? 24 : 0"
+              :class="{ 'on-hover': isHovering }"
+              :elevation="isHovering ? 24 : 0"
               align="center"
               color="transparent"
+              v-bind="props"
             >
               <v-card-title>Stay informed</v-card-title>
               <v-card-subtitle>Subscribe</v-card-subtitle>

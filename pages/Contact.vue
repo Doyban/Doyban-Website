@@ -161,13 +161,14 @@ useHead({
       <v-row class="mx-3 my-12" justify="center">
         <v-col cols="12" md="10">
           <v-hover>
-            <template v-slot:default="{ hover }">
+            <template v-slot:default="{ isHovering, props }">
               <v-card
-                :class="{ 'on-hover': hover }"
-                :elevation="hover ? 24 : 12"
+                :class="{ 'on-hover': isHovering }"
+                :elevation="isHovering ? 24 : 12"
                 class="elevation-24"
                 outlined
                 shaped
+                v-bind="props"
               >
                 <v-form
                   ref="contactForm"
@@ -298,14 +299,15 @@ useHead({
                 </v-form>
                 <v-dialog v-model="terms">
                   <v-hover>
-                    <template v-slot:default="{ hover2 }">
+                    <template v-slot:default="{ isHovering2, props2 }">
                       <v-card
-                        :class="{ 'on-hover': hover2 }"
-                        :elevation="hover2 ? 24 : 12"
+                        :class="{ 'on-hover': isHovering2 }"
+                        :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
                         outlined
                         ripple
                         shaped
+                        v-bind="props2"
                       >
                         <v-card-text
                           ><Terms
@@ -331,14 +333,15 @@ useHead({
                 </v-dialog>
                 <v-dialog v-model="privacy">
                   <v-hover>
-                    <template v-slot:default="{ hover2 }">
+                    <template v-slot:default="{ isHovering2, props2 }">
                       <v-card
-                        :class="{ 'on-hover': hover2 }"
-                        :elevation="hover2 ? 24 : 12"
+                        :class="{ 'on-hover': isHovering2 }"
+                        :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
                         outlined
                         ripple
                         shaped
+                        v-bind="props2"
                       >
                         <v-card-text
                           ><Privacy

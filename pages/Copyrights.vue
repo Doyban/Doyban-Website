@@ -40,13 +40,14 @@ useHead({
     <v-row justify="center">
       <v-col class="ma-8" cols="12" md="6">
         <v-hover>
-          <template v-slot:default="{ hover }">
+          <template v-slot:default="{ isHovering, props }">
             <v-card
               :class="{
-                'on-hover': hover,
+                'on-hover': isHovering,
               }"
-              :elevation="hover ? 24 : 12"
+              :elevation="isHovering ? 24 : 12"
               class="pb-6"
+              v-bind="props"
             >
               <v-list-item
                 v-for="(policy, index) in policies"
