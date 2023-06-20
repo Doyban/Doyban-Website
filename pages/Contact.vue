@@ -172,7 +172,7 @@ useHead({
               >
                 <v-form
                   ref="contactForm"
-                  v-bind="isContactFormValid"
+                  v-model="isContactFormValid"
                   @submit.prevent="onSubmit"
                 >
                   <v-container>
