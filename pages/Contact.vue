@@ -83,7 +83,7 @@ const inputFields: any = [
     slotText: 'First name',
     rules: contactFormRules.firstName,
     variant: 'outlined',
-    vBind: contactForm.value.firstName,
+    vModel: contactForm.value.firstName,
   },
   {
     appendInnerIcon: 'mdi-account-check',
@@ -93,7 +93,7 @@ const inputFields: any = [
     slotText: 'Last name',
     rules: contactFormRules.lastName,
     variant: 'outlined',
-    vBind: contactForm.value.lastName,
+    vModel: contactForm.value.lastName,
   },
   {
     appendInnerIcon: 'mdi-at',
@@ -103,7 +103,7 @@ const inputFields: any = [
     slotText: 'Email',
     rules: contactFormRules.email,
     variant: 'outlined',
-    vBind: contactForm.value.email,
+    vModel: contactForm.value.email,
   },
   {
     appendInnerIcon: 'mdi-information-outline',
@@ -113,7 +113,7 @@ const inputFields: any = [
     slotText: 'Subject',
     rules: contactFormRules.subject,
     variant: 'outlined',
-    vBind: contactForm.value.subject,
+    vModel: contactForm.value.subject,
   },
 ]
 
@@ -186,7 +186,7 @@ useHead({
                       :placeholder="inputField.placeholder"
                       :rules="inputField.rules"
                       :variant="inputField.variant"
-                      :v-bind="inputField.vBind"
+                      :v-model="inputField.vModel"
                       clearable
                       color="purple darken-4"
                       loading
@@ -198,6 +198,7 @@ useHead({
                       >
                       <!--/ Slot for "v-text-field". -->
                     </v-text-field>
+                    <!-- This one needs to stay on v-bind, otherwise it doesn't keep the message in the textarea and doesn't count correctly the number of words. -->
                     <v-textarea
                       :counter="8192"
                       :rules="contactFormRules.message"
@@ -228,16 +229,17 @@ useHead({
                       multiple
                       persistent-hint
                       placeholder="What brings you to us?"
-                      v-bind="contactForm.contactType"
+                      v-model="contactForm.contactType"
                       variant="outlined"
                     >
                     </v-combobox>
                     <span class="red--text"><strong>* </strong></span>
+                    <!-- TODO: This needs to be fixed why v-bind (at least v-bind should work)/model (should be v-model) doesn't work here. -->
                     <v-checkbox
-                      :rules="contactFormRules.terms"
+                      :rules="contactFormRules.acceptedTerms"
                       class="mt-n9 ml-n1"
                       color="purple darken-4"
-                      v-bind="contactForm.terms"
+                      v-model="contactForm.terms"
                     >
                       <template v-slot:label>
                         <div @click.stop>
@@ -252,8 +254,8 @@ useHead({
                                 Terms
                               </a>
                             </template>
-                            Opens a dialog with Terms</v-tooltip
-                          >
+                            Opens a dialog with Terms
+                          </v-tooltip>
                           and
                           <v-tooltip location="bottom">
                             <template v-slot:activator="{ props }">
