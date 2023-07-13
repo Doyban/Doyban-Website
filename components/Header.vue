@@ -54,55 +54,49 @@ const menuItems: MenuItem[] = [
 <template>
   <header>
     <!-- TODO: Improve ARIA across the whole app. -->
-    <v-app-bar
+    <v-toolbar
       aria-label="This is a toolbar with menu elements for large screen devices."
-      app
       elevation="24"
     >
       <v-toolbar-title
-        ><v-img src="logo.webp" max-width="100"
-      /></v-toolbar-title>
+        ><router-link to="/"
+          ><v-img link max-width="100" src="logo.webp" /></router-link
+      ></v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
-      <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn
-          v-for="(menuItem, index) in menuItems"
-          :key="index"
-          :to="menuItem.path"
-          color="purple darken-4"
-          exact
-          ripple
-          small
-          v-text="menuItem.name"
-          variant="tonal"
-        />
-      </v-toolbar-items>
-    </v-app-bar>
-    <v-navigation-drawer
-      :value="drawer"
-      aria-label="This is a sidenav with menu elements for mobile devices."
-      fixed
-      right
-    >
-      <v-list>
-        <!-- <v-list-item-group> -->
+      <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
+      <v-toolbar-items class="hidden-sm-and-down" variant="plain">
         <v-list-item
           v-for="(menuItem, index) in menuItems"
           :key="index"
           :to="menuItem.path"
           color="purple darken-4"
-          exact
-          two-line
         >
-          <v-list-item-action>
-            <v-icon v-text="menuItem.icon" />
-          </v-list-item-action>
-          <!-- <v-list-item-content> -->
-          <v-list-item-title v-text="menuItem.name" />
-          <!-- </v-list-item-content> -->
+          <v-btn size="small" v-text="menuItem.name" />
         </v-list-item>
-        <!-- </v-list-item-group> -->
-      </v-list>
+      </v-toolbar-items>
+    </v-toolbar>
+    <v-navigation-drawer
+      aria-label="This is a sidenav with menu elements for mobile devices."
+      elevation="24"
+      location="right"
+      temporary
+      v-model="drawer"
+    >
+      <!-- TODO: Use floating or temporary after figuring out working routes in that config. -->
+      <v-list-item
+        v-for="(menuItem, index) in menuItems"
+        :key="index"
+        :prepend-icon="menuItem.icon"
+        :to="menuItem.path"
+        lines="two"
+      >
+        <v-btn
+          color="purple darken-4"
+          size="x-large"
+          variant="plain"
+          v-text="menuItem.name"
+        />
+      </v-list-item>
     </v-navigation-drawer>
   </header>
 </template>
