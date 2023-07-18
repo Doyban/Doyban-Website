@@ -60,7 +60,7 @@ const menuItems: MenuItem[] = [
     >
       <v-toolbar-title
         ><router-link to="/"
-          ><v-img link max-width="100" src="logo.webp" /></router-link
+          ><v-img max-height="60" src="logo.svg" /></router-link
       ></v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
@@ -100,3 +100,13 @@ const menuItems: MenuItem[] = [
     </v-navigation-drawer>
   </header>
 </template>
+
+<style lang="scss" scoped>
+.v-img {
+  width: 5rem;
+}
+
+.v-toolbar-title {
+  flex: 5rem 0 0;
+}
+</style>
