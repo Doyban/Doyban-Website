@@ -85,15 +85,13 @@ useHead({
                 :key="index"
                 two-line
               >
-                <v-list-item-content>
-                  <v-list-item-title class="mb-3 text-center"
-                    ><strong>{{ policy.title }}</strong></v-list-item-title
-                  >
-                  <v-list-item-subtitle
-                    class="text-justify text-wrap"
-                    v-html="policy.description"
-                  />
-                </v-list-item-content>
+                <v-list-item-title class="mb-3 text-center"
+                  ><strong>{{ policy.title }}</strong></v-list-item-title
+                >
+                <v-list-item-subtitle
+                  class="text-justify text-wrap"
+                  v-html="policy.description"
+                />
               </v-list-item> </v-card
           ></template>
         </v-hover>
