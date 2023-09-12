@@ -188,12 +188,12 @@ useHead({
                       :variant="inputField.variant"
                       :v-model="inputField.vModel"
                       clearable
-                      color="purple darken-4"
+                      color="purple-darken-4"
                       loading
                     >
                       <!-- Slot for "v-text-field". -->
                       <template #label
-                        ><span class="red--text"><strong>* </strong></span
+                        ><span class="text-red"><strong>*&nbsp;</strong></span
                         >{{ inputField.slotText }}</template
                       >
                       <!--/ Slot for "v-text-field". -->
@@ -204,7 +204,7 @@ useHead({
                       :rules="contactFormRules.message"
                       append-inner-icon="mdi-lead-pencil"
                       clearable
-                      color="purple darken-4"
+                      color="purple-darken-4"
                       hint="Write about what you have to say to us."
                       loading
                       placeholder="Message content"
@@ -213,7 +213,7 @@ useHead({
                     >
                       <!-- Slot for "v-textarea". -->
                       <template #label
-                        ><span class="red--text"><strong>* </strong></span
+                        ><span class="text-red"><strong>*&nbsp;</strong></span
                         >Message</template
                       >
                       <!--/ Slot for "v-textarea". -->
@@ -224,7 +224,7 @@ useHead({
                       chips
                       clearable
                       closable-chips
-                      color="purple darken-4"
+                      color="purple-darken-4"
                       hint="Select the topics you are contacting us about. If 'Other', you can write it down."
                       multiple
                       persistent-hint
@@ -233,14 +233,16 @@ useHead({
                       variant="outlined"
                     >
                     </v-combobox>
-                    <span class="red--text"><strong>* </strong></span>
+                    <span class="text-red"><strong>*&nbsp;</strong></span>
                     <!-- TODO: This needs to be fixed why v-bind (at least v-bind should work)/model (should be v-model) doesn't work here. -->
                     <v-checkbox
+                      @click="contactForm.terms = !contactForm.terms"
                       :rules="contactFormRules.acceptedTerms"
                       class="mt-n9 ml-n1"
-                      color="purple darken-4"
+                      color="purple-darken-4"
                       v-model="contactForm.terms"
                     >
+                      {{ contactForm.terms }}
                       <template v-slot:label>
                         <div @click.stop>
                           Do you accept the
@@ -270,7 +272,7 @@ useHead({
                         </div>
                       </template>
                     </v-checkbox>
-                    <span class="red--text"><strong>* </strong></span>
+                    <span class="text-red"><strong>*&nbsp;</strong></span>
                     <recaptcha
                       class="mt-n9 ml-2"
                       @expired="onRecaptchaExpired"
@@ -283,12 +285,12 @@ useHead({
                       elevation="6"
                       ripple
                       size="large"
-                      variant="text"
+                      variant="plain"
                       >Reset</v-btn
                     >
                     <v-btn
                       :disabled="!isContactFormValid || !isRecaptchaValid"
-                      color="purple darken-4"
+                      color="purple-darken-4"
                       elevation="6"
                       ripple
                       size="large"
@@ -321,7 +323,7 @@ useHead({
                           <v-spacer />
                           <v-btn
                             @click="terms = false"
-                            color="purple darken-4"
+                            color="purple-darken-4"
                             elevation="6"
                             ripple
                             size="large"
@@ -355,7 +357,7 @@ useHead({
                           <v-spacer />
                           <v-btn
                             @click="privacy = false"
-                            color="purple darken-4"
+                            color="purple-darken-4"
                             elevation="6"
                             ripple
                             size="large"

@@ -263,7 +263,7 @@ useHead({
             <v-row justify="center">
               <v-avatar
                 class="elevation-24 mb-2 text-center"
-                color="purple darken-4"
+                color="purple-darken-4"
                 size="64"
                 ><v-icon dark x-large v-text="feature.icon"
               /></v-avatar>
@@ -318,7 +318,7 @@ useHead({
             <template v-slot:default="{ isHovering, props }">
               <v-card
                 :class="{ 'on-hover': isHovering }"
-                color="purple lighten-5"
+                color="purple-lighten-5"
                 :elevation="isHovering ? 24 : 12"
                 loading
                 outlined
@@ -330,7 +330,7 @@ useHead({
                 <template slot="progress">
                   <v-progress-linear
                     buffer-value="50"
-                    color="purple darken-4"
+                    color="purple-darken-4"
                     indeterminate
                   ></v-progress-linear>
                 </template>

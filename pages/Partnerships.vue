@@ -109,7 +109,7 @@ useHead({
               :class="{
                 'on-hover': isHovering,
               }"
-              :color="checkIfCenter(index) ? 'purple darken-4' : ''"
+              :color="checkIfCenter(index) ? 'purple-darken-4' : ''"
               :elevation="isHovering ? 24 : 12"
               :theme="checkIfCenter(index) ? 'dark' : ''"
               class="pb-6"

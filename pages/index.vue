@@ -76,7 +76,7 @@ useHead({
 <template>
   <section>
     <!-- TODO: Play with Typography (https://vuetifyjs.com/en/styles/text-and-typography/#typography) -->
-    <v-carousel height="95vh" progress progress-color="purple darken-4">
+    <v-carousel height="95vh" progress progress-color="purple-darken-4">
       <v-carousel-item
         v-for="(sliderItem, index) in sliderItems"
         :key="index"
@@ -112,7 +112,7 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>
@@ -162,7 +162,7 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>
@@ -209,7 +209,7 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>

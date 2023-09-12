@@ -69,7 +69,7 @@ const menuItems: MenuItem[] = [
           v-for="(menuItem, index) in menuItems"
           :key="index"
           :to="menuItem.path"
-          color="purple darken-4"
+          color="purple-darken-4"
         >
           <v-btn size="small" v-text="menuItem.name" />
         </v-list-item>
@@ -91,7 +91,7 @@ const menuItems: MenuItem[] = [
         lines="two"
       >
         <v-btn
-          color="purple darken-4"
+          color="purple-darken-4"
           size="x-large"
           variant="plain"
           v-text="menuItem.name"

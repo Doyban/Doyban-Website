@@ -75,24 +75,25 @@ useHead({
     </v-row>
     <v-container>
       <h1 class="my-12 text-center">Our Story</h1>
-      <!-- :dense="$vuetify.breakpoint.smAndDown"
-        :reverse="$vuetify.breakpoint.mdAndUp" -->
-      <v-timeline>
+      <v-timeline
+        :density="$vuetify.display.smAndDown ? 'comfortable' : 'default'"
+        line-inset="15"
+        truncate-line="start"
+      >
         <v-timeline-item
           v-for="(event, index) in events"
           :key="index"
           :dot-color="event.color"
+          :icon="event.icon"
           class="ma-6"
           fill-dot
-          large
+          icon-color="white"
+          size="large"
         >
           <!-- Slots for "v-timeline-item". -->
-          <template v-slot:icon>
-            <v-icon :icon="event.icon" size="32" theme="dark" />
-          </template>
           <template v-slot:opposite>
             <span
-              :class="`headline font-weight-bold ${event.color}--text`"
+              :class="`headline font-weight-bold text-${event.color}`"
               v-text="event.year"
             ></span>
           </template>
@@ -100,7 +101,7 @@ useHead({
             <template v-slot:default="{ isHovering, props }">
               <v-card
                 :class="{ 'on-hover': isHovering }"
-                :color="`${event.color} lighten-5`"
+                :color="`${event.color}-lighten-5`"
                 :elevation="isHovering ? 24 : 12"
                 loading
                 outlined
@@ -109,17 +110,17 @@ useHead({
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
-                <template v-slot:progress>
+                <template v-slot:loader>
                   <v-progress-linear
                     buffer-value="0"
-                    :color="`${event.color} darken-4`"
+                    :color="`${event.color}-darken-4`"
                     stream
                   ></v-progress-linear>
                 </template>
                 <!--/ Slots for "v-progress-linear". -->
                 <v-card-title
                   :class="`headline pt-6 font-weight-light mb-6 text-center
-            ${event.color}--text`"
+            text-${event.color}`"
                   v-text="event.title"
                 />
                 <v-card-text
