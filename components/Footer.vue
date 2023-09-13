@@ -34,11 +34,11 @@ const currentYear: number = new Date().getFullYear()
               ><p>
                 <v-icon>mdi-phone</v-icon>
                 <i
-                  ><a
+                  ><NuxtLink
                     aria-label="+48 732 280 741. Click here give us a phone call."
                     href="tel:+48 732 280 741"
                     title="+48 732 280 741"
-                    >+48 732 280 741</a
+                    >+48 732 280 741</NuxtLink
                   ></i
                 >
               </p></v-list-item
@@ -47,11 +47,11 @@ const currentYear: number = new Date().getFullYear()
               ><p>
                 <v-icon>mdi-at</v-icon>
                 <i
-                  ><a
+                  ><NuxtLink
                     aria-label="contact@doyban.com. Click here to send us an e-mail."
                     href="mailto:contact@doyban.com?subject=Mail from doyban.com&body=Hi Doyban!%0D%0A%0D%0AMy mail is about:%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0ABest regards,%0D%0A"
                     title="contact@doyban.com"
-                    >contact@doyban.com</a
+                    >contact@doyban.com</NuxtLink
                   ></i
                 >
               </p></v-list-item

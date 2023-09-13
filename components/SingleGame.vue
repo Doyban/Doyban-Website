@@ -64,12 +64,12 @@ useHead({
             </small>
           </footer>
         </blockquote>
-        <a
+        <NuxtLink
           v-for="(storeButton, index) in storeButtons"
           :href="storeButton.url"
           :key="index"
           :title="storeButton.title"
-          rel="noreferrer noopener"
+          rel
         >
           <img
             v-if="storeButton.url"
@@ -77,7 +77,7 @@ useHead({
             :src="`/buttons_stores/${storeButton.filename}.webp`"
             :title="storeButton.title"
             class="storeButtons"
-        /></a>
+        /></NuxtLink>
         <v-overlay v-if="selectedItem">
           <v-img
             :src="selectedItem ? selectedItem.src : ''"

@@ -248,25 +248,25 @@ useHead({
                           Do you accept the
                           <v-tooltip location="bottom">
                             <template v-slot:activator="{ props }">
-                              <a
+                              <NuxtLink
                                 @click.stop="terms = true"
                                 href="javascript:;"
                                 v-bind="props"
                               >
                                 Terms
-                              </a>
+                              </NuxtLink>
                             </template>
                             Opens a dialog with Terms
                           </v-tooltip>
                           and
                           <v-tooltip location="bottom">
                             <template v-slot:activator="{ props }">
-                              <a
+                              <NuxtLink
                                 @click.stop="privacy = true"
                                 href="javascript:;"
                                 v-bind="props"
                                 >Privacy Policy
-                              </a> </template
+                              </NuxtLink> </template
                             >Opens a dialog with Privacy Policy </v-tooltip
                           >?
                         </div>

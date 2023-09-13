@@ -294,19 +294,19 @@ useHead({
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
           <p class="text-center" v-html="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
-          <a
+          <NuxtLink
             v-for="(storeButton, indexGameStoreButton) in game.storeButtons"
             :href="storeButton.url"
             :key="indexGameStoreButton"
             :title="storeButton.title"
-            rel="noreferrer noopener"
+            rel
           >
             <img
               :alt="storeButton.title"
               :src="`/buttons_stores/${storeButton.filename}.webp`"
               :title="storeButton.title"
               class="storeButtons"
-          /></a>
+          /></NuxtLink>
         </v-col>
         <v-col
           cols="12"
