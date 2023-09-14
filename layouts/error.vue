@@ -9,7 +9,7 @@
       </h1>
       <h2>May the force be with you.</h2>
       <NuxtLink to="/">Return to Home page.</NuxtLink>
-      <v-img :src="require('@/static/pages/404.gif')" />
+      <v-img src="pages/404.gif" />
     </v-col>
   </v-row>
 </template>

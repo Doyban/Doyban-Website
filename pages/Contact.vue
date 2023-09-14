@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref, Ref } from 'vue'
 import Swal from 'sweetalert2'
 import Privacy from './Privacy.vue'

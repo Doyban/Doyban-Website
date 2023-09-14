@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import Feature from '../interfaces/Feature'
 
 const features: Feature[] = [
@@ -265,8 +265,8 @@ useHead({
                 class="elevation-24 mb-2 text-center"
                 color="purple-darken-4"
                 size="64"
-                ><v-icon dark x-large v-text="feature.icon"
-              /></v-avatar>
+                ><v-icon dark x-large>{{ feature.icon }} </v-icon></v-avatar
+              >
             </v-row>
             <h2 class="my-4" v-text="feature.title" />
             <p v-text="feature.description"></p>

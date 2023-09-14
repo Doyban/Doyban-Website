@@ -1,5 +1,7 @@
 // import colors from 'vuetify/es5/util/colors'
 // import 'vuetify';
+import vuetify from 'vite-plugin-vuetify'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
@@ -305,11 +307,13 @@ export default defineNuxtConfig({
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   // plugins: [{ src: '~/plugins/agastya.js', ssr: false }], // "ssr: false" fixes "window is not defined".
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    async (options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
+        vuetify()
+      ))
+    },
     // https://github.com/nuxt-community/recaptcha-module
     // '@nuxtjs/recaptcha',
     // https://github.com/nuxt-community/sitemap-module
@@ -361,6 +365,7 @@ export default defineNuxtConfig({
 
   // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
   generate: { fallback: true },
+  // ssr: false,
 
   // sitemap: {
   //   gzip: true,

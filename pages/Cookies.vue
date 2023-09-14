@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 // TODO: Add Animate on Scroll (AOL).
 import Policy from '../interfaces/Policy'
 
