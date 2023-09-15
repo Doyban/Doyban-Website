@@ -1,3 +1,19 @@
+<script lang="ts" setup>
+import Error from './interfaces/Error'
+
+interface Props {
+  error: Error
+}
+const props = defineProps<Props>()
+
+const otherError: string = 'An error occurred'
+const pageNotFound: string = 'Page Not Found - 404'
+
+useHead({
+  title: props.error.statusCode === 404 ? pageNotFound : otherError,
+})
+</script>
+
 <template>
   <v-row>
     <v-col cols="12">
@@ -13,31 +29,6 @@
     </v-col>
   </v-row>
 </template>
-
-<script>
-export default {
-  layout: 'empty',
-  props: {
-    error: {
-      type: Object,
-      default: null,
-    },
-  },
-  data() {
-    return {
-      pageNotFound: 'Page Not Found - 404',
-      otherError: 'An error occurred',
-    }
-  },
-  head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
-    return {
-      title,
-    }
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 a,
