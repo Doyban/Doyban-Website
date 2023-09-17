@@ -1,4 +1,3 @@
-// TODO: Add unit tests.
 module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
