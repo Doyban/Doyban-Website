@@ -4,6 +4,12 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // app config
+  app: {
+    // global transition
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
   // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
   build: { transpile: ["vuetify"] },
 
