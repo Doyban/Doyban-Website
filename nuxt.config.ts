@@ -322,8 +322,12 @@ export default defineNuxtConfig({
     },
     // https://github.com/nuxt-community/recaptcha-module
     // '@nuxtjs/recaptcha',
-    // https://github.com/nuxt-community/sitemap-module
-    // '@nuxtjs/sitemap',
+    // TODO: robots.txt adds http://localhost/sitemap.xml automatically: https://github.com/harlan-zw/nuxt-simple-robots/issues/36
+    // https://github.com/harlan-zw/nuxt-simple-robots
+    'nuxt-simple-robots',
+    // TODO: Sitemap is generated with https://false/PATH_NAME: https://github.com/harlan-zw/nuxt-simple-sitemap/issues/138
+    // https://github.com/harlan-zw/nuxt-simple-sitemap
+    'nuxt-simple-sitemap',
     // https://go.nuxtjs.dev/stylelint
     // '@nuxtjs/stylelint-module',
     ['@nuxtjs/google-fonts', {
@@ -372,12 +376,6 @@ export default defineNuxtConfig({
   // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
   generate: { fallback: true },
   // ssr: false,
-
-  // sitemap: {
-  //   gzip: true,
-  //   hostname: 'https://doyban.com',
-  //   path: '/sitemap.xml',
-  // },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   // TODO: Use variables for SCSS.
