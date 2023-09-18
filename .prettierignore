@@ -1,0 +1,7 @@
+.nuxt
+.output
+components.d.ts
+coverage
+dist
+node_modules
+nuxt.d.ts
