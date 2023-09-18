@@ -1,5 +1,4 @@
 // import colors from 'vuetify/es5/util/colors'
-// import 'vuetify';
 import vuetify from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -375,7 +374,6 @@ export default defineNuxtConfig({
 
   // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
   generate: { fallback: true },
-  // ssr: false,
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   // TODO: Use variables for SCSS.
