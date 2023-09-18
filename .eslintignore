@@ -1,7 +1,7 @@
-node_modules
-dist
 .nuxt
 .output
-coverage
 components.d.ts
+coverage
+dist
+node_modules
 nuxt.d.ts
