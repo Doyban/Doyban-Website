@@ -102,12 +102,12 @@ useHead({
           @click="selectedItem = galleryPicture"
         >
           <template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
+            <div class="d-flex align-center justify-center fill-height">
               <v-progress-circular
+                color="purple-darken-4"
                 indeterminate
-                color="grey-lighten-5"
               ></v-progress-circular>
-            </v-row>
+            </div>
           </template>
         </v-img>
       </v-col>
