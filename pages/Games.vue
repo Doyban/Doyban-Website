@@ -327,9 +327,9 @@ useHead({
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
-                <template slot="progress">
+                <template v-slot:loader="{ isActive }">
                   <v-progress-linear
-                    buffer-value="50"
+                    :active="isActive"
                     color="purple-darken-4"
                     indeterminate
                   ></v-progress-linear>
