@@ -60,7 +60,10 @@ const menuItems: MenuItem[] = [
     >
       <v-toolbar-title
         ><router-link to="/"
-          ><v-img max-height="60" src="logo.svg" /></router-link
+          ><v-img
+            alt="Logo image"
+            max-height="60"
+            src="logo.svg" /></router-link
       ></v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
