@@ -321,10 +321,8 @@ export default defineNuxtConfig({
     },
     // https://github.com/nuxt-community/recaptcha-module
     // '@nuxtjs/recaptcha',
-    // TODO: robots.txt adds http://localhost/sitemap.xml automatically: https://github.com/harlan-zw/nuxt-simple-robots/issues/36
     // https://github.com/harlan-zw/nuxt-simple-robots
     'nuxt-simple-robots',
-    // TODO: Sitemap is generated with https://false/PATH_NAME: https://github.com/harlan-zw/nuxt-simple-sitemap/issues/138
     // https://github.com/harlan-zw/nuxt-simple-sitemap
     'nuxt-simple-sitemap',
     // https://go.nuxtjs.dev/stylelint
