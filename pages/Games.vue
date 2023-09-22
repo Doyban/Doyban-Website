@@ -240,7 +240,7 @@ useHead({
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img src="/pages/games.webp" height="100%" />
+        <v-img alt="" src="/pages/games.webp" height="100%" />
       </v-col>
       <v-col class="mx-sm-3 mx-md-0" cols="12" md="6">
         <v-row class="mt-12" justify="center">
@@ -335,7 +335,7 @@ useHead({
                   ></v-progress-linear>
                 </template>
                 <!--/ Slots for "v-progress-linear". -->
-                <v-img :src="`/games/` + `${game.title}` + `.webp`" />
+                <v-img alt="" :src="`/games/` + `${game.title}` + `.webp`" />
                 <v-card-title class="text-center" v-text="game.title" />
                 <v-card-subtitle>
                   <p class="text-center" v-text="game.headline" />
