@@ -81,6 +81,7 @@ useHead({
         <v-overlay v-if="selectedItem">
           <v-img
             :src="selectedItem ? selectedItem.src : ''"
+            alt="Full size image"
             contain
             @click="selectedItem = null"
           ></v-img>
@@ -96,6 +97,7 @@ useHead({
         cols="12"
       >
         <v-img
+          :alt="`Picture number ${galleryPicture.id}.`"
           :src="galleryPicture.src"
           contain
           class="grey lighten-2"
