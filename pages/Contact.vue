@@ -29,7 +29,7 @@ const contactFormRules = {
     (inputValue: string) =>
       // eslint-disable-next-line no-useless-escape
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        inputValue
+        inputValue,
       ) || 'This is not correct email format.',
   ],
   firstName: [
@@ -142,7 +142,7 @@ function onSubmit(): void {
   Swal.fire(
     'Awesome!',
     "We've received your mail, will get back to you A.S.A.P.",
-    'success'
+    'success',
   )
   onReset()
 }
@@ -156,7 +156,7 @@ useHead({
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img src="pages/contact.webp" height="100%" />
+        <v-img alt="" src="pages/contact.webp" height="100%" />
       </v-col>
       <v-row class="mx-3 my-12" justify="center">
         <v-col cols="12" md="10">
