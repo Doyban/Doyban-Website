@@ -6,15 +6,16 @@
     "build": "nuxi build",
     "dev": "nuxi dev",
     "generate": "nuxi generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
     "start": "nuxi preview",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest",
     "serve": "firebase serve --only functions,hosting",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
@@ -27,20 +28,18 @@
     }
   },
   "dependencies": {
-    "@mdi/font": "^7.2.96",
-    "@nuxtjs/google-fonts": "^3.0.0",
-    "@nuxtjs/pwa": "^3.0.2",
-    "nuxt-mail": "^3.1.27",
-    "sass": "^1.61.0",
-    "sweetalert2": "^10.10.0",
-    "vuetify": "^3.1.4"
+    "vite-plugin-vuetify": "^1.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@mdi/font": "^7.2.96",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/google-fonts": "^3.0.0",
     "@nuxtjs/stylelint-module": "^5.0.1",
     "@nuxtjs/vuetify": "^1.11.2",
+    "@vite-pwa/assets-generator": "^0.0.10",
+    "@vite-pwa/nuxt": "^0.1.1",
     "@vue/test-utils": "^1.1.0",
     "consola": "^3.0.1",
     "eslint": "^8.49.0",
@@ -50,13 +49,19 @@
     "jest": "^26.5.0",
     "lint-staged": "^10.4.0",
     "nuxt": "^3.7.2",
+    "nuxt-mail": "^3.1.27",
     "nuxt-simple-robots": "^3.1.5",
     "nuxt-simple-sitemap": "^3.3.4",
     "prettier": "^3.0.3",
+    "sass": "^1.61.0",
     "stylelint": "^15.10.3",
     "stylelint-config-standard-scss": "^11.0.0",
+    "sweetalert2": "^10.10.0",
     "ts-jest": "^26.4.1",
-    "vite-plugin-vuetify": "^1.0.2",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "vuetify": "^3.1.4",
+    "workbox-core": "^7.0.0",
+    "workbox-precaching": "^7.0.0",
+    "workbox-routing": "^7.0.0"
   }
 }

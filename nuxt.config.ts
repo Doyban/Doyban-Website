@@ -1,27 +1,27 @@
 // import colors from 'vuetify/es5/util/colors'
 import vuetify from 'vite-plugin-vuetify'
 
+// PWA Config
+const description: string = '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.';
+const title: string = 'Doyban | The World of Digital Gameplay.';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // app config
+  // Global SEO and Meta config (https://nuxt.com/docs/getting-started/seo-meta)
   app: {
-    // global transition
-    pageTransition: { name: 'page', mode: 'out-in' },
-  },
-
-  // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
-  build: { transpile: ["vuetify"] },
-
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    'vuetify/styles',
-    '~/assets/main.scss'
-  ],
-
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    titleTemplate: '%s - Doyban | The World of Digital Gameplay.',
-    title: 'Doyban',
+    head: {
+      titleTemplate: '%s - ' + title,
+    },
+    htmlAttrs: {
+      lang: 'en',
+      amp: true,
+    },
+    link: [
+      { href: '/favicon.ico', rel: 'icon', sizes: 'any', type: 'image/x-icon' },
+      { href: '/favicon.ico', rel: 'shortcut icon', sizes: 'any', type: 'image/ico' },
+      { href: '/favicon.svg', rel: 'icon', type: 'image/svg+xml', },
+      { href: '/apple-touch-icon-180x180.png', rel: 'apple-touch-icon' },
+    ],
     meta: [
       // Basic HTML meta tags.
       { charset: 'utf-8' },
@@ -30,8 +30,7 @@ export default defineNuxtConfig({
       {
         hid: 'description',
         name: 'description',
-        content:
-          '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.',
+        content: description,
       },
       { hid: 'language', name: 'language', content: 'en_US' },
       { hid: 'robots', name: 'robots', content: 'index,follow' },
@@ -62,8 +61,7 @@ export default defineNuxtConfig({
       {
         hid: 'og:description',
         property: 'og:description',
-        content:
-          '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.',
+        content: description,
       },
       { hid: 'og:image', property: 'og:image', content: '/logo.webp' },
       {
@@ -256,7 +254,7 @@ export default defineNuxtConfig({
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Doyban | The World of Digital Gameplay.',
+        content: title,
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://doyban.com' },
@@ -275,8 +273,7 @@ export default defineNuxtConfig({
       {
         hid: 'twitter:description',
         property: 'twitter:description',
-        content:
-          '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.',
+        content: description,
       },
       {
         hid: 'twitter:image',
@@ -296,17 +293,32 @@ export default defineNuxtConfig({
       {
         hid: 'twitter:title',
         property: 'twitter:title',
-        content: 'Doyban | The World of Digital Gameplay.',
+        content: title,
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'shortcut icon', type: 'image/ico', href: '/favicon.ico' },
-    ],
-    htmlAttrs: {
-      lang: 'en',
-      amp: true,
-    },
+
+    // global transition
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
+  // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
+  build: { transpile: ["vuetify"] },
+
+  client: {
+    installPrompt: true,
+  },
+
+  // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: [
+    'vuetify/styles',
+    '~/assets/main.scss'
+  ],
+
+  devOptions: {
+    enabled: true,
+    suppressWarnings: true,
+    navigateFallbackAllowlist: [/^\/$/],
+    type: 'module',
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -347,8 +359,6 @@ export default defineNuxtConfig({
       text: null,
       useStylesheet: false,
     }],
-    // // https://go.nuxtjs.dev/pwa
-    // '@nuxtjs/pwa',
     // // https://github.com/dword-design/nuxt-mail
     [
       'nuxt-mail',
@@ -362,6 +372,8 @@ export default defineNuxtConfig({
         },
       },
     ],
+    // https://github.com/vite-pwa/nuxt
+    '@vite-pwa/nuxt'
   ],
 
   // recaptcha: {
@@ -372,6 +384,61 @@ export default defineNuxtConfig({
 
   // The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If set to true, the filename will be 404.html. If working with statically generated pages then it is recommended to use a 404.html for error pages. Multiple services (e.g. Netlify) detect a 404.html automatically, so that's the recommended way to do so in order not to configure error handling on the server.
   generate: { fallback: true },
+
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+    prerender: {
+      crawlLinks: true,
+      routes: ['/sitemap.xml', '/robots.txt']
+    }
+  },
+
+  pwa: {
+    manifest: {
+      background_color: '#fafafa',
+      description: description,
+      display: 'standalone',
+      icons: [
+        {
+          src: 'pwa-64x64.png',
+          sizes: '64x64',
+          type: 'image/png'
+        },
+        {
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any'
+        },
+        {
+          src: 'maskable-icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable'
+        }
+      ],
+      name: title,
+      scope: '.',
+      start_url: './',
+      short_name: title,
+      theme_color: '#4A148C',
+    },
+    strategies: 'injectManifest',
+  },
+
+  workbox: {
+    navigateFallback: '/',
+    globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+  },
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   // TODO: Use variables for SCSS.
