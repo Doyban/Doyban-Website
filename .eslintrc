@@ -2,7 +2,9 @@
   "root": true,
   "extends": [
     "@nuxtjs/eslint-config-typescript",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:vue/base",
+    "plugin:vuetify/base"
   ],
   "rules": {
     "vue/multi-word-component-names": "off",
