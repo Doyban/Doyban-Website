@@ -1,6 +1,6 @@
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -50,7 +50,7 @@
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -60,7 +60,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -70,7 +70,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -80,7 +80,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -90,7 +90,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -100,7 +100,7 @@
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -110,7 +110,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -120,7 +120,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -130,7 +130,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -140,7 +140,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -150,7 +150,7 @@
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -160,7 +160,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -170,7 +170,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -180,7 +180,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -190,7 +190,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -200,7 +200,7 @@
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -210,7 +210,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -220,7 +220,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -230,7 +230,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -240,7 +240,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Cormorant';
+  font-family: Cormorant;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -260,7 +260,7 @@
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -270,7 +270,7 @@
 
 /* cyrillic */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -280,7 +280,7 @@
 
 /* greek-ext */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -290,7 +290,7 @@
 
 /* greek */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -300,7 +300,7 @@
 
 /* vietnamese */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -310,7 +310,7 @@
 
 /* latin-ext */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -320,7 +320,7 @@
 
 /* latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-style: normal;
   font-weight: 100;
   font-display: swap;
