@@ -112,7 +112,12 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon
+              :icon="point.icon"
+              aria-hidden="true"
+              color="purple-darken-4"
+              size="x-large"
+            />
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>
@@ -162,7 +167,12 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon
+              :icon="point.icon"
+              aria-hidden="true"
+              color="purple-darken-4"
+              size="x-large"
+            />
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>
@@ -209,7 +219,12 @@ useHead({
       >
         <v-card color="transparent" flat>
           <v-card-text class="text-center">
-            <v-icon color="purple-darken-4" x-large>{{ point.icon }}</v-icon>
+            <v-icon
+              :icon="point.icon"
+              aria-hidden="true"
+              color="purple-darken-4"
+              size="x-large"
+            />
           </v-card-text>
           <v-card-title class="text-center">
             <h3>{{ point.title }}</h3>
