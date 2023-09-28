@@ -26,13 +26,13 @@ const currentYear: number = new Date().getFullYear()
           <v-list class="bg-transparent">
             <v-list-item
               ><p>
-                <v-icon>mdi-home</v-icon>
+                <v-icon aria-hidden="true" icon="mdi-home" />
                 <i>Irysowa 18, 55-220 Jelcz-Laskowice, Poland</i>
               </p></v-list-item
             >
             <v-list-item
               ><p>
-                <v-icon>mdi-phone</v-icon>
+                <v-icon aria-hidden="true" icon="mdi-phone" />
                 <i
                   ><NuxtLink
                     aria-label="+48 732 280 741. Click here give us a phone call."
@@ -45,7 +45,7 @@ const currentYear: number = new Date().getFullYear()
             >
             <v-list-item
               ><p>
-                <v-icon>mdi-at</v-icon>
+                <v-icon aria-hidden="true" icon="mdi-at" />
                 <i
                   ><NuxtLink
                     aria-label="contact@doyban.com. Click here to send us an e-mail."
@@ -58,7 +58,7 @@ const currentYear: number = new Date().getFullYear()
             >
             <v-list-item
               ><p>
-                <v-icon>mdi-information-outline</v-icon>
+                <v-icon aria-hidden="true" icon="mdi-information-outline" />
                 <i>Tax ID: PL9121899240</i>
               </p></v-list-item
             >
