@@ -88,7 +88,7 @@ useHead({
           class="ma-6"
           fill-dot
           icon-color="white"
-          size="large"
+          size="x-large"
         >
           <!-- Slots for "v-timeline-item". -->
           <template v-slot:opposite>
