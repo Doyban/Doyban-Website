@@ -156,7 +156,7 @@ useHead({
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img alt="" src="pages/contact.webp" height="100%" />
+        <v-img alt="" cover height="100%" src="pages/contact.webp" />
       </v-col>
       <v-row class="mx-3 my-12" justify="center">
         <v-col cols="12" md="10">
