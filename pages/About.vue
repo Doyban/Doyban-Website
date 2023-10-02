@@ -45,7 +45,7 @@ useHead({
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img alt="" src="pages/about.webp" height="100%" />
+        <v-img alt="" cover height="100%" src="pages/about.webp" />
       </v-col>
       <v-row class="my-12" justify="center" md="6">
         <v-col cols="12" class="mx-3" md="6">
