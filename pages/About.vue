@@ -104,9 +104,7 @@ useHead({
                 :color="`${event.color}-lighten-5`"
                 :elevation="isHovering ? 24 : 12"
                 loading
-                outlined
                 ripple
-                shaped
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
@@ -147,6 +145,7 @@ span.headline {
 }
 
 .v-card {
+  border-radius: 24px 4px;
   opacity: 0.5;
 
   &:hover {
