@@ -7,10 +7,10 @@ const currentYear: number = new Date().getFullYear()
   <v-footer theme="dark">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card align="center" color="transparent" elevation="0">
-          <v-card-title>Doyban</v-card-title>
+        <v-card color="transparent" elevation="0">
+          <v-card-title class="text-center">Doyban</v-card-title>
           <v-card-text
-            ><p>
+            ><p class="text-justify">
               We are a small mobile gaming studio developing simple yet fun
               games on multiple platforms. Our future-proof focus is Mini Games
               on popular apps and chats like Facebook Gaming, iMessage,
