@@ -82,7 +82,7 @@ useHead({
           <v-img
             :src="selectedItem ? selectedItem.src : ''"
             alt="Full size image"
-            contain
+            cover
             @click="selectedItem = null"
           ></v-img>
         </v-overlay>
@@ -99,8 +99,8 @@ useHead({
         <v-img
           :alt="`Picture number ${galleryPicture.id}.`"
           :src="galleryPicture.src"
-          contain
-          class="grey lighten-2"
+          class="grey-lighten-2"
+          cover
           @click="selectedItem = galleryPicture"
         >
           <template v-slot:placeholder>
