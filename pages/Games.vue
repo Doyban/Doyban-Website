@@ -240,7 +240,7 @@ useHead({
   <section>
     <v-row>
       <v-col class="hidden-sm-and-down" md="6">
-        <v-img alt="" src="/pages/games.webp" height="100%" />
+        <v-img alt="" cover height="100%" src="/pages/games.webp" />
       </v-col>
       <v-col class="mx-sm-3 mx-md-0" cols="12" md="6">
         <v-row class="mt-12" justify="center">
