@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Header />
-    <v-main class="mt-4 pt-4">
+    <v-main>
       <slot />
     </v-main>
     <Footer />
