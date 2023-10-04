@@ -321,9 +321,7 @@ useHead({
                 color="purple-lighten-5"
                 :elevation="isHovering ? 24 : 12"
                 loading
-                outlined
                 ripple
-                shaped
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
@@ -398,6 +396,10 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
+.v-card {
+  border-radius: 24px 4px;
+}
+
 a img {
   margin: 1.5rem;
 
