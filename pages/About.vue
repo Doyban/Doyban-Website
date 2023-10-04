@@ -47,31 +47,33 @@ useHead({
       <v-col class="hidden-sm-and-down" md="6">
         <v-img alt="" cover height="100%" src="pages/about.webp" />
       </v-col>
-      <v-row class="my-12" justify="center" md="6">
-        <v-col cols="12" class="mx-3" md="6">
-          <h1 class="mb-6 text-center">About</h1>
-          <p>
-            We believe that the 5G will accelerate the transition towards cloud
-            gaming within our daily used applications. We are here to research
-            Mobile Games, and eventually develop only installation-free Mini
-            Games.
-          </p>
-          <h2 class="mb-4 text-center">Mission</h2>
-          <p>
-            The technology goes fast, we do not want to be the last. Mini Games
-            have the ambition to bypass traditional app stores, the social
-            gameplay mechanics is one of its cores. Only together can we make
-            something great, which can be an opening gate.
-          </p>
-          <h2 class="mb-4 text-center">Team &amp; Community</h2>
-          <p>
-            Here is Doyban from Remote lands. Games without Installation are an
-            ample opportunity, but first, we need to make #call4community. The
-            main goal is to build a community around our mission and vision,
-            even though our team is currently super small.
-          </p>
-        </v-col>
-      </v-row>
+      <v-col md="6">
+        <v-row justify="center">
+          <v-col class="mx-3 my-12" md="6">
+            <h1 class="mb-6 my-12 text-center">About</h1>
+            <p>
+              We believe that the 5G will accelerate the transition towards
+              cloud gaming within our daily used applications. We are here to
+              research Mobile Games, and eventually develop only
+              installation-free Mini Games.
+            </p>
+            <h2 class="mb-4 my-12 text-center">Mission</h2>
+            <p>
+              The technology goes fast, we do not want to be the last. Mini
+              Games have the ambition to bypass traditional app stores, the
+              social gameplay mechanics is one of its cores. Only together can
+              we make something great, which can be an opening gate.
+            </p>
+            <h2 class="mb-4 my-12 text-center">Team &amp; Community</h2>
+            <p>
+              Here is Doyban from Remote lands. Games without Installation are
+              an ample opportunity, but first, we need to make #call4community.
+              The main goal is to build a community around our mission and
+              vision, even though our team is currently super small.
+            </p>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-row>
     <v-container>
       <h1 class="my-12 text-center">Our Story</h1>
