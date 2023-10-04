@@ -54,7 +54,7 @@ useHead({
                   ><strong>{{ policy.title }}</strong></v-list-item-title
                 >
                 <v-list-item-subtitle
-                  class="text-justify text-wrap"
+                  class="text-wrap"
                   v-html="policy.description"
                 />
               </v-list-item>
