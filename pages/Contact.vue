@@ -166,8 +166,6 @@ useHead({
                 :class="{ 'on-hover': isHovering }"
                 :elevation="isHovering ? 24 : 12"
                 class="elevation-24"
-                outlined
-                shaped
                 v-bind="props"
               >
                 <v-form
@@ -308,9 +306,7 @@ useHead({
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
-                        outlined
                         ripple
-                        shaped
                         v-bind="props2"
                       >
                         <v-card-text
@@ -342,9 +338,7 @@ useHead({
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
-                        outlined
                         ripple
-                        shaped
                         v-bind="props2"
                       >
                         <v-card-text
@@ -379,6 +373,10 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
+.v-card {
+  border-radius: 24px 4px;
+}
+
 .v-text-field {
   padding-bottom: 1rem;
 }
