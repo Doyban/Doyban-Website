@@ -10,7 +10,7 @@ const currentYear: number = new Date().getFullYear()
         <v-card color="transparent" elevation="0">
           <v-card-title class="text-center">Doyban</v-card-title>
           <v-card-text
-            ><p class="text-justify">
+            ><p>
               We are a small mobile gaming studio developing simple yet fun
               games on multiple platforms. Our future-proof focus is Mini Games
               on popular apps and chats like Facebook Gaming, iMessage,
