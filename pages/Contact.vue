@@ -1,8 +1,26 @@
 <script lang="ts" setup>
 import { ref, Ref } from 'vue'
+import {
+  IReCaptchaComposition,
+  VueReCaptcha,
+  useReCaptcha,
+} from 'vue-recaptcha-v3'
+import { RuntimeConfig } from 'nuxt/schema'
 import Swal from 'sweetalert2'
 import Privacy from './Privacy.vue'
 import Terms from './Terms.vue'
+import { useNuxtApp } from '#app'
+
+const config: RuntimeConfig = useRuntimeConfig()
+
+const { vueApp } = useNuxtApp()
+vueApp.use(VueReCaptcha, {
+  siteKey: config.public.recaptchaSiteKey,
+  loaderOptions: {
+    autoHideBadge: true,
+    useRecaptchaNet: true,
+  },
+})
 
 const contactForm: Ref = ref({
   contactType: '',
@@ -118,22 +136,18 @@ const inputFields: any = [
 ]
 
 const isContactFormValid: Ref<boolean> = ref(false)
-let isRecaptchaValid = false
 const privacy: Ref<boolean> = ref(false)
+const recaptchaInstance: IReCaptchaComposition | undefined = useReCaptcha()
 const terms: Ref<boolean> = ref(false)
-
-function onRecaptchaExpired(): void {
-  isRecaptchaValid = false
-}
-function onRecaptchaVerified(): void {
-  isRecaptchaValid = true
-}
 
 const onReset = () => {
   contactForm.value?.reset()
 }
 
-function onSubmit(): void {
+async function onSubmit(): Promise<void> {
+  await recaptchaInstance?.recaptchaLoaded()
+  await recaptchaInstance?.executeRecaptcha('submit')
+
   $mail.send({
     from: 'Daniel',
     subject: 'Incredible',
@@ -270,12 +284,6 @@ useHead({
                         </div>
                       </template>
                     </v-checkbox>
-                    <span class="text-red"><strong>*&nbsp;</strong></span>
-                    <recaptcha
-                      class="mt-n9 ml-2"
-                      @expired="onRecaptchaExpired"
-                      @success="onRecaptchaVerified"
-                    />
                   </v-container>
                   <v-card-actions>
                     <v-btn
@@ -287,7 +295,7 @@ useHead({
                       >Reset</v-btn
                     >
                     <v-btn
-                      :disabled="!isContactFormValid || !isRecaptchaValid"
+                      :disabled="!isContactFormValid"
                       color="purple-darken-4"
                       elevation="6"
                       ripple
