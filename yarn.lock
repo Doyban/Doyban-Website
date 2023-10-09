@@ -10518,10 +10518,10 @@ svgo@^3.0.2:
     csso "^5.0.5"
     picocolors "^1.0.0"
 
-sweetalert2@^10.10.0:
-  version "10.16.11"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.16.11.tgz#c8604059df2f31e06df56b02bd12b2f07ef7f098"
-  integrity sha512-Rdfabv2G89Tr8vmUTb1auWCYYesKBEWnkYPSi7XaiCIW0ZXXGK8Nw1wYKPEMLU6O8gMSMJe5m6MRKqMQsAQy9A==
+sweetalert2@^11.7.32:
+  version "11.7.32"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.7.32.tgz#366fde9eaa1fc8d7a8993400d7582715647a31cf"
+  integrity sha512-44tNNe2oLe7T94mT6dus4hc9G7qg6jZU/K5qZzpNS6e5HGPrSF6Kie6oZ7B5puIJydB34V2h/8f5EhIFivYo4A==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
