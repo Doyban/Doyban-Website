@@ -119,15 +119,16 @@ useHead({
                 <h2 class="mt-6" v-text="partnership.title" />
               </v-card-title>
               <v-card-text>
-                <h2 class="my-12 text-center">Perks</h2>
+                <h3 class="my-12 text-center">Perks</h3>
                 <v-row
                   v-for="(perk, indexPerk) in partnership.perks"
                   :key="indexPerk"
+                  class="px-12"
                 >
-                  <v-col cols="8">
-                    <span class="feature-label" v-text="perk.label" />
+                  <v-col cols="6">
+                    <span v-text="perk.label" />
                   </v-col>
-                  <v-col cols="4">
+                  <v-col class="text-right" cols="6">
                     <strong :class="perk.class" v-text="perk.value" />
                   </v-col>
                 </v-row>
@@ -162,6 +163,9 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
+h3 {
+  font-size: 1.75rem;
+}
 .no {
   color: #7c0690;
 }
@@ -170,12 +174,11 @@ useHead({
   color: green;
 }
 
-.v-card.theme--dark {
-  background-color: purple;
-}
-
-.v-card__text div {
-  font-size: 1.5rem;
+.v-card-text {
+  span,
+  strong {
+    font-size: 1.5rem;
+  }
 }
 
 .custom-btn {
