@@ -374,7 +374,6 @@ useHead({
                           block
                           elevation="24"
                           exact
-                          light
                           ripple
                           size="x-large"
                           :to="'/games/' + `${game.title.toLowerCase()}`"
