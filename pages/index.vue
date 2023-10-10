@@ -76,14 +76,21 @@ useHead({
 <template>
   <section>
     <!-- TODO: Play with Typography (https://vuetifyjs.com/en/styles/text-and-typography/#typography) -->
-    <v-carousel height="95vh" progress progress-color="purple-darken-4">
+    <v-carousel
+      color="white"
+      height="95vh"
+      progress="purple-darken-4"
+      show-arrows="hover"
+    >
       <v-carousel-item
         v-for="(sliderItem, index) in sliderItems"
         :key="index"
+        v-ripple
         :src="sliderItem.src"
-        reverse-transition="fade-transition"
-        ripple
-        transition="fade-transition"
+        alt=""
+        cover
+        reverse-transition="slide-y-reverse-transition"
+        transition="slide-y-transition"
       ></v-carousel-item>
     </v-carousel>
     <div id="clouds">
