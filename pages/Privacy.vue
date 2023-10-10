@@ -90,10 +90,10 @@ useHead({
                 <v-list-item-title class="mb-3 text-center"
                   ><strong>{{ policy.title }}</strong></v-list-item-title
                 >
-                <v-list-item-subtitle
-                  class="text-wrap"
-                  v-html="policy.description"
-                />
+                <!-- TODO: v-html isn't working, issue: https://github.com/nuxt/nuxt/issues/10333. That's why ul/li tags aren't rendered. -->
+                <v-list-item-subtitle class="text-justify">
+                  <span v-html="policy.description" />
+                </v-list-item-subtitle>
               </v-list-item>
             </v-card>
           </template>
