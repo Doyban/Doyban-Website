@@ -128,7 +128,7 @@ useHead({
         </v-card>
       </v-col>
     </v-row>
-    <v-parallax src="/pages/parallax.webp" height="400">
+    <v-parallax height="400" src="/pages/parallax.webp">
       <div
         class="d-flex flex-column fill-height justify-center align-center text-white"
       >
@@ -186,7 +186,7 @@ useHead({
         </v-card>
       </v-col>
     </v-row>
-    <v-parallax src="/pages/parallax2.webp" height="400">
+    <v-parallax height="400" src="/pages/parallax2.webp">
       <div
         class="d-flex flex-column fill-height justify-center align-center text-white"
       >
