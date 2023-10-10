@@ -140,7 +140,6 @@ useHead({
             class="mt-12"
             elevation="24"
             exact
-            light
             ripple
             size="x-large"
             to="/games"
@@ -192,7 +191,6 @@ useHead({
             class="mt-12"
             elevation="24"
             exact
-            light
             ripple
             size="x-large"
             to="/about"
