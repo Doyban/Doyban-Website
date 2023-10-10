@@ -129,26 +129,30 @@ useHead({
       </v-col>
     </v-row>
     <v-parallax src="/pages/parallax.webp" height="400">
-      <h2 class="display-2 text-center">Play</h2>
-      <em class="text-center"
-        >Take a look into our collection of games across different
-        platforms.</em
+      <div
+        class="d-flex flex-column fill-height justify-center align-center text-white"
       >
-      <v-tooltip location="bottom">
-        <template v-slot:activator="{ props }">
-          <v-btn
-            class="mt-12"
-            elevation="24"
-            exact
-            ripple
-            size="x-large"
-            to="/games"
-            v-bind="props"
-            variant="elevated"
-            >Games
-          </v-btn> </template
-        ><span>Games</span>
-      </v-tooltip>
+        <h2 class="display-2 text-center">Play</h2>
+        <em class="text-center"
+          >Take a look into our collection of games across different
+          platforms.</em
+        >
+        <v-tooltip location="bottom">
+          <template v-slot:activator="{ props }">
+            <v-btn
+              class="mt-12"
+              elevation="24"
+              exact
+              ripple
+              size="x-large"
+              to="/games"
+              v-bind="props"
+              variant="elevated"
+              >Games
+            </v-btn> </template
+          ><span>Games</span>
+        </v-tooltip>
+      </div>
     </v-parallax>
     <v-row class="my-12" justify="center">
       <v-col cols="12" sm="4">
@@ -183,23 +187,29 @@ useHead({
       </v-col>
     </v-row>
     <v-parallax src="/pages/parallax2.webp" height="400">
-      <h2 class="display-2 text-center">Doyban</h2>
-      <em class="text-center">Read our story; who we are &amp; what we do.</em>
-      <v-tooltip location="bottom">
-        <template v-slot:activator="{ props }">
-          <v-btn
-            class="mt-12"
-            elevation="24"
-            exact
-            ripple
-            size="x-large"
-            to="/about"
-            v-bind="props"
-            variant="elevated"
-            >About
-          </v-btn> </template
-        ><span>About</span>
-      </v-tooltip>
+      <div
+        class="d-flex flex-column fill-height justify-center align-center text-white"
+      >
+        <h2 class="display-2 text-center">Doyban</h2>
+        <em class="text-center"
+          >Read our story; who we are &amp; what we do.</em
+        >
+        <v-tooltip location="bottom">
+          <template v-slot:activator="{ props }">
+            <v-btn
+              class="mt-12"
+              elevation="24"
+              exact
+              ripple
+              size="x-large"
+              to="/about"
+              v-bind="props"
+              variant="elevated"
+              >About
+            </v-btn> </template
+          ><span>About</span>
+        </v-tooltip>
+      </div>
     </v-parallax>
     <v-row class="my-12" justify="center">
       <v-col cols="12" sm="4">
