@@ -145,10 +145,11 @@ const onReset = () => {
 }
 
 async function onSubmit(): Promise<void> {
+  const mail: any = useMail()
   await recaptchaInstance?.recaptchaLoaded()
   await recaptchaInstance?.executeRecaptcha('submit')
 
-  $mail.send({
+  mail.send({
     from: 'Daniel',
     subject: 'Incredible',
     text: 'This is an incredible test message',
