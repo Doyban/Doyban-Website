@@ -137,7 +137,6 @@ const inputFields: any = [
 
 const isContactFormValid: Ref<boolean> = ref(false)
 const privacy: Ref<boolean> = ref(false)
-const recaptchaInstance: IReCaptchaComposition | undefined = useReCaptcha()
 const terms: Ref<boolean> = ref(false)
 
 const onReset = () => {
@@ -146,6 +145,8 @@ const onReset = () => {
 
 async function onSubmit(): Promise<void> {
   const mail: any = useMail()
+  const recaptchaInstance: IReCaptchaComposition | undefined = useReCaptcha()
+
   await recaptchaInstance?.recaptchaLoaded()
   await recaptchaInstance?.executeRecaptcha('submit')
 
