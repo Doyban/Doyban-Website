@@ -8274,10 +8274,15 @@ nuxi@^3.8.3:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt-mail@^3.1.27:
-  version "3.1.45"
-  resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-3.1.45.tgz#96ea3092246da84e764a5dc8ebeb41afc2d37481"
-  integrity sha512-+sg+ZNwKageveKN3sHReS5Ky2qux9jM7QQJU6SevTFGUcXdDTr1Dt2MZnqltQ5YXPgScsT2MgFun4gnglqhVHQ==
+nuxt-alias-path@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-alias-path/-/nuxt-alias-path-1.0.0.tgz#b700da66e6a4c050a18800306fd3f68a52e4968f"
+  integrity sha512-Brt1kbn6MxiYOo7B1B3Plz+NoMNLCPUzcQzcFOlSdxFFVtx5lqQoUvlQ/FlEuRZX0p7uKUiR3ItK7IeMRIqdAA==
+
+nuxt-mail@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-mail/-/nuxt-mail-4.0.1.tgz#f36110658693b9454f7bc30f01012d1e06fbd0c2"
+  integrity sha512-HqhLBOurYsL5An6EKyNAkDRvBd3Qe9zNxMmaZYthradQg2hElJN4W2bfmiWNdSVJTEJHTZkzRJuOKvXxc84AKA==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     "@nuxt/kit" "^3.0.0"
@@ -8285,6 +8290,7 @@ nuxt-mail@^3.1.27:
     fs-extra "^11.1.0"
     h3 "^1.0.2"
     nodemailer "^6.4.11"
+    nuxt-alias-path "^1.0.0"
     nuxt-push-plugins "^2.1.2"
     parse-packagejson-name "^1.0.1"
 
