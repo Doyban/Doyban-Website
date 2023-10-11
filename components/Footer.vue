@@ -79,7 +79,7 @@ const currentYear: number = new Date().getFullYear()
               <v-card-title>Stay informed</v-card-title>
               <v-card-subtitle>Subscribe</v-card-subtitle>
               <v-card-text>
-                <v-btn ripple variant="outlined">Opt in</v-btn>
+                <v-btn v-ripple variant="outlined">Opt in</v-btn>
               </v-card-text>
             </v-card>
           </template>
