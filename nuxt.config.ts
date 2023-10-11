@@ -356,7 +356,7 @@ export default defineNuxtConfig({
       text: null,
       useStylesheet: false,
     }],
-    // // https://github.com/dword-design/nuxt-mail
+    // https://github.com/dword-design/nuxt-mail
     [
       'nuxt-mail',
       {
