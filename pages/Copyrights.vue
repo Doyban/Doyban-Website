@@ -49,7 +49,11 @@ useHead({
               class="pb-6"
               v-bind="props"
             >
-              <v-list-item v-for="(policy, index) in policies" :key="index">
+              <v-list-item
+                v-for="(policy, index) in policies"
+                :key="index"
+                lines="two"
+              >
                 <v-list-item-title class="mb-3 text-center"
                   ><strong>{{ policy.title }}</strong></v-list-item-title
                 >
