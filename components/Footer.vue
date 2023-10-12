@@ -106,6 +106,7 @@ const currentYear: number = new Date().getFullYear()
       <v-col cols="12">
         <v-card color="transparent" elevation="0">
           <v-card-title>Resources</v-card-title>
+          <!-- TODO: Make it v-for. -->
           <v-list class="bg-transparent d-flex">
             <v-list-item
               ><NuxtLink to="/copyrights">Copyrights</NuxtLink></v-list-item
