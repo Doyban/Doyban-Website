@@ -93,14 +93,14 @@ useHead({
           size="x-large"
         >
           <!-- Slots for "v-timeline-item". -->
-          <template v-slot:opposite>
+          <template #opposite>
             <span
               :class="`headline font-weight-bold text-${event.color}`"
               v-text="event.year"
             ></span>
           </template>
           <v-hover>
-            <template v-slot:default="{ isHovering, props }">
+            <template #default="{ isHovering, props }">
               <v-card
                 :class="{ 'on-hover': isHovering }"
                 :color="`${event.color}-lighten-5`"
@@ -110,7 +110,7 @@ useHead({
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
-                <template v-slot:loader="{ isActive }">
+                <template #loader="{ isActive }">
                   <v-progress-linear
                     :active="isActive"
                     :color="`${event.color}-darken-4`"

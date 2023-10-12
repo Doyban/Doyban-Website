@@ -104,7 +104,7 @@ useHead({
         md="3"
       >
         <v-hover>
-          <template v-slot:default="{ isHovering, props }">
+          <template #default="{ isHovering, props }">
             <v-card
               :class="{
                 'on-hover': isHovering,
@@ -135,7 +135,7 @@ useHead({
               </v-card-text>
               <div style="text-align: center">
                 <v-tooltip location="bottom">
-                  <template v-slot:activator="{ props }">
+                  <template #activator="{ props }">
                     <v-btn
                       :class="[checkIfCenter(index) ? 'custom-btn' : '']"
                       :color="checkIfCenter(index) ? '#7c0690' : ''"

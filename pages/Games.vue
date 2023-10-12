@@ -296,8 +296,8 @@ useHead({
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
           <NuxtLink
             v-for="(storeButton, indexGameStoreButton) in game.storeButtons"
-            :href="storeButton.url"
             :key="indexGameStoreButton"
+            :href="storeButton.url"
             :title="storeButton.title"
             rel
           >
@@ -315,7 +315,7 @@ useHead({
           order-sm="1"
         >
           <v-hover>
-            <template v-slot:default="{ isHovering, props }">
+            <template #default="{ isHovering, props }">
               <v-card
                 :class="{ 'on-hover': isHovering }"
                 color="purple-lighten-5"
@@ -325,7 +325,7 @@ useHead({
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
-                <template v-slot:loader="{ isActive }">
+                <template #loader="{ isActive }">
                   <v-progress-linear
                     :active="isActive"
                     color="purple-darken-4"
@@ -341,12 +341,12 @@ useHead({
                 <v-card-actions>
                   <v-spacer />
                   <v-btn
-                    @click="game.showGameDetails = !game.showGameDetails"
                     block
                     icon
                     ripple
                     size="x-large"
                     variant="plain"
+                    @click="game.showGameDetails = !game.showGameDetails"
                     ><v-icon
                       :icon="
                         game.showGameDetails
@@ -369,7 +369,7 @@ useHead({
                       </p>
                     </v-card-text>
                     <v-tooltip location="bottom">
-                      <template v-slot:activator="{ props }">
+                      <template #activator="{ props }">
                         <v-btn
                           block
                           elevation="24"

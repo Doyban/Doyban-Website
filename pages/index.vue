@@ -139,13 +139,13 @@ useHead({
       <div
         class="d-flex flex-column fill-height justify-center align-center text-white"
       >
-        <h2 class="display-2 text-center">Play</h2>
+        <h2 class="text-h3 text-center">Play</h2>
         <em class="text-center"
           >Take a look into our collection of games across different
           platforms.</em
         >
         <v-tooltip location="bottom">
-          <template v-slot:activator="{ props }">
+          <template #activator="{ props }">
             <v-btn
               class="mt-12"
               elevation="24"
@@ -197,12 +197,12 @@ useHead({
       <div
         class="d-flex flex-column fill-height justify-center align-center text-white"
       >
-        <h2 class="display-2 text-center">Doyban</h2>
+        <h2 class="text-h3 text-center">Doyban</h2>
         <em class="text-center"
           >Read our story; who we are &amp; what we do.</em
         >
         <v-tooltip location="bottom">
-          <template v-slot:activator="{ props }">
+          <template #activator="{ props }">
             <v-btn
               class="mt-12"
               elevation="24"

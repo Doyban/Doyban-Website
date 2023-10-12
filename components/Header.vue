@@ -66,7 +66,7 @@ const menuItems: MenuItem[] = [
             src="logo.svg" /></router-link
       ></v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon @click="drawer = !drawer" class="hidden-md-and-up" />
+      <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
       <v-toolbar-items class="hidden-sm-and-down" variant="plain">
         <v-list-item
           v-for="(menuItem, index) in menuItems"
@@ -79,11 +79,11 @@ const menuItems: MenuItem[] = [
       </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer
+      v-model="drawer"
       aria-label="This is a sidenav with menu elements for mobile devices."
       elevation="24"
       location="right"
       temporary
-      v-model="drawer"
     >
       <!-- TODO: Use floating or temporary after figuring out working routes in that config. -->
       <v-list-item

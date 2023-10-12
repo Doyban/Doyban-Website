@@ -66,8 +66,8 @@ useHead({
         </blockquote>
         <NuxtLink
           v-for="(storeButton, index) in storeButtons"
-          :href="storeButton.url"
           :key="index"
+          :href="storeButton.url"
           :title="storeButton.title"
           rel
         >
@@ -103,7 +103,7 @@ useHead({
           cover
           @click="selectedItem = galleryPicture"
         >
-          <template v-slot:placeholder>
+          <template #placeholder>
             <div class="d-flex align-center justify-center fill-height">
               <v-progress-circular
                 color="purple-darken-4"

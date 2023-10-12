@@ -177,7 +177,7 @@ useHead({
       <v-row class="mx-3 my-12" justify="center">
         <v-col cols="12" md="10">
           <v-hover>
-            <template v-slot:default="{ isHovering, props }">
+            <template #default="{ isHovering, props }">
               <v-card
                 :class="{ 'on-hover': isHovering }"
                 :elevation="isHovering ? 24 : 12"
@@ -233,6 +233,7 @@ useHead({
                       <!--/ Slot for "v-textarea". -->
                     </v-textarea>
                     <v-combobox
+                      v-model="contactForm.contactType"
                       :items="contactType"
                       append-inner-icon="mdi-thought-bubble-outline"
                       chips
@@ -243,29 +244,28 @@ useHead({
                       multiple
                       persistent-hint
                       placeholder="What brings you to us?"
-                      v-model="contactForm.contactType"
                       variant="outlined"
                     >
                     </v-combobox>
                     <span class="text-red"><strong>*&nbsp;</strong></span>
                     <!-- TODO: This needs to be fixed why v-bind (at least v-bind should work)/model (should be v-model) doesn't work here. -->
                     <v-checkbox
-                      @click="contactForm.terms = !contactForm.terms"
+                      v-model="contactForm.terms"
                       :rules="contactFormRules.acceptedTerms"
                       class="mt-n9 ml-n1"
                       color="purple-darken-4"
-                      v-model="contactForm.terms"
+                      @click="contactForm.terms = !contactForm.terms"
                     >
                       {{ contactForm.terms }}
-                      <template v-slot:label>
+                      <template #label>
                         <div @click.stop>
                           Do you accept the
                           <v-tooltip location="bottom">
-                            <template v-slot:activator="{ props }">
+                            <template #activator="{ props }">
                               <NuxtLink
-                                @click.stop="terms = true"
                                 href="javascript:;"
                                 v-bind="props"
+                                @click.stop="terms = true"
                               >
                                 Terms
                               </NuxtLink>
@@ -274,11 +274,11 @@ useHead({
                           </v-tooltip>
                           and
                           <v-tooltip location="bottom">
-                            <template v-slot:activator="{ props }">
+                            <template #activator="{ props }">
                               <NuxtLink
-                                @click.stop="privacy = true"
                                 href="javascript:;"
                                 v-bind="props"
+                                @click.stop="privacy = true"
                                 >Privacy Policy
                               </NuxtLink> </template
                             >Opens a dialog with Privacy Policy </v-tooltip
@@ -289,11 +289,11 @@ useHead({
                   </v-container>
                   <v-card-actions>
                     <v-btn
-                      @click="onReset"
                       elevation="6"
                       ripple
                       size="large"
                       variant="plain"
+                      @click="onReset"
                       >Reset</v-btn
                     >
                     <v-btn
@@ -311,7 +311,7 @@ useHead({
                 </v-form>
                 <v-dialog v-model="terms">
                   <v-hover>
-                    <template v-slot:default="{ isHovering2, props2 }">
+                    <template #default="{ isHovering2, props2 }">
                       <v-card
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
@@ -321,19 +321,19 @@ useHead({
                       >
                         <v-card-text
                           ><Terms
-                            :columnsDividerXs="12"
-                            :columnsDividerSm="6"
-                            :columnsBodyMd="12"
+                            :columns-divider-xs="12"
+                            :columns-divider-sm="6"
+                            :columns-body-md="12"
                         /></v-card-text>
                         <v-card-actions>
                           <v-spacer />
                           <v-btn
-                            @click="terms = false"
                             color="purple-darken-4"
                             elevation="6"
                             ripple
                             size="large"
                             variant="tonal"
+                            @click="terms = false"
                             >Ok
                           </v-btn>
                         </v-card-actions>
@@ -343,7 +343,7 @@ useHead({
                 </v-dialog>
                 <v-dialog v-model="privacy">
                   <v-hover>
-                    <template v-slot:default="{ isHovering2, props2 }">
+                    <template #default="{ isHovering2, props2 }">
                       <v-card
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
@@ -353,19 +353,19 @@ useHead({
                       >
                         <v-card-text
                           ><Privacy
-                            :columnsDividerXs="12"
-                            :columnsDividerSm="6"
-                            :columnsBodyMd="12"
+                            :columns-divider-xs="12"
+                            :columns-divider-sm="6"
+                            :columns-body-md="12"
                         /></v-card-text>
                         <v-card-actions>
                           <v-spacer />
                           <v-btn
-                            @click="privacy = false"
                             color="purple-darken-4"
                             elevation="6"
                             ripple
                             size="large"
                             variant="tonal"
+                            @click="privacy = false"
                             >Ok</v-btn
                           >
                         </v-card-actions>

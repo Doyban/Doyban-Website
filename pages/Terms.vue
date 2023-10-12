@@ -71,7 +71,7 @@ useHead({
     <v-row justify="center">
       <v-col :md="props.columnsBodyMd ?? 6" class="ma-8" cols="12">
         <v-hover>
-          <template v-slot:default="{ isHovering, props }">
+          <template #default="{ isHovering, props }">
             <v-card
               :class="{
                 'on-hover': isHovering,
@@ -83,7 +83,7 @@ useHead({
               <v-list-item
                 v-for="(policy, index) in policies"
                 :key="index"
-                two-line
+                lines="two"
               >
                 <v-list-item-title class="mb-3 text-center"
                   ><strong>{{ policy.title }}</strong></v-list-item-title
