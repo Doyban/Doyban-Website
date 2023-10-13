@@ -65,7 +65,7 @@ const currentYear: number = new Date().getFullYear()
           </v-list>
         </v-card>
       </v-col>
-      <!-- When we'll introduce newsletter uncomment it. -->
+      <!-- TODO: When we'll introduce newsletter uncomment it. -->
       <!-- <v-col cols="12" sm="4">
         <v-hover>
           <template v-slot:default="{ isHovering, props }">
