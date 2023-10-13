@@ -252,7 +252,7 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-.v-parallax__content > h2 {
+h2.text-h3 {
   font-family: 'IM Fell English SC', serif !important;
 }
 
