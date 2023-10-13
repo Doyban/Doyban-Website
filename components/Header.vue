@@ -105,10 +105,6 @@ const menuItems: MenuItem[] = [
 </template>
 
 <style lang="scss" scoped>
-.v-img {
-  width: 5rem;
-}
-
 .v-toolbar-title {
   flex: 5rem 0 0;
 }
