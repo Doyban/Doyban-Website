@@ -132,6 +132,8 @@ const currentYear: number = new Date().getFullYear()
             <v-list-item
               ><NuxtLink to="/security">Security</NuxtLink></v-list-item
             >
+            TODO: should redirect to /sitemap as per
+            https://github.com/Doyban/Doyban-Website/issues/17.
             <v-list-item
               ><NuxtLink to="/sitemap">Sitemap</NuxtLink></v-list-item
             >
