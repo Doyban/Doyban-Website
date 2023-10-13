@@ -27,7 +27,7 @@ const menuItems: MenuItem[] = [
   // {
   //   icon: 'mdi-motion-play',
   //   name: 'PlayTesting',
-  //   path: '/playtesting',
+  //   path: '/playtesting', // TODO: should redirect to /playtesting as per https://github.com/Doyban/Doyban-Website/issues/18.
   // },
   //   icon: 'mdi-motion-play', // TODO: Change the icon.
   //   name: 'UX Research',
