@@ -89,10 +89,13 @@ const currentYear: number = new Date().getFullYear()
         <v-card align="center" color="transparent" elevation="0">
           <v-card-title>Information</v-card-title>
           <v-list class="bg-transparent">
-            <!-- <v-list-item>
+            <!--
+            TODO: should redirect to /faq as per
+            https://github.com/Doyban/Doyban-Website/issues/15.
+            <v-list-item>
               <NuxtLink to="/faq">FAQ</NuxtLink>
             </v-list-item>
-            // TODO: should redirect to /glossary as per
+            TODO: should redirect to /glossary as per
             https://github.com/Doyban/Doyban-Website/issues/8.
             <v-list-item>
               <NuxtLink to="/glossary">Glossary</NuxtLink>
