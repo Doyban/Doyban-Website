@@ -357,13 +357,39 @@ h2.text-h3 {
   }
 }
 
-@keyframes moveclouds {
-  0% {
-    margin-left: 2000px;
-  }
+@media only screen and (min-width: 992px) {
+  @keyframes moveclouds {
+    0% {
+      margin-left: 2000px;
+    }
 
-  100% {
-    margin-left: -2000px;
+    100% {
+      margin-left: -2000px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  @keyframes moveclouds {
+    0% {
+      margin-left: 1000px;
+    }
+
+    100% {
+      margin-left: -1000px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  @keyframes moveclouds {
+    0% {
+      margin-left: 600px;
+    }
+
+    100% {
+      margin-left: -600px;
+    }
   }
 }
 </style>
