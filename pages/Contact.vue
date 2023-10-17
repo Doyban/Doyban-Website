@@ -255,7 +255,6 @@ useHead({
                       color="purple-darken-4"
                       @click="contactForm.terms = !contactForm.terms"
                     >
-                      {{ contactForm.terms }}
                       <template #label>
                         <div @click.stop>
                           Do you accept the
