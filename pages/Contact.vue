@@ -248,9 +248,8 @@ useHead({
                     >
                     </v-combobox>
                     <span class="text-red"><strong>*&nbsp;</strong></span>
-                    <!-- TODO: This needs to be fixed why v-bind (at least v-bind should work)/model (should be v-model) doesn't work here. -->
                     <v-checkbox
-                      v-model="contactForm.terms"
+                      v-bind="contactForm.terms"
                       :rules="contactFormRules.acceptedTerms"
                       class="mt-n9 ml-n1"
                       color="purple-darken-4"
