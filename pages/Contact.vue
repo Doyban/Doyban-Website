@@ -288,7 +288,6 @@ useHead({
                   <v-card-actions>
                     <v-btn
                       elevation="6"
-                      ripple
                       size="large"
                       variant="plain"
                       @click="onReset"
@@ -298,7 +297,6 @@ useHead({
                       :disabled="!isContactFormValid"
                       color="purple-darken-4"
                       elevation="6"
-                      ripple
                       size="large"
                       type="submit"
                       variant="tonal"
@@ -311,10 +309,10 @@ useHead({
                   <v-hover>
                     <template #default="{ isHovering2, props2 }">
                       <v-card
+                        v-ripple
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
-                        ripple
                         v-bind="props2"
                       >
                         <v-card-text
@@ -328,7 +326,6 @@ useHead({
                           <v-btn
                             color="purple-darken-4"
                             elevation="6"
-                            ripple
                             size="large"
                             variant="tonal"
                             @click="terms = false"
@@ -343,10 +340,10 @@ useHead({
                   <v-hover>
                     <template #default="{ isHovering2, props2 }">
                       <v-card
+                        v-ripple
                         :class="{ 'on-hover': isHovering2 }"
                         :elevation="isHovering2 ? 24 : 12"
                         class="elevation-24"
-                        ripple
                         v-bind="props2"
                       >
                         <v-card-text
@@ -360,7 +357,6 @@ useHead({
                           <v-btn
                             color="purple-darken-4"
                             elevation="6"
-                            ripple
                             size="large"
                             variant="tonal"
                             @click="privacy = false"
