@@ -115,8 +115,8 @@ useHead({
               class="pb-6"
               v-bind="props"
             >
-              <v-card-title class="text-center">
-                <h2 class="mt-6" v-text="partnership.title" />
+              <v-card-title class="text-center text-h4 mt-6">
+                {{ partnership.title }}
               </v-card-title>
               <v-card-text>
                 <h3 class="my-12 text-center">Perks</h3>
@@ -126,10 +126,10 @@ useHead({
                   class="px-12"
                 >
                   <v-col cols="6">
-                    <span v-text="perk.label" />
+                    <span>{{ perk.label }}</span>
                   </v-col>
                   <v-col class="text-right" cols="6">
-                    <strong :class="perk.class" v-text="perk.value" />
+                    <strong :class="perk.class">{{ perk.value }}</strong>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -179,6 +179,10 @@ h3 {
   strong {
     font-size: 1.5rem;
   }
+}
+
+.v-card-title {
+  font-family: 'IM Fell English SC', serif !important;
 }
 
 .custom-btn {
