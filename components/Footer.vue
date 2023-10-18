@@ -72,7 +72,7 @@ const currentYear: number = new Date().getFullYear()
             <v-card
               :class="{ 'on-hover': isHovering }"
               :elevation="isHovering ? 24 : 0"
-              align="center"
+              class="text-center"
               color="transparent"
               v-bind="props"
             >
@@ -86,7 +86,7 @@ const currentYear: number = new Date().getFullYear()
         </v-hover>
       </v-col> -->
       <v-col cols="12" sm="6">
-        <v-card align="center" color="transparent" elevation="0">
+        <v-card class="text-center" color="transparent" elevation="0">
           <v-card-title>Information</v-card-title>
           <v-list class="bg-transparent">
             <!--
