@@ -150,7 +150,6 @@ useHead({
               class="mt-12"
               elevation="24"
               exact
-              ripple
               size="x-large"
               to="/games"
               v-bind="props"
@@ -207,7 +206,6 @@ useHead({
               class="mt-12"
               elevation="24"
               exact
-              ripple
               size="x-large"
               to="/about"
               v-bind="props"
