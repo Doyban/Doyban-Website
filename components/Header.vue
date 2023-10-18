@@ -74,7 +74,7 @@ const menuItems: MenuItem[] = [
           :to="menuItem.path"
           color="purple-darken-4"
         >
-          <v-btn size="small" v-text="menuItem.name" />
+          <v-btn size="small"> {{ menuItem.name }}</v-btn>
         </v-list-item>
       </v-toolbar-items>
     </v-toolbar>
@@ -93,12 +93,9 @@ const menuItems: MenuItem[] = [
         :to="menuItem.path"
         lines="two"
       >
-        <v-btn
-          color="purple-darken-4"
-          size="x-large"
-          variant="plain"
-          v-text="menuItem.name"
-        />
+        <v-btn color="purple-darken-4" size="x-large" variant="plain">
+          {{ menuItem.name }}
+        </v-btn>
       </v-list-item>
     </v-navigation-drawer>
   </header>
