@@ -268,8 +268,8 @@ useHead({
                 ><v-icon :icon="feature.icon" aria-hidden="true" size="x-large"
               /></v-avatar>
             </v-row>
-            <h2 class="my-4" v-text="feature.title" />
-            <p v-text="feature.description"></p>
+            <h2 class="my-4">{{ feature.title }}</h2>
+            <p>{{ feature.description }}</p>
           </v-col>
         </v-row>
       </v-col>
@@ -289,8 +289,8 @@ useHead({
           :order-md="index % 2 === 0 ? '2' : '1'"
           order-sm="2"
         >
-          <h2 class="font-weight-black my-12" v-text="game.title" />
-          <p class="text-center" v-text="game.headline" />
+          <h2 class="font-weight-black my-12">{{ game.title }}</h2>
+          <p class="text-center">{{ game.headline }}</p>
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
           <p class="text-center" v-html="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
@@ -334,9 +334,11 @@ useHead({
                 </template>
                 <!--/ Slots for "v-progress-linear". -->
                 <v-img alt="" :src="`/games/` + `${game.title}` + `.webp`" />
-                <v-card-title class="text-center" v-text="game.title" />
+                <v-card-title class="text-center">{{
+                  game.title
+                }}</v-card-title>
                 <v-card-subtitle>
-                  <p class="text-center" v-text="game.headline" />
+                  <p class="text-center">{{ game.headline }}</p>
                 </v-card-subtitle>
                 <v-card-actions>
                   <v-spacer />
