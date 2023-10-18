@@ -142,7 +142,6 @@ useHead({
                       class="mt-12"
                       elevation="24"
                       exact
-                      ripple
                       rounded
                       size="x-large"
                       to="/contact"
