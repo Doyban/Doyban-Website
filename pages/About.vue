@@ -101,11 +101,11 @@ useHead({
           <v-hover>
             <template #default="{ isHovering, props }">
               <v-card
+                v-ripple
                 :class="{ 'on-hover': isHovering }"
                 :color="`${event.color}-lighten-5`"
                 :elevation="isHovering ? 24 : 12"
                 loading
-                ripple
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
