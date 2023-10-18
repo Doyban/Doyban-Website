@@ -292,6 +292,7 @@ useHead({
           <h2 class="font-weight-black my-12">{{ game.title }}</h2>
           <p class="text-center">{{ game.headline }}</p>
           <h3 class="font-weight-black mb-6 mt-12">About</h3>
+          <!-- eslint-disable-next-line vue/no-v-html -->
           <p class="text-center" v-html="game.description" />
           <h3 class="font-weight-black mb-6 mt-12">Where to play?</h3>
           <NuxtLink
