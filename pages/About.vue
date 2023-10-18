@@ -94,10 +94,9 @@ useHead({
         >
           <!-- Slots for "v-timeline-item". -->
           <template #opposite>
-            <span
-              :class="`headline font-weight-bold text-${event.color}`"
-              v-text="event.year"
-            ></span>
+            <span :class="`headline font-weight-bold text-${event.color}`">{{
+              event.year
+            }}</span>
           </template>
           <v-hover>
             <template #default="{ isHovering, props }">
@@ -121,8 +120,8 @@ useHead({
                 <v-card-title
                   :class="`headline pt-6 font-weight-light mb-6 text-center
             text-${event.color}`"
-                  v-text="event.title"
-                />
+                  >{{ event.title }}</v-card-title
+                >
                 <v-card-text
                   ><p>{{ event.description }}</p></v-card-text
                 >
