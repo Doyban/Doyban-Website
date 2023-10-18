@@ -318,11 +318,11 @@ useHead({
           <v-hover>
             <template #default="{ isHovering, props }">
               <v-card
+                v-ripple
                 :class="{ 'on-hover': isHovering }"
                 color="purple-lighten-5"
                 :elevation="isHovering ? 24 : 12"
                 loading
-                ripple
                 v-bind="props"
               >
                 <!-- Slots for "v-progress-linear". -->
@@ -346,7 +346,6 @@ useHead({
                   <v-btn
                     block
                     icon
-                    ripple
                     size="x-large"
                     variant="plain"
                     @click="game.showGameDetails = !game.showGameDetails"
@@ -377,7 +376,6 @@ useHead({
                           block
                           elevation="24"
                           exact
-                          ripple
                           size="x-large"
                           :to="'/games/' + `${game.title.toLowerCase()}`"
                           v-bind="props"
