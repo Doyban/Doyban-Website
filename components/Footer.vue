@@ -127,6 +127,8 @@ const currentYear: number = new Date().getFullYear()
               ><NuxtLink to="/privacy">Privacy</NuxtLink></v-list-item
             >
             <!-- <v-list-item
+            TODO: should redirect to /rss as per
+            https://github.com/Doyban/Doyban-Website/issues/20.
               ><NuxtLink to="/rss">RSS</NuxtLink></v-list-item
             >
             TODO: should redirect to /security as per
