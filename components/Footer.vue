@@ -118,6 +118,8 @@ const currentYear: number = new Date().getFullYear()
               ><NuxtLink to="/cookies">Cookies</NuxtLink></v-list-item
             >
             <!--
+            TODO: should redirect to /legal as per
+            https://github.com/Doyban/Doyban-Website/issues/19.
             <v-list-item
               ><NuxtLink to="/legal">Legal</NuxtLink></v-list-item
             > -->
