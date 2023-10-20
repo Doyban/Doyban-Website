@@ -135,7 +135,7 @@ useHead({
               </v-card-text>
               <div style="text-align: center">
                 <v-tooltip location="bottom">
-                  <template #activator="{ props }">
+                  <template #activator="{ props2 }">
                     <v-btn
                       :class="[checkIfCenter(index) ? 'custom-btn' : '']"
                       :color="checkIfCenter(index) ? '#7c0690' : ''"
@@ -145,7 +145,7 @@ useHead({
                       rounded
                       size="x-large"
                       to="/contact"
-                      v-bind="props"
+                      v-bind="props2"
                       variant="elevated"
                       >Contact
                     </v-btn>
