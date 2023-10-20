@@ -371,14 +371,14 @@ useHead({
                       </p>
                     </v-card-text>
                     <v-tooltip location="bottom">
-                      <template #activator="{ props }">
+                      <template #activator="{ props2 }">
                         <v-btn
                           block
                           elevation="24"
                           exact
                           size="x-large"
                           :to="'/games/' + `${game.title.toLowerCase()}`"
-                          v-bind="props"
+                          v-bind="props2"
                           variant="plain"
                           >Read More
                         </v-btn> </template
