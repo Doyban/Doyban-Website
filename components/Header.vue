@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
   // {
   //   icon: 'mdi-devices',
   //   name: 'Platforms',
-  //   path: '/platforms',
+  //   path: '/platforms', // TODO: should redirect to /playtesting as per https://github.com/Doyban/Doyban-Website/issues/21.
   // },
   // {
   //   icon: 'mdi-motion-play',
