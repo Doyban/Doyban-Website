@@ -1,7 +1,8 @@
 import vuetify from 'vite-plugin-vuetify'
 
 // PWA Config
-const description: string = '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.';
+const description: string =
+  '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.'
 const title: string = 'Doyban | The World of Digital Gameplay.';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -17,7 +18,12 @@ export default defineNuxtConfig({
     },
     link: [
       { href: '/favicon.ico', rel: 'icon', sizes: 'any', type: 'image/x-icon' },
-      { href: '/favicon.ico', rel: 'shortcut icon', sizes: 'any', type: 'image/ico' },
+      {
+        href: '/favicon.ico',
+        rel: 'shortcut icon',
+        sizes: 'any',
+        type: 'image/ico',
+      },
       { href: '/favicon.svg', rel: 'icon', type: 'image/svg+xml', },
       { href: '/apple-touch-icon-180x180.png', rel: 'apple-touch-icon' },
     ],
@@ -301,17 +307,14 @@ export default defineNuxtConfig({
   },
 
   // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
-  build: { transpile: ["vuetify"] },
+  build: { transpile: ['vuetify'] },
 
   client: {
     installPrompt: true,
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-    'vuetify/styles',
-    '~/assets/main.scss'
-  ],
+  css: ['vuetify/styles', '~/assets/main.scss'],
 
   devOptions: {
     enabled: true,
@@ -336,26 +339,29 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap',
     // https://go.nuxtjs.dev/stylelint
     // '@nuxtjs/stylelint-module',
-    ['@nuxtjs/google-fonts', {
-      base64: true,
-      display: 'swap',
-      download: true,
-      families: {
-        'IM+Fell+English+SC': true,
-        Cormorant: [300, 400, 500, 600, 700],
+    [
+      '@nuxtjs/google-fonts',
+      {
+        base64: true,
+        display: 'swap',
+        download: true,
+        families: {
+          'IM+Fell+English+SC': true,
+          Cormorant: [300, 400, 500, 600, 700],
+        },
+        fontsDir: 'fonts',
+        fontsPath: '~assets/fonts',
+        inject: true,
+        overwriting: true,
+        preconnect: true,
+        prefetch: true,
+        preload: true,
+        subsets: [],
+        stylePath: 'css/fonts.css',
+        text: null,
+        useStylesheet: false,
       },
-      fontsDir: 'fonts',
-      fontsPath: '~assets/fonts',
-      inject: true,
-      overwriting: true,
-      preconnect: true,
-      prefetch: true,
-      preload: true,
-      subsets: [],
-      stylePath: 'css/fonts.css',
-      text: null,
-      useStylesheet: false,
-    }],
+    ],
     // https://github.com/dword-design/nuxt-mail
     [
       'nuxt-mail',
@@ -386,38 +392,38 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: ['/sitemap.xml', '/robots.txt']
+      routes: ['/sitemap.xml', '/robots.txt'],
     }
   },
 
   pwa: {
     manifest: {
       background_color: '#fafafa',
-      description: description,
+      description,
       display: 'standalone',
       icons: [
         {
           src: 'pwa-64x64.png',
           sizes: '64x64',
-          type: 'image/png'
+          type: 'image/png',
         },
         {
           src: 'pwa-192x192.png',
           sizes: '192x192',
-          type: 'image/png'
+          type: 'image/png',
         },
         {
           src: 'pwa-512x512.png',
           sizes: '512x512',
           type: 'image/png',
-          purpose: 'any'
+          purpose: 'any',
         },
         {
           src: 'maskable-icon-512x512.png',
           sizes: '512x512',
           type: 'image/png',
-          purpose: 'maskable'
-        }
+          purpose: 'maskable',
+        },
       ],
       name: title,
       scope: '.',
