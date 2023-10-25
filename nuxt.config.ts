@@ -3,7 +3,7 @@ import vuetify from 'vite-plugin-vuetify'
 // PWA Config
 const description: string =
   '🚀 Mobile Games without Installation are Mini Games on popular apps and chats like Facebook Gaming, iMessage, Messenger, Snapchat, Telegram, or WeChat.'
-const title: string = 'Doyban | The World of Digital Gameplay.';
+const title: string = 'Doyban | The World of Digital Gameplay.'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -393,7 +393,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/sitemap.xml', '/robots.txt'],
-    }
+    },
   },
 
   pwa: {
