@@ -387,9 +387,17 @@ export default defineNuxtConfig({
         target: 'esnext',
       },
     },
+    firebase: {
+      gen: 2,
+      nodeVersion: '18',
+    },
+    preset: 'firebase',
     prerender: {
       crawlLinks: true,
       routes: ['/sitemap.xml', '/robots.txt'],
+    },
+    replace: {
+      [`functions.https.onRequest`]: `functions.region('europe-west1').https.onRequest`,
     },
   },
 
