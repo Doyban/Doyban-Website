@@ -370,8 +370,12 @@ export default defineNuxtConfig({
           to: 'contact@doyban.com',
         },
         smtp: {
-          host: 'mail.doyban.com',
-          port: 587,
+          host: process.env.MAIL_HOST,
+          port: process.env.MAIL_PORT,
+          auth: {
+            user: process.env.MAIL_ACCOUNT,
+            pass: process.env.MAIL_PASSWORD,
+          },
         },
       },
     ],
