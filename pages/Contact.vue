@@ -184,11 +184,7 @@ useHead({
                 class="elevation-24"
                 v-bind="props"
               >
-                <v-form
-                  ref="contactForm"
-                  v-model="isContactFormValid"
-                  @submit.prevent="onSubmit"
-                >
+                <v-form ref="contactForm" v-model="isContactFormValid">
                   <v-container>
                     <h1 class="my-12 text-center">Contact</h1>
                     <v-text-field
