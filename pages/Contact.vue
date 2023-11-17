@@ -300,6 +300,7 @@ useHead({
                       size="large"
                       type="submit"
                       variant="tonal"
+                      @click="onSubmit"
                     >
                       Send
                     </v-btn>
