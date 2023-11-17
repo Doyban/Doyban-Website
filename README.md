@@ -18,4 +18,3 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-TODO: Check https://github.com/nuxt-community/awesome-nuxt (for example it has auto sitemap generation)
