@@ -57,13 +57,12 @@ a {
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
-    height: 160%;
-    padding-bottom: 15rem;
+    padding-top: 7rem;
   }
 
   @media only screen and (max-width: 767px) {
     font-size: 1rem;
-    height: 160%;
+    padding-top: 10rem;
   }
 }
 
@@ -95,6 +94,12 @@ h2 {
   @media only screen and (max-width: 767px) {
     font-size: 1.25rem;
     padding-bottom: 0;
+  }
+}
+
+.v-responsive {
+  @media only screen and (max-width: 1200px) {
+    position: static;
   }
 }
 </style>
