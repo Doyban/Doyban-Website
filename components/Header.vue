@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, Ref } from 'vue'
-import { MenuItem } from '../interfaces/MenuItem'
+import MenuItem from '../interfaces/MenuItem'
 
 const drawer: Ref<boolean> = ref(false)
 const menuItems: MenuItem[] = [
