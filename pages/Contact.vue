@@ -101,7 +101,7 @@ const inputFields: any = [
     slotText: 'First name',
     rules: contactFormRules.firstName,
     variant: 'outlined',
-    vModel: contactForm.value.firstName,
+    vModel: 'firstName',
   },
   {
     appendInnerIcon: 'mdi-account-check',
@@ -111,7 +111,7 @@ const inputFields: any = [
     slotText: 'Last name',
     rules: contactFormRules.lastName,
     variant: 'outlined',
-    vModel: contactForm.value.lastName,
+    vModel: 'lastName',
   },
   {
     appendInnerIcon: 'mdi-at',
@@ -121,7 +121,7 @@ const inputFields: any = [
     slotText: 'Email',
     rules: contactFormRules.email,
     variant: 'outlined',
-    vModel: contactForm.value.email,
+    vModel: 'email',
   },
   {
     appendInnerIcon: 'mdi-information-outline',
@@ -131,7 +131,7 @@ const inputFields: any = [
     slotText: 'Subject',
     rules: contactFormRules.subject,
     variant: 'outlined',
-    vModel: contactForm.value.subject,
+    vModel: 'subject',
   },
 ]
 
@@ -151,9 +151,24 @@ async function onSubmit(): Promise<void> {
   await recaptchaInstance?.executeRecaptcha('submit')
 
   mail.send({
-    from: 'Daniel',
-    subject: 'Incredible',
-    text: 'This is an incredible test message',
+    bcc: 'contact@doyban.com',
+    from: `${contactForm.value.firstName} <${contactForm.value.email}>`,
+    html: `<p>A message from a contact form has been sent. That is a copy of your message.</p>
+        <h3>Message content:</h3>
+        <ul>
+          <li>First name: ${contactForm.value.firstName}</li>
+          <li>Last name: ${contactForm.value.lastName}</li>
+          <li>E-mail: ${contactForm.value.email}</li>
+          <li>Subject: ${contactForm.value.subject}</li>
+          <li>Message: ${contactForm.value.message}</li>
+          <li>Reason to contact: ${
+            contactForm.value.contactType
+              ? contactForm.value.contactType
+              : 'not specified'
+          }</li>
+        </ul>`,
+    subject: 'Contact Form: Doyban',
+    to: `${contactForm.value.email}`,
   })
   Swal.fire(
     'Awesome!',
@@ -190,13 +205,13 @@ useHead({
                     <v-text-field
                       v-for="inputField in inputFields"
                       :key="inputField"
+                      v-model="contactForm[inputField.vModel]"
                       :append-inner-icon="inputField.appendInnerIcon"
                       :counter="inputField.counter"
                       :hint="inputField.hint"
                       :placeholder="inputField.placeholder"
                       :rules="inputField.rules"
                       :variant="inputField.variant"
-                      :v-model="inputField.vModel"
                       clearable
                       color="purple-darken-4"
                       loading
@@ -208,8 +223,8 @@ useHead({
                       >
                       <!--/ Slot for "v-text-field". -->
                     </v-text-field>
-                    <!-- This one needs to stay on v-bind, otherwise it doesn't keep the message in the textarea and doesn't count correctly the number of words. -->
                     <v-textarea
+                      v-model="contactForm.message"
                       :counter="8192"
                       :rules="contactFormRules.message"
                       append-inner-icon="mdi-lead-pencil"
@@ -218,7 +233,6 @@ useHead({
                       hint="Write about what you have to say to us."
                       loading
                       placeholder="Message content"
-                      v-bind="contactForm.message"
                       variant="outlined"
                     >
                       <!-- Slot for "v-textarea". -->
