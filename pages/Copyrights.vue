@@ -57,10 +57,8 @@ useHead({
                 <v-list-item-title class="mb-3 text-center"
                   ><strong>{{ policy.title }}</strong></v-list-item-title
                 >
-                <v-list-item-subtitle
-                  class="text-wrap"
-                  v-html="policy.description"
-                />
+                <!-- eslint-disable-next-line vue/no-v-html -->
+                <p class="text-wrap" v-html="policy.description" />
               </v-list-item>
             </v-card>
           </template>
