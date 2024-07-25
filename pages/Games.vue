@@ -30,6 +30,30 @@ const features: Feature[] = [
 const games = [
   {
     description:
+      "<ul class='pl-0' style='list-style: none;'><li>Immersive shooter game.</li><li>Stunning graphics and dynamic environments.</li><li>Defend your spacecraft.</li><li>Score as many points as possible.</li></ul>",
+    headline: 'Action-packed shooter game set in the vast expanse of space.',
+    showGameDetails: false,
+    storeButtons: [
+      {
+        filename: 'AppleAppStoreButton',
+        title: 'Apple App Store',
+        url: 'https://apps.apple.com/app/flyyingplane/id6470124867', // TODO: Replace when published.
+      },
+      {
+        filename: 'GooglePlayStoreButton',
+        title: 'Google Play Store',
+        url: 'https://play.google.com/store/apps/details?id=com.doyban.galacticshooter',
+      },
+      {
+        filename: 'ItchIoButton',
+        title: 'itch.io',
+        url: 'https://doyban.itch.io/galacticshooter',
+      },
+    ],
+    title: 'GalacticShooter',
+  },
+  {
+    description:
       "<ul class='pl-0' style='list-style: none;'><li>Intuitive controls for a seamless gaming experience.</li><li>Stunning graphics and dynamic environments.</li><li>Endless gameplay with increasing difficulty.</li><li>Free to download and play, with optional in-game purchases.</li></ul>",
     headline:
       'Never-ending mobile game that will keep you on the edge of your seat!',
