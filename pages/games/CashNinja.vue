@@ -6,11 +6,11 @@ import StoreUrls from '~/interfaces/StoreUrls'
 const description: string =
   'CashNinja is a free and fun game where you get get a lot of cash!'
 const galleryPictures: GalleryPicture[] = [
-  { id: 1, src: 'games/gallery/CashNinja/1.webp' },
-  { id: 2, src: 'games/gallery/CashNinja/2.webp' },
-  { id: 3, src: 'games/gallery/CashNinja/3.webp' },
-  { id: 4, src: 'games/gallery/CashNinja/4.webp' },
-  { id: 5, src: 'games/gallery/CashNinja/5.webp' },
+  { id: 1, src: 'gallery/CashNinja/1.webp' },
+  { id: 2, src: 'gallery/CashNinja/2.webp' },
+  { id: 3, src: 'gallery/CashNinja/3.webp' },
+  { id: 4, src: 'gallery/CashNinja/4.webp' },
+  { id: 5, src: 'gallery/CashNinja/5.webp' },
 ]
 const storeUrls: StoreUrls = {
   appleAppStore: 'https://apps.apple.com/app/cashninja/id1450304980',
