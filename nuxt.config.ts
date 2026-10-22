@@ -11,11 +11,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s - ' + title,
-    },
-    htmlAttrs: {
-      lang: 'en',
-      amp: true,
-    },
+      htmlAttrs: {
+        lang: 'en',
+        amp: true,
+      } as { lang: string },
     link: [
       { href: '/favicon.ico', rel: 'icon', sizes: 'any', type: 'image/x-icon' },
       {
@@ -30,277 +29,278 @@ export default defineNuxtConfig({
     meta: [
       // Basic HTML meta tags.
       { charset: 'utf-8' },
-      { hid: 'author', name: 'author', content: 'Doyban, contact@doyban.com' },
-      { hid: 'copyright', name: 'copyright', content: 'Doyban' },
+      { key: 'author', name: 'author', content: 'Doyban, contact@doyban.com' },
+      { key: 'copyright', name: 'copyright', content: 'Doyban' },
       {
-        hid: 'description',
+        key: 'description',
         name: 'description',
         content: description,
       },
-      { hid: 'language', name: 'language', content: 'en_US' },
-      { hid: 'robots', name: 'robots', content: 'index,follow' },
+      { key: 'language', name: 'language', content: 'en_US' },
+      { key: 'robots', name: 'robots', content: 'index,follow' },
       {
-        hid: 'viewport',
+        key: 'viewport',
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
 
       // Apple meta tags.
       {
-        hid: 'apple-mobile-web-app-capable',
+        key: 'apple-mobile-web-app-capable',
         name: 'apple-mobile-web-app-capable',
         content: 'yes',
       },
       {
-        hid: 'apple-mobile-web-app-status-bar-style',
+        key: 'apple-mobile-web-app-status-bar-style',
         name: 'apple-mobile-web-app-status-bar-style',
         content: 'black',
       },
       {
-        hid: 'format-detection',
+        key: 'format-detection',
         name: 'format-detection',
         content: 'telephone=true',
       },
 
       // Open Graph / Facebook meta tags.
       {
-        hid: 'og:description',
+        key: 'og:description',
         property: 'og:description',
         content: description,
       },
-      { hid: 'og:image', property: 'og:image', content: '/logo.webp' },
+      { key: 'og:image', property: 'og:image', content: '/logo.webp' },
       {
-        hid: 'og:image:alt',
+        key: 'og:image:alt',
         property: 'og:image:alt',
         content: 'This is logo of Doyban',
       },
-      { hid: 'og:locale', property: 'og:locale', content: 'en_US' },
+      { key: 'og:locale', property: 'og:locale', content: 'en_US' },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ar',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'be_BY',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'bg_BG',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'cs_CZ',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'da_DK',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'de_DE',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'el_GR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'es_ES',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'et_EE',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'fi_FI',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'fr_FR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'he_IL',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'hi_IN',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'hr_HR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'hu_HU',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'id_ID',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'is_IS',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'it_IT',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ja_JP',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ko_KR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'nb_NO',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'nl_NL',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'pl_PL',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'pt_PT',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ro_RO',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ru_RU',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'sk_SK',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'sr_SR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'sv_SE',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ta',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'te',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'th_TH',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'tr_TR',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'uk_UA',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'ur',
       },
       {
-        hid: 'og:locale:alternate',
+        key: 'og:locale:alternate',
         property: 'og:locale:alternate',
         content: 'zh_TW',
       },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Doyban' },
+      { key: 'og:site_name', property: 'og:site_name', content: 'Doyban' },
       {
-        hid: 'og:title',
+        key: 'og:title',
         property: 'og:title',
         content: title,
       },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://doyban.com' },
+      { key: 'og:type', property: 'og:type', content: 'website' },
+      { key: 'og:url', property: 'og:url', content: 'https://doyban.com' },
 
       // Twitter meta tags.
       {
-        hid: 'twitter:card',
+        key: 'twitter:card',
         property: 'twitter:card',
         content: 'summary_large_image',
       },
       {
-        hid: 'twitter:creator',
+        key: 'twitter:creator',
         property: 'twitter:creator',
         content: '@ddanielecki',
       },
       {
-        hid: 'twitter:description',
+        key: 'twitter:description',
         property: 'twitter:description',
         content: description,
       },
       {
-        hid: 'twitter:image',
+        key: 'twitter:image',
         property: 'twitter:image',
         content: '/logo.webp',
       },
       {
-        hid: 'twitter:image:alt',
+        key: 'twitter:image:alt',
         property: 'twitter:image:alt',
         content: 'This is logo of Doyban',
       },
       {
-        hid: 'twitter:site',
+        key: 'twitter:site',
         property: 'twitter:site',
         content: '@doybangames',
       },
       {
-        hid: 'twitter:title',
+        key: 'twitter:title',
         property: 'twitter:title',
         content: title,
       },
     ],
+    },
 
     // global transition
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -309,19 +309,8 @@ export default defineNuxtConfig({
   // Build Configuration (https://nuxt.com/docs/api/configuration/nuxt-config#build)
   build: { transpile: ['vuetify'] },
 
-  client: {
-    installPrompt: true,
-  },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['vuetify/styles', '~/assets/main.scss'],
-
-  devOptions: {
-    enabled: true,
-    suppressWarnings: true,
-    navigateFallbackAllowlist: [/^\/$/],
-    type: 'module',
-  },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   // plugins: [{ src: '~/plugins/agastya.js', ssr: false }], // "ssr: false" fixes "window is not defined".
@@ -329,14 +318,16 @@ export default defineNuxtConfig({
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     async (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-        vuetify()
-      ))
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        const viteConfig = config as { plugins?: unknown[] }
+        viteConfig.plugins ??= []
+        viteConfig.plugins.push(vuetify())
+      })
     },
-    // https://github.com/harlan-zw/nuxt-simple-robots
-    'nuxt-simple-robots',
-    // https://github.com/harlan-zw/nuxt-simple-sitemap
-    'nuxt-simple-sitemap',
+    // https://github.com/nuxt-modules/robots
+    '@nuxtjs/robots',
+    // https://github.com/nuxt-modules/sitemap
+    '@nuxtjs/sitemap',
     // https://go.nuxtjs.dev/stylelint
     // '@nuxtjs/stylelint-module',
     [
@@ -441,6 +432,19 @@ export default defineNuxtConfig({
       theme_color: '#4A148C',
     },
     strategies: 'injectManifest',
+    client: {
+      installPrompt: true,
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module',
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
   },
 
   runtimeConfig: {
@@ -453,8 +457,4 @@ export default defineNuxtConfig({
     },
   },
 
-  workbox: {
-    navigateFallback: '/',
-    globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-  },
 })

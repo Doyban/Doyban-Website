@@ -2,5 +2,16 @@
     "extends": [
         "stylelint-config-standard-scss",
         "stylelint-config-recommended-vue/scss"
-    ]
+    ],
+    "rules": {
+        "alpha-value-notation": null,
+        "color-function-alias-notation": null,
+        "color-function-notation": null,
+        "font-family-name-quotes": null,
+        "media-feature-range-notation": null,
+        "no-empty-source": null,
+        "rule-empty-line-before": null,
+        "selector-class-pattern": null,
+        "shorthand-property-no-redundant-values": null
+    }
 }
